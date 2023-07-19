@@ -4,7 +4,7 @@ import photo1 from "../../images/10.jpg";
 import photo2 from "../../images/11.jpg";
 import { SlLocationPin } from "react-icons/sl";
 import { IconContext } from "react-icons";
-import ConnectionForm from "../../components/ConnectionForm.jsx/СonnectionModal";
+import ConnectionForm from "../../components/ConnectionForm/СonnectionModal";
 import {
   Container,
   Div,

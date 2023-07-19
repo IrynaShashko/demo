@@ -1,7 +1,7 @@
 import React, { useEffect, useCallback, useState } from "react";
 import { createPortal } from "react-dom";
 import logo from "../../logo.png";
-import ConnectionForm from "../ConnectionForm.jsx/СonnectionModal";
+import ConnectionForm from "../ConnectionForm/СonnectionModal";
 import { FiX } from "react-icons/fi";
 import { SlLocationPin } from "react-icons/sl";
 import { LocationButton } from "./Modal.styled";
