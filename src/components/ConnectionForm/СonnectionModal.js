@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 // import { Formik, ErrorMessage } from "formik";
 // import { IconContext } from "react-icons";
 // import { FiX } from "react-icons/fi";
@@ -67,24 +67,24 @@ priceData.else.map((item) => elseServises.push(item.service));
 //   // Add more services and their subServices as needed
 // ];
 
-const servicesData = {
-  women: womenServises,
-  men: menServises,
-  children: childrenServises,
-};
+// const servicesData = {
+//   women: womenServises,
+//   men: menServises,
+//   children: childrenServises,
+// };
 
 const ConnectionForm = ({ isOpen, onClose }) => {
-  const [selectedServiceType, setSelectedServiceType] = useState("");
-  const [selectedService, setSelectedService] = useState("");
+  // const [selectedServiceType, setSelectedServiceType] = useState("");
+  // const [selectedService, setSelectedService] = useState("");
 
-  const handleServiceTypeChange = (event) => {
-    setSelectedServiceType(event.target.value);
-    setSelectedService("");
-  };
+  // const handleServiceTypeChange = (event) => {
+  //   setSelectedServiceType(event.target.value);
+  //   setSelectedService("");
+  // };
 
-  const handleServiceChange = (event) => {
-    setSelectedService(event.target.value);
-  };
+  // const handleServiceChange = (event) => {
+  //   setSelectedService(event.target.value);
+  // };
 
   useEffect(() => {
     if (isOpen) {
