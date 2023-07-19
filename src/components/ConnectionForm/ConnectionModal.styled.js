@@ -26,6 +26,7 @@ export const Label = styled.label`
   flex-direction: column;
   width: 280px;
   margin-bottom: 5px;
+  color: #000;
 `;
 
 export const Input = styled(Field)`
@@ -36,6 +37,8 @@ export const Input = styled(Field)`
   border-radius: 8px;
   margin-top: 5px;
   font-size: 14px;
+  outline: none;
+  color: #000;
 `;
 
 export const Comment = styled(Field)`
