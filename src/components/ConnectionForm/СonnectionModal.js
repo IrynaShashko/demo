@@ -128,8 +128,12 @@ const ConnectionForm = ({ isOpen, onClose }) => {
           </ModalHeader>
           <FormTitle>Записатись</FormTitle>
           <Formik initialValues={initialValues} onSubmit={handleSubmit}>
-            {({ values, handleChange }) => (
-              <FormStyled name="connaction" netlify>
+            {({ values, handleChange, handleSubmit }) => (
+              <FormStyled
+                onSubmit={handleSubmit}
+                name="connaction"
+                data-netlify="true"
+              >
                 <div>
                   <Label htmlFor="service">
                     Для кого:
