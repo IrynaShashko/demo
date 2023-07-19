@@ -55,7 +55,7 @@ export const Container = styled.div`
 `;
 
 export const ModalHeader = styled.div`
-  width: 80%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
