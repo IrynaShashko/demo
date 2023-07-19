@@ -5,19 +5,18 @@ import { Container, Header, Main } from "./App.styled";
 
 function App() {
   return (
-    <>
+    <div>
+      Heloooo
       <Header>
-        <Container>{/* <NavBar /> */}</Container>
+        <Container>{/* <NavBar /> */}Kyyyyy</Container>
       </Header>
       <Main>
         <Container>{/* <NavRoutes /> */}</Container>
       </Main>
       <footer>
-        {/* <Container>
-          <Footer />
-        </Container> */}
+        <Container>{/* <Footer /> */}</Container>
       </footer>
-    </>
+    </div>
   );
 }
 
