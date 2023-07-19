@@ -61,6 +61,7 @@ export const ModalHeader = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  margin-bottom: 20px;
   @media screen and (min-width: 768px) {
     width: 300px;
     padding: 0;
@@ -107,7 +108,8 @@ export const ModalText = styled.a`
   text-shadow: 2px 2px 5px #656666;
   /* margin-bottom: 20px; */
 `;
-export const ModalNumber = styled.p`
+
+export const ModalNumber = styled.a`
   text-decoration: none;
   color: #007586;
   font-size: 20px;
