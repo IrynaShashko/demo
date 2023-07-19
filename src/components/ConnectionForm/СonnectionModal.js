@@ -134,6 +134,12 @@ const ConnectionForm = ({ isOpen, onClose }) => {
         <input name="name" type="text" />
       </label>
       <label>
+        <input name="tel" type="text" />
+      </label>
+      <label>
+        <input name="email" type="text" />
+      </label>
+      {/* <label>
         Для кого:
         <select
           name="serviceType"
@@ -162,7 +168,7 @@ const ConnectionForm = ({ isOpen, onClose }) => {
             ))}
           </select>
         </label>
-      )}
+      )} */}
       <button type="submit">send</button>
     </form>
   );
