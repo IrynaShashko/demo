@@ -99,6 +99,7 @@ export const ModalTextContainer = styled.div`
   font-size: 20px;
   margin: 0 auto;
   padding: 0;
+  margin-bottom: 20px;
 `;
 
 export const ModalText = styled.a`
@@ -112,9 +113,8 @@ export const ModalText = styled.a`
 export const ModalNumber = styled.a`
   text-decoration: none;
   color: #007586;
-  font-size: 20px;
+  font-size: 25px;
   text-shadow: 2px 2px 5px #656666;
-  margin-bottom: 20px;
 `;
 
 export const ModalSubmitBtn = styled.button`
