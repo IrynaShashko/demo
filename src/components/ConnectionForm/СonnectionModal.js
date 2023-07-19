@@ -68,9 +68,9 @@ priceData.else.map((item) => elseServises.push(item.service));
 // ];
 
 const servicesData = {
-  women: ["Жіноча стрижка", "Фарбування", "Завивка"],
-  men: ["Чоловіча стрижка", "Бриття", "Королівський масаж обличчя"],
-  children: ["Дитяча стрижка", "Малювання обличчя", "Карнавальний макіяж"],
+  women: womenServises,
+  men: menServises,
+  children: childrenServises,
 };
 
 const ConnectionForm = ({ isOpen, onClose }) => {
@@ -128,7 +128,7 @@ const ConnectionForm = ({ isOpen, onClose }) => {
   // };
 
   return (
-    <form name="connection" netlify>
+    <form name="connection" data-netlify="true">
       <h2>Оберіть послугу:</h2>
       <label>
         <input name="name" type="text" />
