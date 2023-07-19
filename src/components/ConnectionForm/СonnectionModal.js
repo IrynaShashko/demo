@@ -105,9 +105,14 @@ const ConnectionForm = ({ isOpen, onClose }) => {
   const handleSubmit = (values, { resetForm }) => {
     // Handle form submission logic here
     console.log(values);
-    resetForm();
-    window.alert("Дякуємо за запис!");
-    onClose();
+    if (!values) {
+      return;
+    }
+    if (values) {
+      resetForm();
+      window.alert("Дякуємо за запис!");
+      onClose();
+    }
   };
 
   return (

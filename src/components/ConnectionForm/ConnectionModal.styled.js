@@ -33,12 +33,14 @@ export const Input = styled(Field)`
   display: flex;
   flex-direction: column;
   padding: 5px;
+  height: 30px;
   border-color: #007586;
   border-radius: 8px;
   margin-top: 5px;
   font-size: 14px;
   outline: none;
   color: #000;
+  background-color: transparent;
 `;
 
 export const Comment = styled(Field)`

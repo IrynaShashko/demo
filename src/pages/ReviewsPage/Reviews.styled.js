@@ -73,12 +73,12 @@ export const UserDiv = styled.div`
   width: 30px;
   padding: 6px 8px;
   margin-right: 20px;
-  box-shadow: 3px 3px 11px -4px rgba(66, 68, 90, 1);
+  box-shadow: inset 0px 0px 11px -2px rgba(0, 117, 134, 1);
 `;
 
 export const UserName = styled.p`
   color: #007586;
-  text-shadow: 2px 2px 10px #007586;
+  text-shadow: 0px 0px 7px rgba(0, 117, 134, 1);
   margin-bottom: 5px;
 `;
 

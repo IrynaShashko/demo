@@ -42,7 +42,13 @@ export const NavLinks = styled(NavLink)`
   &.active {
     border-bottom: 2px solid #007586;
     color: #007586;
-    padding: 10px 10px;
-    text-shadow: 2px 2px 15px #007586;
+    padding: 10px;
+    text-shadow: 0px 0px 7px rgba(0, 117, 134, 1);
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
+  @media screen and (min-width: 1440px) {
+    font-size: 18px;
   }
 `;

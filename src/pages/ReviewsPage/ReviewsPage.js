@@ -24,7 +24,7 @@ const ReviewsPage = () => {
 
   return (
     <Container>
-      <Title>Останні відгуки</Title>
+      <Title>Відгуки</Title>
       <Div>
         <StarsTitle>5.0</StarsTitle>
         <Stars>
