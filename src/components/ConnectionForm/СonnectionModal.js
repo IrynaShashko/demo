@@ -114,17 +114,21 @@ const ConnectionForm = ({ isOpen, onClose }) => {
       <ModalContent onClose={onClose}>
         <Container>
           <ModalHeader>
-            <img src={logo} width={120} alt="logo" />
-            <ModalButton onClick={onClose}>
-              <IconContext.Provider
-                value={{
-                  size: "30px",
-                  color: "#007586",
-                }}
-              >
-                <FiX />
-              </IconContext.Provider>
-            </ModalButton>
+            <div>
+              <img src={logo} width={120} alt="logo" />
+            </div>
+            <div>
+              <ModalButton onClick={onClose}>
+                <IconContext.Provider
+                  value={{
+                    size: "30px",
+                    color: "#007586",
+                  }}
+                >
+                  <FiX />
+                </IconContext.Provider>
+              </ModalButton>
+            </div>
           </ModalHeader>
           <FormTitle>Записатись</FormTitle>
           <Formik initialValues={initialValues} onSubmit={handleSubmit}>

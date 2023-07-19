@@ -51,9 +51,11 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 `;
 
 export const ModalHeader = styled.div`
+  width: 80%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

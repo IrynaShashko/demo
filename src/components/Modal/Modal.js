@@ -15,11 +15,12 @@ import {
   ModalList,
   ModalTitle,
   ModalTextContainer,
-  ModalText,
   ModalSubmitBtn,
   NavLinkStyled,
   ModalNumber,
 } from "./Modal.styled";
+
+import { LocationText } from "../../pages/HomePage/HomePage.styled";
 
 const modalRoot = document.querySelector("#modal");
 
@@ -82,7 +83,7 @@ export default function Modal({ onClose, children }) {
               >
                 <SlLocationPin />
               </IconContext.Provider>
-              <ModalText>пр.Перемоги, 121а, м.Київ</ModalText>
+              <LocationText>пр.Перемоги, 121а, м.Київ</LocationText>
             </LocationButton>
             <ModalTextContainer>
               <ModalNumber href="tel:+380966193616">
