@@ -56,6 +56,7 @@ export const Container = styled.div`
 
 export const ModalHeader = styled.div`
   width: 100%;
+  box-sizing: border-box;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
