@@ -6,7 +6,6 @@ import { Container, Header, Main } from "./App.styled";
 function App() {
   return (
     <div>
-      Heloooo
       <Header>
         <Container>
           <NavBar />
