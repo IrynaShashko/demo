@@ -14,6 +14,7 @@ import {
   ImageContainer,
   ImageLeft,
   ImageRight,
+  LocationText,
 } from "./HomePage.styled";
 
 import {
@@ -47,7 +48,7 @@ const HomePage = () => {
           >
             <SlLocationPin />
           </IconContext.Provider>
-          <ModalText>пр.Перемоги, 121а, м.Київ</ModalText>
+          <LocationText>пр.Перемоги, 121а, м.Київ</LocationText>
         </LocationButton>
         <ModalText href="tel:+380966193616">+38 (093) 619 3616</ModalText>
       </TextContainer>

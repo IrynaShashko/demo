@@ -80,3 +80,10 @@ export const ImageRight = styled.img`
     width: 250px;
   }
 `;
+
+export const LocationText = styled.p`
+  text-decoration: none;
+  color: #007586;
+  font-size: 20px;
+  text-shadow: 2px 2px 5px #656666;
+`;
