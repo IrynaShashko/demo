@@ -102,12 +102,13 @@ const ConnectionForm = ({ isOpen, onClose }) => {
     },
     [onClose]
   );
-  // const handleSubmit = (values, { resetForm }) => {
-  //   // Handle form submission logic here
-  //   console.log(values);
-  //   resetForm();
-  //   onClose();
-  // };
+  const handleSubmit = (values, { resetForm }) => {
+    // Handle form submission logic here
+    console.log(values);
+    resetForm();
+    window.alert("Дякуємо за запис!");
+    onClose();
+  };
 
   return (
     <ModalBackdrop onClick={handleBackdropClick}>
@@ -131,7 +132,7 @@ const ConnectionForm = ({ isOpen, onClose }) => {
             </div>
           </ModalHeader>
           <FormTitle>Записатись</FormTitle>
-          <Formik initialValues={initialValues}>
+          <Formik initialValues={initialValues} onSubmit={handleSubmit}>
             {({ values, handleChange }) => (
               <FormStyled name="connection" data-netlify="true">
                 <div>
