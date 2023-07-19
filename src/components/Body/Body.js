@@ -22,7 +22,7 @@ export default function Body() {
           </tr>
         </thead>
         <tbody>
-          Styx Австрія
+          Styx
           {styxData.map((item) => (
             <PriceItem key={nanoid()}>
               <ItemText>{item.service}</ItemText>

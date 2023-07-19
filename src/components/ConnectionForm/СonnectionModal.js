@@ -128,7 +128,7 @@ const ConnectionForm = ({ isOpen, onClose }) => {
   // };
 
   return (
-    <form name="contact" data-netlify="true">
+    <form name="connection" netlify>
       <h2>Оберіть послугу:</h2>
       <label>
         <input name="name" type="text" />

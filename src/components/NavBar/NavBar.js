@@ -36,7 +36,7 @@ const NavBar = () => {
         </ModalButton>
         <NavLinkContainer>
           <NavLinks to={"/"}>Головна</NavLinks>
-          <NavLinks to={"/about"}>Про нас</NavLinks>
+          <NavLinks to={"/about"}>Давайте знайомитись</NavLinks>
           <NavLinks to={"/portfolio"}>Портфоліо</NavLinks>
           <NavLinks to={"/reviews"}>Відгуки</NavLinks>
           <NavLinks to={"/price"}>Ціни</NavLinks>
