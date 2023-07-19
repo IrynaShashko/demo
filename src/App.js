@@ -1,5 +1,5 @@
-// import NavRoutes from "./Routes";
-// import NavBar from "./components/NavBar/NavBar";
+import NavRoutes from "./Routes";
+import NavBar from "./components/NavBar/NavBar";
 // import Footer from "./components/Footer/Footer";
 import { Container, Header, Main } from "./App.styled";
 
@@ -8,14 +8,16 @@ function App() {
     <div>
       Heloooo
       <Header>
-        <Container>{/* <NavBar /> */}Kyyyyy</Container>
+        <Container>
+          <NavBar />
+        </Container>
       </Header>
       <Main>
-        <Container>{/* <NavRoutes /> */}</Container>
+        <Container>
+          <NavRoutes />
+        </Container>
       </Main>
-      <footer>
-        <Container>{/* <Footer /> */}</Container>
-      </footer>
+      <footer>{/* <Container><Footer /></Container> */}</footer>
     </div>
   );
 }
