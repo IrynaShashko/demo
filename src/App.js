@@ -1,14 +1,23 @@
-import logo from "./logo.svg";
-import "./App.css";
+import NavRoutes from "./Routes";
+import NavBar from "./components/NavBar/NavBar";
+// import Footer from "./components/Footer/Footer";
+import { Container, Header, Main } from "./App.styled";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Heloooooo</p>
-      </header>
-    </div>
+    <>
+      <Header>
+        <Container>{/* <NavBar /> */}</Container>
+      </Header>
+      <Main>
+        <Container>{/* <NavRoutes /> */}</Container>
+      </Main>
+      <footer>
+        {/* <Container>
+          <Footer />
+        </Container> */}
+      </footer>
+    </>
   );
 }
 
