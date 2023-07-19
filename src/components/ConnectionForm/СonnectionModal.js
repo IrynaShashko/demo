@@ -131,7 +131,7 @@ const ConnectionForm = ({ isOpen, onClose }) => {
             {({ values, handleChange, handleSubmit }) => (
               <FormStyled
                 onSubmit={handleSubmit}
-                name="connaction"
+                name="connection"
                 data-netlify="true"
               >
                 <div>
