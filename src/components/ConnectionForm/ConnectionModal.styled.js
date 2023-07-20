@@ -69,6 +69,7 @@ export const OptionLable = styled(Field)`
   width: 280px;
   border-color: #007586;
   border-radius: 8px;
+  background-color: transparent;
   @media screen and (min-width: 425px) {
     width: 300px;
   }
