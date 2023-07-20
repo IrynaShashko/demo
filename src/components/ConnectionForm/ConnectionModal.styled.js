@@ -70,6 +70,7 @@ export const OptionLable = styled(Field)`
   border-color: #007586;
   border-radius: 8px;
   background-color: transparent;
+  color: #000;
   @media screen and (min-width: 425px) {
     width: 300px;
   }
