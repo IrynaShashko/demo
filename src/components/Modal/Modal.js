@@ -18,9 +18,8 @@ import {
   ModalSubmitBtn,
   NavLinkStyled,
   ModalNumber,
+  LocationText,
 } from "./Modal.styled";
-
-import { LocationText } from "../../pages/HomePage/HomePage.styled";
 
 const modalRoot = document.querySelector("#modal");
 

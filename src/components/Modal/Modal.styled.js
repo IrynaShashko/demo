@@ -2,7 +2,6 @@ import styled from "@emotion/styled";
 import { NavLink } from "react-router-dom";
 
 export const ModalBackdrop = styled.div`
-  /* @media screen and (max-width: 768px) { */
   position: fixed;
   top: 0;
   right: 0;
@@ -10,7 +9,6 @@ export const ModalBackdrop = styled.div`
   height: 100vh;
   background: rgba(0, 0, 0, 0.5);
   z-index: 2;
-  /* } */
 `;
 
 export const ModalContent = styled.div`
@@ -30,21 +28,7 @@ export const ModalContent = styled.div`
     margin-left: auto;
     margin-right: auto;
     border-radius: 8px;
-  } /* @media screen and (max-width: 768px) {
-    max-height: 600px;
-    width: 100%;
-    /* padding: 20px 10px 268px 10px; */
-  /* padding: 20px 0px 268px 0px;
   }
-  @media screen and (min-width: 768px) {
-    max-height: 508px;
-    min-width: 500px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px 20px 60px 20px;
-    border-radius: 20px;
-  } */
 `;
 
 export const Container = styled.div`
@@ -148,7 +132,16 @@ export const LocationButton = styled.a`
 `;
 
 export const NavLinkStyled = styled(NavLink)`
-  color: #007586;
+  color: #000;
   text-decoration: none;
   margin-left: 10px;
+  font-size: 20px;
+  // font-weight: 600;
+`;
+
+export const LocationText = styled.p`
+  text-decoration: none;
+  color: #007586;
+  font-size: 20px;
+  // text-shadow: 0px 0px 7px rgba(0, 117, 134, 1);
 `;
