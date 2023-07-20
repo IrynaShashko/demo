@@ -14,6 +14,7 @@ import {
   DataTitle,
   AboutNumber,
 } from "../AboutPage/AboutPage.styled";
+import { Container } from "../../App.styled";
 
 const AboutPage = () => {
   const studyItems = experience.study.map((item) => (
@@ -39,7 +40,7 @@ const AboutPage = () => {
   ));
 
   return (
-    <div>
+    <Container>
       <StudyContainer>
         <ImageContainer>
           <Image src={photo} alt="masseur" />
@@ -58,7 +59,7 @@ const AboutPage = () => {
       <ul>{experienceItems}</ul>
       <ItemTitle>Додаткові навички:</ItemTitle>
       <ul>{elseItems}</ul>
-    </div>
+    </Container>
   );
 };
 

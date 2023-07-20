@@ -10,7 +10,7 @@ export const StarButton = styled.button`
   background-color: transparent;
 `;
 
-export const Container = styled.div`
+export const ReviewsContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;

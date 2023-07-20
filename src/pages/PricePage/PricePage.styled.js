@@ -1,5 +1,22 @@
 import styled from "@emotion/styled";
 import { NavLink } from "react-router-dom";
+import photo from "../../images/11.jpg";
+
+export const BackgroundImageStyle = styled.div`
+  background-image: linear-gradient(
+      0deg,
+      rgba(50, 49, 49, 0.437) 0%,
+      rgba(50, 49, 49, 0.527) 100%
+    ),
+    url(${photo});
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 135vh;
+  @media screen and (min-width: 768px) {
+    height: 115vh;
+  }
+`;
 
 export const Container = styled.div`
   display: flex;
@@ -12,25 +29,37 @@ export const List = styled.ul`
   flex-direction: row;
   justify-content: center;
   margin: 0 auto;
+  padding-top: 10px;
   li:not(:last-child) {
     margin-right: 10px;
+  }
+  @media screen and (min-width: 767px) {
+    padding-top: 20px;
   }
 `;
 
 export const Item = styled(NavLink)`
-  color: #000;
+  color: #fff;
   font-size: 14px;
   font-weight: 600;
   padding: 5px;
+
   &.active {
-    box-shadow: 1px -4px 6px -4px rgba(66, 68, 90, 1);
-    color: #007586;
+    box-shadow: 1px -4px 6px -4px rgba(255, 255, 255, 1);
+    color: #fff;
+    font-size: 16px;
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
-    border-top: 1px solid #007586;
-    border-left: 1px solid #007586;
-    border-right: 1px solid #007586;
-    text-shadow: 2px 2px 15px #007586;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    text-shadow: 2px 2px 15px #fff;
+    @media screen and (min-width: 767px) {
+      font-size: 18px;
+    }
+    @media screen and (min-width: 1440px) {
+      font-size: 20px;
+    }
   }
   @media screen and (min-width: 767px) {
     padding: 10px;
@@ -47,6 +76,7 @@ export const PriceContainer = styled.table`
   border-radius: 10px;
   margin: 0 auto;
   margin-top: 30px;
+  background-color: rgba(255, 255, 255, 0.6);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   @media screen and (min-width: 375px) {
     width: 350px;
@@ -62,7 +92,7 @@ export const PriceContainer = styled.table`
 `;
 
 export const PriceItem = styled.tr`
-  background-color: #f1f4f5;
+  background-color: #fff;
   height: 50px;
   border: none;
   border-radius: 8px;
@@ -72,12 +102,12 @@ export const PriceItem = styled.tr`
 `;
 
 export const ItemTitle = styled.td`
-  font-size: 14px;
-  padding: 5px;
-  color: #007586;
+  font-size: 16px;
+  padding: 10px;
+  color: #fff;
   text-shadow: 2px 2px 5px #585858;
   @media screen and (min-width: 768px) {
-    font-size: 16px;
+    font-size: 18px;
     padding: 10px;
   }
   @media screen and (min-width: 1440px) {
@@ -88,7 +118,7 @@ export const ItemTitle = styled.td`
 
 export const ItemText = styled.td`
   font-size: 14px;
-  padding: 5px;
+  padding: 10px;
   @media screen and (min-width: 768px) {
     font-size: 16px;
     padding: 10px;

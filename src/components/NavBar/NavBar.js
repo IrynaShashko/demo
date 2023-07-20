@@ -5,7 +5,7 @@ import Modal from "../Modal/Modal";
 import { FiMenu } from "react-icons/fi";
 import { IconContext } from "react-icons";
 import {
-  Container,
+  ContainerNav,
   NavLinkContainer,
   NavLinks,
   Logo,
@@ -20,7 +20,7 @@ const NavBar = () => {
 
   return (
     <>
-      <Container>
+      <ContainerNav>
         <Link to={"/"}>
           <Logo src={logo} alt="logo" />
         </Link>
@@ -41,7 +41,7 @@ const NavBar = () => {
           <NavLinks to={"/reviews"}>Відгуки</NavLinks>
           <NavLinks to={"/price"}>Ціни</NavLinks>
         </NavLinkContainer>
-      </Container>
+      </ContainerNav>
       {isModalOpen && <Modal onClose={onCloseModal} />}
     </>
   );

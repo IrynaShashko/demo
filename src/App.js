@@ -1,6 +1,5 @@
 import NavRoutes from "./Routes";
 import NavBar from "./components/NavBar/NavBar";
-// import Footer from "./components/Footer/Footer";
 import { Container, Header, Main } from "./App.styled";
 
 function App() {
@@ -12,9 +11,7 @@ function App() {
         </Container>
       </Header>
       <Main>
-        <Container>
-          <NavRoutes />
-        </Container>
+        <NavRoutes />
       </Main>
       <footer>{/* <Container><Footer /></Container> */}</footer>
     </div>

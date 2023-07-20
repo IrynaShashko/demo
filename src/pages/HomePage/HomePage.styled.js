@@ -1,27 +1,32 @@
 import styled from "@emotion/styled";
 
-export const Container = styled.div`
+import photo from "../../images/10.jpg";
+
+export const HomeContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-top: 30px;
+  background-image: linear-gradient(
+      0deg,
+      rgba(50, 49, 49, 0.437) 0%,
+      rgba(50, 49, 49, 0.527) 100%
+    ),
+    url(${photo});
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 90vh;
+
   @media screen and (min-width: 767px) {
     padding-top: 50px;
+    height: 80vh;
   }
   @media screen and (min-width: 1440px) {
     padding-top: 100px;
     flex-direction: row;
     justify-content: space-evenly;
-  }
-`;
-
-export const Div = styled.div`
-  @media screen and (min-width: 1440px) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
 `;
 
@@ -45,9 +50,11 @@ export const TextContainer = styled.div`
 `;
 
 export const Text = styled.p`
-  font-size: 20px;
+  font-size: 25px;
+  color: #fff;
+  text-align: center;
   @media screen and (min-width: 1440px) {
-    font-size: 25px;
+    font-size: 30px;
   }
 `;
 
@@ -83,7 +90,44 @@ export const ImageRight = styled.img`
 
 export const LocationText = styled.p`
   text-decoration: none;
-  color: #007586;
+  color: #fff;
   font-size: 20px;
-  text-shadow: 0px 0px 7px rgba(0, 117, 134, 1);
+  text-shadow: 0px 0px 7px rgba(255, 255, 255, 1);
+`;
+
+export const ModalNumber = styled.a`
+  text-decoration: none;
+  color: #fff;
+  font-size: 25px;
+  text-shadow: 0px 0px 7px rgba(255, 255, 255, 1);
+`;
+
+export const LocationButton = styled.a`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  margin-bottom: 20px;
+`;
+
+export const ModalSubmitBtn = styled.button`
+  border: none;
+  background-color: #007586;
+  border-radius: 8px;
+  align-self: center;
+  padding: 10px 20px;
+  color: #ffffff;
+  width: 280px;
+  font-size: 20px;
+  font-family: 400;
+  cursor: pointer;
+  box-shadow: 0px 1px 8px 1px rgba(255, 255, 255, 1);
+  margin-top: 20px;
+  @media screen and (min-width: 425px) {
+    width: 250px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 280px;
+  }
 `;

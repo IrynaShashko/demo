@@ -110,7 +110,6 @@ const ConnectionForm = ({ isOpen, onClose }) => {
     }
     if (values) {
       resetForm();
-      window.alert("Дякуємо за запис!");
       onClose();
     }
   };

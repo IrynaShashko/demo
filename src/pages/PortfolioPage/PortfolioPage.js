@@ -1,10 +1,10 @@
+import { Container } from "../../App.styled";
+
 const PortfolioPage = () => {
   return (
-    <main>
-      <div>
-        <h1>Portfolio Page</h1>
-      </div>
-    </main>
+    <Container>
+      <h1>Portfolio Page</h1>
+    </Container>
   );
 };
 

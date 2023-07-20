@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { NavLink } from "react-router-dom";
 
-export const Container = styled.div`
+export const ContainerNav = styled.div`
   background-color: #ffffff;
   display: flex;
   justify-content: space-between;
@@ -34,7 +34,7 @@ export const ModalButton = styled.button`
 `;
 
 export const NavLinks = styled(NavLink)`
-  font-size: 18px;
+  font-size: 14px;
   color: #000000;
   text-decoration: none;
   margin-left: 20px;
@@ -43,10 +43,13 @@ export const NavLinks = styled(NavLink)`
     border-bottom: 2px solid #007586;
     color: #007586;
     padding: 10px;
-    text-shadow: 0px 0px 7px rgba(0, 117, 134, 1);
-  }
-  @media screen and (min-width: 768px) {
-    font-size: 14px;
+    font-size: 20px;
+    @media screen and (min-width: 768px) {
+      font-size: 16px;
+    }
+    @media screen and (min-width: 1440px) {
+      font-size: 20px;
+    }
   }
   @media screen and (min-width: 1440px) {
     font-size: 18px;

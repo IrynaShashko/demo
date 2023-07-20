@@ -6,7 +6,7 @@ import { IconContext } from "react-icons";
 import {
   Stars,
   StarButton,
-  Container,
+  ReviewsContainer,
   List,
   ListItem,
   Div,
@@ -17,6 +17,7 @@ import {
   // StarsText,
   ItemDiv,
 } from "./Reviews.styled";
+import { Container } from "../../App.styled";
 import reviews from "../../reviews.json";
 
 const ReviewsPage = () => {
@@ -24,64 +25,68 @@ const ReviewsPage = () => {
 
   return (
     <Container>
-      <Title>Відгуки</Title>
-      <Div>
-        <StarsTitle>5.0</StarsTitle>
-        <Stars>
-          {starArr.map((el, index) => (
-            <IconContext.Provider
-              key={index}
-              value={{
-                color: "orange",
-                size: "20px",
-              }}
-            >
-              <StarButton type="button">
-                <AiFillStar />
-              </StarButton>
-            </IconContext.Provider>
+      <ReviewsContainer>
+        <Title>Відгуки</Title>
+        <Div>
+          <StarsTitle>5.0</StarsTitle>
+          <Stars>
+            {starArr.map((el, index) => (
+              <IconContext.Provider
+                key={index}
+                value={{
+                  color: "orange",
+                  size: "20px",
+                }}
+              >
+                <StarButton type="button">
+                  <AiFillStar />
+                </StarButton>
+              </IconContext.Provider>
+            ))}
+          </Stars>
+        </Div>
+        {/* <StarsText>Базовано на відгуках: {reviews.length}</StarsText> */}
+        <List>
+          {reviews?.map((item) => (
+            <ListItem key={item.id}>
+              <ItemDiv>
+                <Div>
+                  <UserDiv>
+                    <IconContext.Provider
+                      value={{
+                        color: "#007586",
+                        size: "30px",
+                      }}
+                    >
+                      <BiUser />
+                    </IconContext.Provider>
+                  </UserDiv>
+                  <div>
+                    <UserName>{item.name}</UserName>
+                    <Stars>
+                      {starArr.map((el, index) => (
+                        <IconContext.Provider
+                          key={index}
+                          value={{
+                            color: `${
+                              index >= item.totalPositiveStars
+                                ? "#ccc"
+                                : "orange"
+                            }`,
+                          }}
+                        >
+                          <AiFillStar />
+                        </IconContext.Provider>
+                      ))}
+                    </Stars>
+                  </div>
+                </Div>
+                <p>{item.comment}</p>
+              </ItemDiv>
+            </ListItem>
           ))}
-        </Stars>
-      </Div>
-      {/* <StarsText>Базовано на відгуках: {reviews.length}</StarsText> */}
-      <List>
-        {reviews?.map((item) => (
-          <ListItem key={item.id}>
-            <ItemDiv>
-              <Div>
-                <UserDiv>
-                  <IconContext.Provider
-                    value={{
-                      color: "#007586",
-                      size: "30px",
-                    }}
-                  >
-                    <BiUser />
-                  </IconContext.Provider>
-                </UserDiv>
-                <div>
-                  <UserName>{item.name}</UserName>
-                  <Stars>
-                    {starArr.map((el, index) => (
-                      <IconContext.Provider
-                        key={index}
-                        value={{
-                          color: `${
-                            index >= item.totalPositiveStars ? "#ccc" : "orange"
-                          }`,
-                        }}
-                      >
-                        <AiFillStar />
-                      </IconContext.Provider>
-                    ))}
-                  </Stars>
-                </div>
-              </Div>
-              <p>{item.comment}</p>
-            </ItemDiv>
-          </ListItem>
-        ))}
-      </List>
+        </List>
+      </ReviewsContainer>
     </Container>
   );
 };
