@@ -36,7 +36,7 @@ export const Label = styled.label`
 export const Input = styled(Field)`
   display: flex;
   flex-direction: column;
-  padding: 5px;
+  padding: 5px 10px;
   height: 30px;
   border-color: #007586;
   border-radius: 8px;
@@ -55,7 +55,7 @@ export const Comment = styled(Field)`
   border-radius: 8px;
   margin-top: 10px;
   height: 50px;
-  font-size: 18px;
+  font-size: 16px;
   margin-bottom: 20px;
   resize: none;
 `;
@@ -71,6 +71,9 @@ export const OptionLable = styled(Field)`
   border-radius: 8px;
   background-color: transparent;
   color: #000;
+  padding: 5px;
+  font-size: 14px;
+  margin-top: 5px;
   @media screen and (min-width: 425px) {
     width: 300px;
   }

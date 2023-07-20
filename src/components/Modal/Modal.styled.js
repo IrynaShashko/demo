@@ -45,7 +45,7 @@ export const ModalHeader = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   @media screen and (min-width: 768px) {
     width: 300px;
     padding: 0;

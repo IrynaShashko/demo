@@ -7,7 +7,6 @@ export const HomeContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 30px;
   background-image: linear-gradient(
       0deg,
       rgba(50, 49, 49, 0.437) 0%,
@@ -17,7 +16,7 @@ export const HomeContainer = styled.div`
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 90vh;
+  min-height: 90vh;
 
   @media screen and (min-width: 768px) {
     padding-top: 50px;
