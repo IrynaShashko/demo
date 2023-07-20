@@ -4,8 +4,7 @@ import { Form, Field } from "formik";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 20px;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 `;
 
@@ -20,7 +19,6 @@ export const FormTitle = styled.h1`
 export const FormStyled = styled(Form)`
   display: flex;
   flex-direction: column;
-  width: 280px;
 `;
 
 export const Label = styled.label`
@@ -30,6 +28,9 @@ export const Label = styled.label`
   margin-bottom: 5px;
   color: #000;
   font-weight: lighter;
+  @media screen and (min-width: 425px) {
+    width: 300px;
+  }
 `;
 
 export const Input = styled(Field)`
@@ -57,4 +58,18 @@ export const Comment = styled(Field)`
   font-size: 18px;
   margin-bottom: 20px;
   resize: none;
+`;
+
+export const Option = styled.option`
+  padding: 10px 20px;
+`;
+
+export const OptionLable = styled(Field)`
+  height: 40px;
+  width: 280px;
+  border-color: #007586;
+  border-radius: 8px;
+  @media screen and (min-width: 425px) {
+    width: 300px;
+  }
 `;

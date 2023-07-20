@@ -14,11 +14,10 @@ export const ModalBackdrop = styled.div`
 export const ModalContent = styled.div`
   position: absolute;
   margin: 0;
-  /* margin-left: auto; */
   height: 100vh;
   width: 100vw;
   right: 0;
-  /* top: 60px; */
+  justify-content: center;
   background-color: #fff;
   @media screen and (min-width: 768px) {
     top: 100px;
@@ -46,7 +45,7 @@ export const ModalHeader = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   @media screen and (min-width: 768px) {
     width: 300px;
     padding: 0;
@@ -117,7 +116,7 @@ export const ModalSubmitBtn = styled.button`
   cursor: pointer;
   box-shadow: 0px 1px 8px 1px rgba(0, 0, 0, 1);
   @media screen and (min-width: 425px) {
-    width: 250px;
+    width: 300px;
   }
   @media screen and (min-width: 768px) {
     width: 280px;

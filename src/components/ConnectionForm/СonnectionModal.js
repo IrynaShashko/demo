@@ -17,6 +17,7 @@ import {
   Input,
   Label,
   Comment,
+  OptionLable,
 } from "./ConnectionModal.styled";
 import priceData from "../../price.json";
 
@@ -142,7 +143,7 @@ const ConnectionForm = ({ isOpen, onClose }) => {
                 <div>
                   <Label htmlFor="service">
                     Для кого:
-                    <Input
+                    <OptionLable
                       as="select"
                       id="service"
                       name="service"
@@ -154,7 +155,7 @@ const ConnectionForm = ({ isOpen, onClose }) => {
                           {service.name}
                         </option>
                       ))}
-                    </Input>
+                    </OptionLable>
                     <ErrorMessage name="service" component="div" />
                   </Label>
                 </div>
@@ -163,7 +164,11 @@ const ConnectionForm = ({ isOpen, onClose }) => {
                   <div>
                     <Label htmlFor="subService">
                       Оберіть послугу:
-                      <Input as="select" id="subService" name="subService">
+                      <OptionLable
+                        as="select"
+                        id="subService"
+                        name="subService"
+                      >
                         <option value="">Оберіть</option>
                         {services
                           .find((service) => service.name === values.service)
@@ -172,7 +177,7 @@ const ConnectionForm = ({ isOpen, onClose }) => {
                               {subService}
                             </option>
                           ))}
-                      </Input>
+                      </OptionLable>
                       <ErrorMessage name="subService" component="div" />
                     </Label>
                   </div>
