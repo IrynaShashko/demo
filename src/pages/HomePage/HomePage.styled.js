@@ -19,12 +19,13 @@ export const HomeContainer = styled.div`
   width: 100%;
   height: 90vh;
 
-  @media screen and (min-width: 767px) {
+  @media screen and (min-width: 768px) {
     padding-top: 50px;
     height: 80vh;
   }
   @media screen and (min-width: 1440px) {
-    padding-top: 100px;
+    height: 85vh;
+    padding-top: auto;
     flex-direction: row;
     justify-content: space-evenly;
   }
@@ -50,9 +51,11 @@ export const TextContainer = styled.div`
 `;
 
 export const Text = styled.p`
-  font-size: 25px;
+  font-size: 20px;
   color: #fff;
   text-align: center;
+  font-weight: lighter;
+  text-transform: uppercase;
   @media screen and (min-width: 1440px) {
     font-size: 30px;
   }
@@ -92,6 +95,7 @@ export const LocationText = styled.p`
   text-decoration: none;
   color: #fff;
   font-size: 20px;
+  font-weight: lighter;
   text-shadow: 0px 0px 7px rgba(255, 255, 255, 1);
 `;
 
@@ -99,6 +103,7 @@ export const ModalNumber = styled.a`
   text-decoration: none;
   color: #fff;
   font-size: 25px;
+  font-weight: lighter;
   text-shadow: 0px 0px 7px rgba(255, 255, 255, 1);
 `;
 
@@ -121,6 +126,7 @@ export const ModalSubmitBtn = styled.button`
   width: 280px;
   font-size: 20px;
   font-family: 400;
+  font-weight: lighter;
   cursor: pointer;
   box-shadow: 0px 1px 8px 1px rgba(255, 255, 255, 1);
   margin-top: 20px;

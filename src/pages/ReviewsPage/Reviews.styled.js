@@ -15,6 +15,7 @@ export const ReviewsContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #f8f8f8;
 `;
 
 export const List = styled.ul`
@@ -31,14 +32,15 @@ export const List = styled.ul`
 `;
 
 export const ListItem = styled.li`
-  height: 240px;
+  border-radius: 8px;
+  border: 1px solid #e3e2e2;
+  background: #fff;
+  box-shadow: -3px 4px 15px 0px rgba(0, 0, 0, 0.06);
+  height: 245px;
   width: 100%;
-  background-color: #f1f4f5;
   border-radius: 8px;
   padding: 20px;
   margin-bottom: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  overflow: auto;
   overflow-y: scroll;
   box-sizing: border-box;
   @media screen and (min-width: 375px) {
@@ -70,10 +72,11 @@ export const ItemDiv = styled.div`
 export const UserDiv = styled.div`
   border-radius: 50px;
   background-color: #fff;
-  width: 30px;
+  width: 20px;
   padding: 6px 8px;
   margin-right: 20px;
-  box-shadow: inset 0px 0px 11px -2px rgba(0, 117, 134, 1);
+  border: 1px solid #007586;
+  // box-shadow: inset 0px 0px 11px -2px rgba(0, 117, 134, 1);
 `;
 
 export const UserName = styled.p`
@@ -85,14 +88,29 @@ export const UserName = styled.p`
 export const Title = styled.h2`
   font-size: 20px;
   margin-bottom: 10px;
+  font-weight: lighter;
+  text-transform: uppercase;
+`;
+
+export const TitleContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 `;
 
 export const StarsTitle = styled.p`
   margin-right: 10px;
   font-size: 16px;
+  margin-left: 20px;
+  font-weight: lighter;
 `;
 
 export const StarsText = styled.p`
   font-size: 14px;
   margin-bottom: 10px;
+`;
+
+export const Text = styled.p`
+  font-size: 16px;
+  font-weight: lighter;
 `;

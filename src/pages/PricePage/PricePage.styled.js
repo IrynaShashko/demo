@@ -12,10 +12,7 @@ export const BackgroundImageStyle = styled.div`
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 135vh;
-  @media screen and (min-width: 768px) {
-    height: 115vh;
-  }
+  min-height: 90vh;
 `;
 
 export const Container = styled.div`
@@ -41,7 +38,6 @@ export const List = styled.ul`
 export const Item = styled(NavLink)`
   color: #fff;
   font-size: 14px;
-  font-weight: 600;
   padding: 5px;
 
   &.active {

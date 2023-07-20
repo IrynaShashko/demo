@@ -46,10 +46,11 @@ export const TitleContainer = styled.div`
 `;
 
 export const Title = styled.h2`
-  font-size: 25px;
+  font-size: 30px;
   margin-top: 20px;
   color: #007586;
   margin-bottom: 10px;
+  font-weight: lighter;
   @media screen and (min-width: 768px) {
     font-size: 35px;
   }
@@ -58,6 +59,7 @@ export const Title = styled.h2`
 export const AfterTitle = styled.p`
   font-size: 16px;
   margin-bottom: 10px;
+  font-weight: lighter;
   @media screen and (min-width: 768px) {
     font-size: 20px;
   }
@@ -75,16 +77,22 @@ export const ItemTitle = styled.h4`
   font-size: 20px;
   color: #007586;
   margin-bottom: 10px;
+  font-weight: lighter;
+  line-height: 30px;
+  text-transform: uppercase;
 `;
 
 export const DataTitle = styled.span`
-  font-weight: 600;
+  font-weight: lighter;
+  color: #000;
+  font-size: 18px;
 `;
 
 export const AboutNumber = styled.a`
   text-decoration: none;
   color: #007586;
   font-size: 18px;
+  font-weight: lighter;
   text-shadow: 0px 0px 7px rgba(0, 117, 134, 1);
   @media screen and (min-width: 768px) {
     font-size: 25px;

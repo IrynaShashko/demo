@@ -10,9 +10,11 @@ export const Container = styled.div`
 `;
 
 export const FormTitle = styled.h1`
-  font-size: 25px;
+  font-size: 30px;
   color: #007586;
   margin-bottom: 10px;
+  font-weight: lighter;
+  text-transform: uppercase;
 `;
 
 export const FormStyled = styled(Form)`
@@ -27,6 +29,7 @@ export const Label = styled.label`
   width: 280px;
   margin-bottom: 5px;
   color: #000;
+  font-weight: lighter;
 `;
 
 export const Input = styled(Field)`

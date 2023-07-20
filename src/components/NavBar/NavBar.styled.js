@@ -38,7 +38,6 @@ export const NavLinks = styled(NavLink)`
   color: #000000;
   text-decoration: none;
   margin-left: 20px;
-  font-weight: 600;
   &.active {
     border-bottom: 2px solid #007586;
     color: #007586;

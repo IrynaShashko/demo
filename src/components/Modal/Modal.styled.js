@@ -99,6 +99,7 @@ export const ModalNumber = styled.a`
   text-decoration: none;
   color: #007586;
   font-size: 25px;
+  font-weight: lighter;
   text-shadow: 0px 0px 7px rgba(0, 117, 134, 1);
 `;
 
@@ -112,6 +113,7 @@ export const ModalSubmitBtn = styled.button`
   width: 280px;
   font-size: 20px;
   font-family: 400;
+  font-weight: lighter;
   cursor: pointer;
   box-shadow: 0px 1px 8px 1px rgba(0, 0, 0, 1);
   @media screen and (min-width: 425px) {
@@ -136,12 +138,13 @@ export const NavLinkStyled = styled(NavLink)`
   text-decoration: none;
   margin-left: 10px;
   font-size: 20px;
-  // font-weight: 600;
+  font-weight: lighter;
 `;
 
 export const LocationText = styled.p`
   text-decoration: none;
   color: #007586;
   font-size: 20px;
+  font-weight: lighter;
   // text-shadow: 0px 0px 7px rgba(0, 117, 134, 1);
 `;

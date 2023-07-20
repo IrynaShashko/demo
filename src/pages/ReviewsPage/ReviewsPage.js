@@ -14,7 +14,8 @@ import {
   UserName,
   Title,
   StarsTitle,
-  // StarsText,
+  TitleContainer,
+  Text,
   ItemDiv,
 } from "./Reviews.styled";
 import { Container } from "../../App.styled";
@@ -24,27 +25,29 @@ const ReviewsPage = () => {
   const starArr = [1, 2, 3, 4, 5];
 
   return (
-    <Container>
-      <ReviewsContainer>
-        <Title>Відгуки</Title>
-        <Div>
-          <StarsTitle>5.0</StarsTitle>
-          <Stars>
-            {starArr.map((el, index) => (
-              <IconContext.Provider
-                key={index}
-                value={{
-                  color: "orange",
-                  size: "20px",
-                }}
-              >
-                <StarButton type="button">
-                  <AiFillStar />
-                </StarButton>
-              </IconContext.Provider>
-            ))}
-          </Stars>
-        </Div>
+    <ReviewsContainer>
+      <Container>
+        <TitleContainer>
+          <Title>Відгуки</Title>
+          <Div>
+            <StarsTitle>5.0</StarsTitle>
+            <Stars>
+              {starArr.map((el, index) => (
+                <IconContext.Provider
+                  key={index}
+                  value={{
+                    color: "orange",
+                    size: "20px",
+                  }}
+                >
+                  <StarButton type="button">
+                    <AiFillStar />
+                  </StarButton>
+                </IconContext.Provider>
+              ))}
+            </Stars>
+          </Div>
+        </TitleContainer>
         {/* <StarsText>Базовано на відгуках: {reviews.length}</StarsText> */}
         <List>
           {reviews?.map((item) => (
@@ -55,7 +58,7 @@ const ReviewsPage = () => {
                     <IconContext.Provider
                       value={{
                         color: "#007586",
-                        size: "30px",
+                        size: "20px",
                       }}
                     >
                       <BiUser />
@@ -81,13 +84,13 @@ const ReviewsPage = () => {
                     </Stars>
                   </div>
                 </Div>
-                <p>{item.comment}</p>
+                <Text>{item.comment}</Text>
               </ItemDiv>
             </ListItem>
           ))}
         </List>
-      </ReviewsContainer>
-    </Container>
+      </Container>
+    </ReviewsContainer>
   );
 };
 
