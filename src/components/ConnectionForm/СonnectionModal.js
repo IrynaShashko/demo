@@ -104,15 +104,15 @@ const ConnectionForm = ({ isOpen, onClose }) => {
     [onClose]
   );
   const handleSubmit = (values, { resetForm }) => {
-    // Handle form submission logic here
-    console.log(values);
-    if (!values) {
-      return;
-    }
-    if (values) {
-      resetForm();
-      onClose();
-    }
+    // // Handle form submission logic here
+    // console.log(values);
+    // if (!values) {
+    //   return;
+    // }
+    // if (values) {
+    resetForm();
+    onClose();
+    // }
   };
 
   return (
@@ -140,6 +140,7 @@ const ConnectionForm = ({ isOpen, onClose }) => {
           <Formik initialValues={initialValues} onSubmit={handleSubmit}>
             {({ values, handleChange }) => (
               <FormStyled name="connection" data-netlify="true">
+                <input type="hidden" name="form-name" value="connection" />
                 <div>
                   <Label htmlFor="service">
                     Для кого:
