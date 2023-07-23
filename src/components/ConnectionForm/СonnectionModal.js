@@ -171,7 +171,7 @@ const ConnectionForm = ({ isOpen, onClose }) => {
                     >
                       <option value="">Оберіть</option>
                       {services
-                        .find((service) => service.name === values.service)
+                        ?.find((service) => service.name === values.service)
                         .subServices.map((subService) => (
                           <option key={subService} value={subService}>
                             {subService}
