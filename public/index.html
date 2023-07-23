@@ -33,6 +33,21 @@
     <title>Massage</title>
   </head>
   <body>
+    <form name="connection-form" netlify netlify-honeypot="bot-field" hidden>
+      <select name="service">
+        <option value="">Оберіть</option>
+        {services.map((service) => (
+        <option key="{service.name}" value="{service.name}">
+          {service.name}
+        </option>
+        ))}
+      </select>
+      <input type="text" name="name" />
+      <input type="tel" name="tel" />
+      <textarea type="text" name="text" />
+      <button type="submit">Відправити</button>
+    </form>
+
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <div id="modal"></div>

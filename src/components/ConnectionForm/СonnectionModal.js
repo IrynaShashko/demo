@@ -139,13 +139,8 @@ const ConnectionForm = ({ isOpen, onClose }) => {
           <FormTitle>Записатись</FormTitle>
           {/* <Formik initialValues={initialValues} onSubmit={handleSubmit}>
             // {({ values, handleChange }) => ( */}
-          <form
-            name="connection-form v1"
-            method="post"
-            data-netlify="true"
-            onSubmit="submit"
-          >
-            <input type="hidden" name="form-name" value="connection-form v1" />
+          <form action="/contact" name="connection-form" method="post">
+            <input type="hidden" name="form-name" value="connection-form" />
             <div>
               <label htmlFor="service">
                 Для кого:
