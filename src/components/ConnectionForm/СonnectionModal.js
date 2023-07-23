@@ -1,23 +1,23 @@
 import React, { useEffect, useCallback } from "react";
-import { Formik, ErrorMessage } from "formik";
+// import { Formik, ErrorMessage } from "formik";
 import { IconContext } from "react-icons";
 import { FiX } from "react-icons/fi";
 import logo from "../../logo.png";
 import {
   ModalBackdrop,
   ModalContent,
-  ModalSubmitBtn,
+  // ModalSubmitBtn,
   ModalButton,
   ModalHeader,
 } from "../Modal/Modal.styled";
 import {
   Container,
   FormTitle,
-  FormStyled,
-  Input,
-  Label,
-  Comment,
-  OptionLable,
+  // FormStyled,
+  // Input,
+  // Label,
+  // Comment,
+  // OptionLable,
 } from "./ConnectionModal.styled";
 import priceData from "../../price.json";
 
@@ -36,13 +36,13 @@ priceData.styx.map((item) => bodyServises.push(item.service));
 let elseServises = [];
 priceData.else.map((item) => elseServises.push(item.service));
 
-const initialValues = {
-  name: "",
-  tel: "",
-  text: "",
-  service: "",
-  subService: "",
-};
+// const initialValues = {
+//   name: "",
+//   tel: "",
+//   text: "",
+//   service: "",
+//   subService: "",
+// };
 
 const services = [
   {
@@ -103,17 +103,17 @@ const ConnectionForm = ({ isOpen, onClose }) => {
     },
     [onClose]
   );
-  const handleSubmit = (values, { resetForm }) => {
-    // // Handle form submission logic here
-    // console.log(values);
-    // if (!values) {
-    //   return;
-    // }
-    // if (values) {
-    resetForm();
-    onClose();
-    // }
-  };
+  // const handleSubmit = (values, { resetForm }) => {
+  //   // // Handle form submission logic here
+  //   // console.log(values);
+  //   // if (!values) {
+  //   //   return;
+  //   // }
+  //   // if (values) {
+  //   resetForm();
+  //   onClose();
+  //   // }
+  // };
 
   return (
     <ModalBackdrop onClick={handleBackdropClick}>
@@ -197,7 +197,7 @@ const ConnectionForm = ({ isOpen, onClose }) => {
                   name="name"
                   placeholder="Введіть ім'я"
                 />
-                <ErrorMessage name="name" component="div" />
+                {/* <ErrorMessage name="name" component="div" /> */}
               </label>
             </div>
 
