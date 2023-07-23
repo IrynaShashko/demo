@@ -109,19 +109,6 @@ const ConnectionForm = ({ isOpen, onClose }) => {
   //   // }
   // };
 
-  const test = services.find((service) =>
-    // console.log("service.name", service.subServices)
-    service.subServices?.map((subService) =>
-      console.log("subService", subService)
-    )
-  );
-
-  services
-    .find((service) => service.name === "Для жінок")
-    .subServices.map((item) => console.log(item));
-  // .subServices.map((subService) => console.log(subService));
-  console.log("test", test);
-
   return (
     <ModalBackdrop onClick={handleBackdropClick}>
       <ModalContent onClose={onClose}>
@@ -145,7 +132,7 @@ const ConnectionForm = ({ isOpen, onClose }) => {
           </ModalHeader>
           <FormTitle>Записатись</FormTitle>
           <Formik initialValues={initialValues}>
-            {({ values, handleChange, setFieldValue }) => {
+            {({ values, handleChange }) => {
               console.log("values.service", values.service);
               console.log("values.subService", values.subService);
               return (
@@ -188,7 +175,6 @@ const ConnectionForm = ({ isOpen, onClose }) => {
                           as="select"
                           id="subService"
                           name="subService"
-                          value={values.subService}
                           onChange={handleChange}
                         >
                           <option value="">Оберіть</option>
@@ -197,10 +183,7 @@ const ConnectionForm = ({ isOpen, onClose }) => {
                             .subServices.map((subService) => {
                               console.log("subService", subService);
                               return (
-                                <option
-                                  key={values.subService}
-                                  value={values.subService}
-                                >
+                                <option key={subService} value={subService}>
                                   {subService}
                                 </option>
                               );
