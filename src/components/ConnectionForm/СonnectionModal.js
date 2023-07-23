@@ -140,12 +140,16 @@ const ConnectionForm = ({ isOpen, onClose }) => {
           <Formik initialValues={initialValues} onSubmit={handleSubmit}>
             {({ values, handleChange }) => (
               <FormStyled
-                name="connection-form"
+                name="connection-form v1"
                 method="POST"
                 data-netlify="true"
                 onSubmit="submit"
               >
-                <input type="hidden" name="form-name" value="connection-form" />
+                <input
+                  type="hidden"
+                  name="form-name"
+                  value="connection-form v1"
+                />
                 <div>
                   <Label htmlFor="service">
                     Для кого:
