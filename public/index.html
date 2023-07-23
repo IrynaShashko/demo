@@ -82,10 +82,8 @@
           e.preventDefault();
         };
 
-        handleChange = (e) => {
-          console.log(e.target);
+        handleChange = (e) =>
           this.setState({ [e.target.name]: e.target.value });
-        };
 
         render() {
           const { service, subService, name, tel, text } = this.state;
@@ -93,7 +91,7 @@
             <form name="connection-form" onSubmit={this.handleSubmit}>
               <input type="hidden" name="form-name" value="connection-form" />
               <div>
-                <label htmlFor="subService">
+                <label htmlFor="service">
                   Оберіть послугу:
                   <input
                     id="service"
