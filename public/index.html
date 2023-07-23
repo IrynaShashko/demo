@@ -82,8 +82,10 @@
           e.preventDefault();
         };
 
-        handleChange = (e) =>
+        handleChange = (e) => {
+          console.log(e.target);
           this.setState({ [e.target.name]: e.target.value });
+        };
 
         render() {
           const { service, subService, name, tel, text } = this.state;
