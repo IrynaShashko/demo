@@ -109,6 +109,19 @@ const ConnectionForm = ({ isOpen, onClose }) => {
   //   // }
   // };
 
+  const test = services.find((service) =>
+    // console.log("service.name", service.subServices)
+    service.subServices?.map((subService) =>
+      console.log("subService", subService)
+    )
+  );
+
+  services
+    .find((service) => service.name === "Для жінок")
+    .subServices.map((item) => console.log(item));
+  // .subServices.map((subService) => console.log(subService));
+  console.log("test", test);
+
   return (
     <ModalBackdrop onClick={handleBackdropClick}>
       <ModalContent onClose={onClose}>
@@ -133,7 +146,8 @@ const ConnectionForm = ({ isOpen, onClose }) => {
           <FormTitle>Записатись</FormTitle>
           <Formik initialValues={initialValues}>
             {({ values, handleChange, setFieldValue }) => {
-              console.log(values);
+              console.log("values.service", values.service);
+              console.log("values.subService", values.subService);
               return (
                 <FormStyled
                   name="connection-form"
@@ -175,18 +189,22 @@ const ConnectionForm = ({ isOpen, onClose }) => {
                           id="subService"
                           name="subService"
                           value={values.subService}
-                          onChange={(e) =>
-                            setFieldValue("subService", e.target.value)
-                          }
+                          onChange={handleChange}
                         >
                           <option value="">Оберіть</option>
                           {services
                             .find((service) => service.name === values.service)
-                            .subServices.map((subService) => (
-                              <option key={subService} value={subService}>
-                                {subService}
-                              </option>
-                            ))}
+                            .subServices.map((subService) => {
+                              console.log("subService", subService);
+                              return (
+                                <option
+                                  key={values.subService}
+                                  value={values.subService}
+                                >
+                                  {subService}
+                                </option>
+                              );
+                            })}
                         </OptionLable>
                         <ErrorMessage name="subService" component="div" />
                       </Label>
