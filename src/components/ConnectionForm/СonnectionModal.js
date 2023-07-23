@@ -139,7 +139,7 @@ const ConnectionForm = ({ isOpen, onClose }) => {
                   name="connection-form"
                   method="POST"
                   data-netlify="true"
-                  onSubmit={handleSubmit}
+                  onSubmit="submit"
                 >
                   <input
                     type="hidden"
