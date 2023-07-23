@@ -180,14 +180,11 @@ const ConnectionForm = ({ isOpen, onClose }) => {
                           <option value="">Оберіть</option>
                           {services
                             .find((service) => service.name === values.service)
-                            .subServices.map((subService) => {
-                              console.log("subService", subService);
-                              return (
-                                <option key={subService} value={subService}>
-                                  {subService}
-                                </option>
-                              );
-                            })}
+                            .subServices.map((subService) => (
+                              <option key={subService} value={subService}>
+                                {subService}
+                              </option>
+                            ))}
                         </OptionLable>
                         <ErrorMessage name="subService" component="div" />
                       </Label>
