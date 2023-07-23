@@ -85,19 +85,6 @@
         handleChange = (e) =>
           this.setState({ [e.target.name]: e.target.value });
 
-        handleChangeForSubService = (e) => {
-          const { name, value } = e.target;
-          if (name === "service") {
-            // Збережіть підсервіси обраної послуги в стані "subService"
-            const subServices = services.find(
-              (service) => service.name === value
-            ).subServices;
-            this.setState({ [name]: value, subService: subServices[0] || "" }); // Встановіть перший підсервіс за замовчуванням
-          } else {
-            this.setState({ [name]: value });
-          }
-        };
-
         render() {
           const { service, subService, name, tel, text } = this.state;
           return (
@@ -122,9 +109,11 @@
                     id="subService"
                     name="subService"
                     value={subService}
-                    onChange={this.handleChangeForSubService}
+                    onChange={this.handleChange}
                   />
-                  <option value="">Оберіть</option>
+                  <option key={subService} value={subService}>
+                    Оберіть
+                  </option>
                 </label>
               </div>
               <div>
