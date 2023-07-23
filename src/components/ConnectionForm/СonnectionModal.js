@@ -104,15 +104,8 @@ const ConnectionForm = ({ isOpen, onClose }) => {
     [onClose]
   );
   const handleSubmit = (values, { resetForm }) => {
-    // // Handle form submission logic here
-    // console.log(values);
-    // if (!values) {
-    //   return;
-    // }
-    // if (values) {
     resetForm();
     onClose();
-    // }
   };
 
   return (
