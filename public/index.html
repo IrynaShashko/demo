@@ -94,10 +94,23 @@
                 <label htmlFor="subService">
                   Оберіть послугу:
                   <input
-                    id="subService"
+                    id="service"
                     as="select"
                     name="service"
                     value={service}
+                    onChange={this.handleChange}
+                  />
+                  <option value="">Оберіть</option>
+                </label>
+              </div>
+              <div>
+                <label htmlFor="subService">
+                  Оберіть послугу:
+                  <input
+                    id="subService"
+                    as="select"
+                    name="subService"
+                    value={subService}
                     onChange={this.handleChange}
                   />
                   <option value="">Оберіть</option>
