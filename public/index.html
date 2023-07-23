@@ -88,12 +88,8 @@
         render() {
           const { service, subService, name, tel, text } = this.state;
           return (
-            <form name="connection-form v1" onSubmit={this.handleSubmit}>
-              <input
-                type="hidden"
-                name="form-name"
-                value="connection-form v1"
-              />
+            <form name="connection-form" onSubmit={this.handleSubmit}>
+              <input type="hidden" name="form-name" value="connection-form" />
               <div>
                 <label htmlFor="service">
                   Оберіть послугу:
