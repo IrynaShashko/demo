@@ -132,99 +132,106 @@ const ConnectionForm = ({ isOpen, onClose }) => {
           </ModalHeader>
           <FormTitle>Записатись</FormTitle>
           <Formik initialValues={initialValues} onSubmit={handleSubmit}>
-            {({ values, handleChange }) => (
-              <FormStyled
-                name="connection-form"
-                method="POST"
-                data-netlify="true"
-                onSubmit="submit"
-              >
-                <input type="hidden" name="form-name" value="connection-form" />
-                <div>
-                  <Label htmlFor="service">
-                    Для кого:
-                    <OptionLable
-                      as="select"
-                      id="service"
-                      name="service"
-                      onChange={handleChange}
-                    >
-                      <option value="">Оберіть</option>
-                      {services.map((service) => (
-                        <option key={service.name} value={service.name}>
-                          {service.name}
-                        </option>
-                      ))}
-                    </OptionLable>
-                    <ErrorMessage name="service" component="div" />
-                  </Label>
-                </div>
-
-                {values.service && (
+            {({ values, handleChange }) => {
+              console.log(values);
+              return (
+                <FormStyled
+                  name="connection-form"
+                  method="POST"
+                  data-netlify="true"
+                  onSubmit={handleSubmit}
+                >
+                  <input
+                    type="hidden"
+                    name="form-name"
+                    value="connection-form"
+                  />
                   <div>
-                    <Label htmlFor="subService">
-                      Оберіть послугу:
+                    <Label htmlFor="service">
+                      Для кого:
                       <OptionLable
                         as="select"
-                        id="subService"
-                        name="subService"
+                        id="service"
+                        name="service"
                         onChange={handleChange}
                       >
                         <option value="">Оберіть</option>
-                        {services
-                          .find((service) => service.name === values.service)
-                          .subServices.map((subService) => (
-                            <option key={subService} value={subService}>
-                              {subService}
-                            </option>
-                          ))}
+                        {services.map((service) => (
+                          <option key={service.name} value={service.name}>
+                            {service.name}
+                          </option>
+                        ))}
                       </OptionLable>
-                      <ErrorMessage name="subService" component="div" />
+                      <ErrorMessage name="service" component="div" />
                     </Label>
                   </div>
-                )}
-                <div>
-                  <Label htmlFor="name">
-                    Ім'я:
-                    <Input
-                      type="text"
-                      id="name"
-                      name="name"
-                      placeholder="Введіть ім'я"
-                    />
-                    <ErrorMessage name="name" component="div" />
-                  </Label>
-                </div>
 
-                <div>
-                  <Label htmlFor="tel">
-                    Телефон:
-                    <Input
-                      type="tel"
-                      id="tel"
-                      name="tel"
-                      placeholder="Введіть телефон"
-                    />
-                    <ErrorMessage name="tel" component="div" />
-                  </Label>
-                </div>
+                  {values.service && (
+                    <div>
+                      <Label htmlFor="subService">
+                        Оберіть послугу:
+                        <OptionLable
+                          as="select"
+                          id="subService"
+                          name="subService"
+                          onChange={handleChange}
+                        >
+                          <option value="">Оберіть</option>
+                          {services
+                            .find((service) => service.name === values.service)
+                            .subServices.map((subService) => (
+                              <option key={subService} value={subService}>
+                                {subService}
+                              </option>
+                            ))}
+                        </OptionLable>
+                        <ErrorMessage name="subService" component="div" />
+                      </Label>
+                    </div>
+                  )}
+                  <div>
+                    <Label htmlFor="name">
+                      Ім'я:
+                      <Input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Введіть ім'я"
+                      />
+                      <ErrorMessage name="name" component="div" />
+                    </Label>
+                  </div>
 
-                <div>
-                  <Label htmlFor="text">
-                    Коментар:
-                    <Comment
-                      as="textarea"
-                      type="text"
-                      id="text"
-                      name="text"
-                      placeholder="Напишіть коментар"
-                    />
-                    <ErrorMessage name="text" component="div" />
-                  </Label>
-                </div>
-                <ModalSubmitBtn type="submit">Відправити</ModalSubmitBtn>
-              </FormStyled>
-            )}
+                  <div>
+                    <Label htmlFor="tel">
+                      Телефон:
+                      <Input
+                        type="tel"
+                        id="tel"
+                        name="tel"
+                        placeholder="Введіть телефон"
+                      />
+                      <ErrorMessage name="tel" component="div" />
+                    </Label>
+                  </div>
+
+                  <div>
+                    <Label htmlFor="text">
+                      Коментар:
+                      <Comment
+                        as="textarea"
+                        type="text"
+                        id="text"
+                        name="text"
+                        placeholder="Напишіть коментар"
+                      />
+                      <ErrorMessage name="text" component="div" />
+                    </Label>
+                  </div>
+                  <ModalSubmitBtn type="submit">Відправити</ModalSubmitBtn>
+                </FormStyled>
+              );
+            }}
           </Formik>
         </Container>
       </ModalContent>
