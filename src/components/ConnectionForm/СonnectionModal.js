@@ -169,7 +169,9 @@ const ConnectionForm = ({ isOpen, onClose }) => {
                         name="subService"
                         onChange={handleChange}
                       >
-                        <option value="">Оберіть</option>
+                        <option key={subService} value={subService}>
+                          Оберіть
+                        </option>
                         {services
                           .find((service) => service.name === values.service)
                           .subServices.map((subService) => (
