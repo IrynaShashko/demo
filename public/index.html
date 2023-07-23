@@ -46,7 +46,13 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    <script type="text/babel">
+    <script type="text/javascript">
+      // Ось лише рядок для відображення вашого React-компонента
+      ReactDOM.createRoot(document.getElementById("root")).render(
+        <ConnectionForm />
+      );
+    </script>
+    <!-- <script type="text/babel">
       const encode = (data) => {
         return Object.keys(data)
           .map(
@@ -143,7 +149,7 @@
               </div>
               <div>
                 <label htmlFor="text">
-                  Message:{" "}
+                  Коментар:
                   <textarea
                     type="text"
                     id="text"
@@ -160,6 +166,6 @@
       }
 
       ReactDOM.createRoot(<ConnectionForm />, document.getElementById("root"));
-    </script>
+    </script> -->
   </body>
 </html>
