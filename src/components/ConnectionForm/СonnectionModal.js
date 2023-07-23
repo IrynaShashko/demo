@@ -159,29 +159,29 @@ const ConnectionForm = ({ isOpen, onClose }) => {
                   </Label>
                 </div>
 
-                {values.service && (
-                  <div>
-                    <Label htmlFor="subService">
-                      Оберіть послугу:
-                      <OptionLable
-                        as="select"
-                        id="subService"
-                        name="subService"
-                        onChange={handleChange}
-                      >
-                        <option value="">Оберіть</option>
-                        {services
-                          .find((service) => service.name === values.service)
-                          .subServices.map((subService) => (
-                            <option key={subService} value={subService}>
-                              {subService}
-                            </option>
-                          ))}
-                      </OptionLable>
-                      <ErrorMessage name="subService" component="div" />
-                    </Label>
-                  </div>
-                )}
+                {/* {values.service && ( */}
+                <div>
+                  <Label htmlFor="subService">
+                    Оберіть послугу:
+                    <OptionLable
+                      as="select"
+                      id="subService"
+                      name="subService"
+                      onChange={handleChange}
+                    >
+                      <option value="">Оберіть</option>
+                      {services
+                        .find((service) => service.name === values.service)
+                        .subServices.map((subService) => (
+                          <option key={subService} value={subService}>
+                            {subService}
+                          </option>
+                        ))}
+                    </OptionLable>
+                    <ErrorMessage name="subService" component="div" />
+                  </Label>
+                </div>
+                {/* )} */}
                 <div>
                   <Label htmlFor="name">
                     Ім'я:
