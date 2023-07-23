@@ -132,7 +132,7 @@ const ConnectionForm = ({ isOpen, onClose }) => {
           </ModalHeader>
           <FormTitle>Записатись</FormTitle>
           <Formik initialValues={initialValues}>
-            {({ values, handleChange }) => {
+            {({ values, handleChange, setFieldValue }) => {
               console.log(values);
               return (
                 <FormStyled
@@ -174,7 +174,10 @@ const ConnectionForm = ({ isOpen, onClose }) => {
                           as="select"
                           id="subService"
                           name="subService"
-                          onChange={handleChange}
+                          value={values.subService}
+                          onChange={(e) =>
+                            setFieldValue("subService", e.target.value)
+                          }
                         >
                           <option value="">Оберіть</option>
                           {services
