@@ -137,35 +137,36 @@ const ConnectionForm = ({ isOpen, onClose }) => {
             </div>
           </ModalHeader>
           <FormTitle>Записатись</FormTitle>
-          <Formik initialValues={initialValues} onSubmit={handleSubmit}>
-            {({ values, handleChange }) => (
-              <FormStyled
-                name="connection-form"
-                method="post"
-                data-netlify="true"
-              >
-                <input type="hidden" name="form-name" value="connection-form" />
-                <div>
-                  <Label htmlFor="service">
-                    Для кого:
-                    <OptionLable
-                      as="select"
-                      id="service"
-                      name="service"
-                      onChange={handleChange}
-                    >
-                      <option value="">Оберіть</option>
-                      {services.map((service) => (
-                        <option key={service.name} value={service.name}>
-                          {service.name}
-                        </option>
-                      ))}
-                    </OptionLable>
-                    <ErrorMessage name="service" component="div" />
-                  </Label>
-                </div>
+          {/* <Formik initialValues={initialValues} onSubmit={handleSubmit}>
+            // {({ values, handleChange }) => ( */}
+          <form
+            name="connection-form v1"
+            method="post"
+            data-netlify="true"
+            onSubmit="submit"
+          >
+            <input type="hidden" name="form-name" value="connection-form v1" />
+            <div>
+              <label htmlFor="service">
+                Для кого:
+                <select
+                  as="select"
+                  id="service"
+                  name="service"
+                  // onChange={handleChange}
+                >
+                  <option value="">Оберіть</option>
+                  {services.map((service) => (
+                    <option key={service.name} value={service.name}>
+                      {service.name}
+                    </option>
+                  ))}
+                </select>
+                {/* <ErrorMessage name="service" component="div" /> */}
+              </label>
+            </div>
 
-                {values.service && (
+            {/* {values.service && (
                   <div>
                     <Label htmlFor="subService">
                       Оберіть послугу:
@@ -184,52 +185,51 @@ const ConnectionForm = ({ isOpen, onClose }) => {
                           ))}
                       </OptionLable>
                       <ErrorMessage name="subService" component="div" />
-                    </Label>
-                  </div>
-                )}
-                <div>
-                  <Label htmlFor="name">
-                    Ім'я:
-                    <Input
-                      type="text"
-                      id="name"
-                      name="name"
-                      placeholder="Введіть ім'я"
-                    />
-                    <ErrorMessage name="name" component="div" />
-                  </Label>
-                </div>
+                    </Label> */}
+            {/* </div>
+                )} */}
+            <div>
+              <label htmlFor="name">
+                Ім'я:
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Введіть ім'я"
+                />
+                <ErrorMessage name="name" component="div" />
+              </label>
+            </div>
 
-                <div>
-                  <Label htmlFor="tel">
-                    Телефон:
-                    <Input
-                      type="tel"
-                      id="tel"
-                      name="tel"
-                      placeholder="Введіть телефон"
-                    />
-                    <ErrorMessage name="tel" component="div" />
-                  </Label>
-                </div>
+            <div>
+              <label htmlFor="tel">
+                Телефон:
+                <input
+                  type="tel"
+                  id="tel"
+                  name="tel"
+                  placeholder="Введіть телефон"
+                />
+                {/* <ErrorMessage name="tel" component="div" /> */}
+              </label>
+            </div>
 
-                <div>
-                  <Label htmlFor="text">
-                    Коментар:
-                    <Comment
-                      as="textarea"
-                      type="text"
-                      id="text"
-                      name="text"
-                      placeholder="Напишіть коментар"
-                    />
-                    <ErrorMessage name="text" component="div" />
-                  </Label>
-                </div>
-                <ModalSubmitBtn type="submit">Відправити</ModalSubmitBtn>
-              </FormStyled>
-            )}
-          </Formik>
+            <div>
+              <label htmlFor="text">
+                Коментар:
+                <textarea
+                  type="text"
+                  id="text"
+                  name="text"
+                  placeholder="Напишіть коментар"
+                />
+                {/* <ErrorMessage name="text" component="div" /> */}
+              </label>
+            </div>
+            <button type="submit">Відправити</button>
+          </form>
+          {/* )}
+          </Formik> */}
         </Container>
       </ModalContent>
     </ModalBackdrop>
