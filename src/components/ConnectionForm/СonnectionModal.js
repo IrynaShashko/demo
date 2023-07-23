@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useEffect, useCallback } from "react";
 import { Formik, ErrorMessage } from "formik";
 import { IconContext } from "react-icons";
 import { FiX } from "react-icons/fi";
@@ -104,21 +104,6 @@ const ConnectionForm = ({ isOpen, onClose }) => {
     [onClose]
   );
 
-  const [selectedService, setSelectedService] = useState("");
-  const [selectedSubService, setSelectedSubService] = useState("");
-
-  // ... (попередні хуки useEffect)
-
-  const handleServiceChange = useCallback((event) => {
-    const selectedServiceValue = event.target.value;
-    setSelectedService(selectedServiceValue);
-    setSelectedSubService(""); // Скидайте підпослугу, коли змінюється послуга
-  }, []);
-
-  const handleSubServiceChange = useCallback((event) => {
-    const selectedSubServiceValue = event.target.value;
-    setSelectedSubService(selectedSubServiceValue);
-  }, []);
   // const handleSubmit = (values, { resetForm }) => {
   //   resetForm();
   //   onClose();
@@ -170,7 +155,7 @@ const ConnectionForm = ({ isOpen, onClose }) => {
                         as="select"
                         id="service"
                         name="service"
-                        onChange={handleServiceChange}
+                        onChange={handleChange}
                       >
                         <option value="">Оберіть</option>
                         {services.map((service) => (
@@ -191,7 +176,7 @@ const ConnectionForm = ({ isOpen, onClose }) => {
                           as="select"
                           id="subService"
                           name="subService"
-                          onChange={handleSubServiceChange}
+                          onChange={handleChange}
                         >
                           <option value="">Оберіть</option>
                           {services
