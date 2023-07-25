@@ -1,14 +1,21 @@
 import styled from "@emotion/styled";
 
+export const AboutContainer = styled.div`
+  padding: 20px;
+  @media screen and (min-width: 375px) {
+    padding: 50px;
+  }
+`;
+
 export const StudyContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   /* align-items: center; */
-  padding-top: 20px;
+  padding-top: 30px;
 
   @media screen and (min-width: 768px) {
-    /* flex-direction: row; */
+    padding-top: 50px;
   }
 `;
 
@@ -110,8 +117,6 @@ export const ItemTitle = styled.h4`
   font-size: 20px;
   color: #007586;
   margin-bottom: 10px;
-  font-weight: lighter;
-  line-height: 30px;
   text-transform: uppercase;
 `;
 

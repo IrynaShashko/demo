@@ -19,11 +19,10 @@ export const HomeContainer = styled.div`
   min-height: 90vh;
 
   @media screen and (min-width: 768px) {
-    padding-top: 50px;
-    height: 80vh;
+    height: 85vh;
   }
   @media screen and (min-width: 1440px) {
-    height: 85vh;
+    height: 90vh;
     padding-top: auto;
     flex-direction: row;
     justify-content: space-evenly;

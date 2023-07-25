@@ -16,6 +16,10 @@ export const ReviewsContainer = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #f8f8f8;
+  padding: 20px;
+  @media screen and (min-width: 375px) {
+    padding: 50px;
+  }
 `;
 
 export const List = styled.ul`

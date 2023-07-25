@@ -16,10 +16,6 @@ body.modal-open {
   width: 1px; /* Ширина скрола */
 }
 
-::-webkit-scrollbar-thumb {
-  background-color: #007586; /* Колір бару скрола */
-}
-
 ::-webkit-scrollbar-track {
   background-color: #f1f1f1; /* Колір треку скрола */
 }
