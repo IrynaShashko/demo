@@ -166,6 +166,7 @@ const ConnectionForm = ({ isOpen, onClose }) => {
                       as="select"
                       id="service"
                       name="service"
+                      value={selectedService}
                       onChange={handleServiceChange}
                     >
                       <option value="">Оберіть</option>
@@ -179,7 +180,7 @@ const ConnectionForm = ({ isOpen, onClose }) => {
                   </Label>
                 </div>
 
-                {subServiceOptions && (
+                {subServiceOptions.length > 0 && (
                   <div>
                     <Label htmlFor="subService">
                       Оберіть послугу:
