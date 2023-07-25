@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useCallback } from "react";
 import { Formik, ErrorMessage } from "formik";
 import { IconContext } from "react-icons";
 import { FiX } from "react-icons/fi";
@@ -69,10 +69,6 @@ const services = [
 ];
 
 const ConnectionForm = ({ isOpen, onClose }) => {
-  const [subServiceOptions, setSubServiceOptions] = useState([]);
-  const [selectedService, setSelectedService] = useState("");
-  const [selectedSubService, setSelectedSubService] = useState("");
-
   useEffect(() => {
     if (isOpen) {
       document.body.classList.add("modal-open");
@@ -164,31 +160,6 @@ const ConnectionForm = ({ isOpen, onClose }) => {
           <FormTitle>Записатись</FormTitle>
           <Formik initialValues={initialValues}>
             {({ values, handleChange, setFieldValue }) => {
-              const handleServiceChange = (event) => {
-                const selectedService = event.target.value;
-                setSelectedService(selectedService);
-
-                // Оновлюємо стан subServiceOptions при зміні вибраного сервісу (selectedService)
-                if (selectedService) {
-                  const selectedServiceObj = services.find(
-                    (service) => service.name === selectedService
-                  );
-                  setSubServiceOptions(selectedServiceObj.subServices);
-                } else {
-                  setSubServiceOptions([]);
-                }
-
-                // Очистимо поле subService, коли змінюється сервіс
-                setFieldValue("subService", "");
-              };
-
-              const handleSubServiceChange = (event) => {
-                const selectedSubService = event.target.value;
-                setSelectedSubService(selectedSubService);
-
-                // Встановимо значення поля subService через setFieldValue
-                setFieldValue("subService", selectedSubService);
-              };
               console.log("values.service", values.service);
               console.log("values.subService", values.subService);
               return (
@@ -210,8 +181,7 @@ const ConnectionForm = ({ isOpen, onClose }) => {
                         as="select"
                         id="service"
                         name="service"
-                        value={selectedService}
-                        onChange={handleServiceChange}
+                        onChange={handleChange}
                       >
                         <option value="">Оберіть</option>
                         {services.map((service) => (
@@ -224,7 +194,7 @@ const ConnectionForm = ({ isOpen, onClose }) => {
                     </Label>
                   </div>
 
-                  {subServiceOptions.length > 0 && ( // Перевіряємо чи є підсервіси перед їх відображенням
+                  {values.subService.length > 0 && (
                     <div>
                       <Label htmlFor="subService">
                         Оберіть послугу:
@@ -232,14 +202,10 @@ const ConnectionForm = ({ isOpen, onClose }) => {
                           as="select"
                           id="subService"
                           name="subService"
-                          value={selectedSubService}
-                          onChange={(e) => {
-                            handleSubServiceChange(e);
-                            handleChange(e); // Викликаємо handleChange з контексту Formik
-                          }}
+                          onChange={setFieldValue}
                         >
                           <option value="">Оберіть</option>
-                          {subServiceOptions.map((subService) => (
+                          {services.map((subService) => (
                             <option key={subService} value={subService}>
                               {subService}
                             </option>
