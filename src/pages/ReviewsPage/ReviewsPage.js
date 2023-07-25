@@ -1,8 +1,11 @@
 import React from "react";
-
+import Slider from "react-slick";
 import { AiFillStar } from "react-icons/ai";
 import { BiUser } from "react-icons/bi";
 import { IconContext } from "react-icons";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "../../index.css";
 import {
   Stars,
   StarButton,
@@ -11,18 +14,35 @@ import {
   ListItem,
   Div,
   UserDiv,
+  UserIconDiv,
   UserName,
   Title,
   StarsTitle,
   TitleContainer,
   Text,
   ItemDiv,
+  TitleDiv,
 } from "./Reviews.styled";
 import { Container } from "../../App.styled";
 import reviews from "../../reviews.json";
 
 const ReviewsPage = () => {
   const starArr = [1, 2, 3, 4, 5];
+
+  const settings = {
+    dots: true,
+    // fade: true,
+    // className: "center",
+    // centerMode: true,
+    // centerPadding: "10px",
+    infinite: true,
+    speed: 3000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplaySpeed: 3000,
+    // autoplay: true,
+    // cssEase: "linear",
+  };
 
   return (
     <ReviewsContainer>
@@ -48,46 +68,48 @@ const ReviewsPage = () => {
             </Stars>
           </Div>
         </TitleContainer>
-        {/* <StarsText>Базовано на відгуках: {reviews.length}</StarsText> */}
+
         <List>
-          {reviews?.map((item) => (
-            <ListItem key={item.id}>
-              <ItemDiv>
-                <Div>
-                  <UserDiv>
-                    <IconContext.Provider
-                      value={{
-                        color: "#007586",
-                        size: "20px",
-                      }}
-                    >
-                      <BiUser />
-                    </IconContext.Provider>
-                  </UserDiv>
-                  <div>
-                    <UserName>{item.name}</UserName>
-                    <Stars>
-                      {starArr.map((el, index) => (
-                        <IconContext.Provider
-                          key={index}
-                          value={{
-                            color: `${
-                              index >= item.totalPositiveStars
-                                ? "#ccc"
-                                : "orange"
-                            }`,
-                          }}
-                        >
-                          <AiFillStar />
-                        </IconContext.Provider>
-                      ))}
-                    </Stars>
-                  </div>
-                </Div>
-                <Text>{item.comment}</Text>
-              </ItemDiv>
-            </ListItem>
-          ))}
+          <Slider {...settings} className="slider">
+            {reviews.map((item) => (
+              <ListItem key={item.id}>
+                <ItemDiv>
+                  <TitleDiv>
+                    <UserDiv>
+                      <IconContext.Provider
+                        value={{
+                          color: "#007586",
+                          size: "20px",
+                        }}
+                      >
+                        <BiUser />
+                      </IconContext.Provider>
+                    </UserDiv>
+                    <UserIconDiv>
+                      <UserName>{item.name}</UserName>
+                      <Stars>
+                        {starArr.map((el, index) => (
+                          <IconContext.Provider
+                            key={index}
+                            value={{
+                              color: `${
+                                index >= item.totalPositiveStars
+                                  ? "#ccc"
+                                  : "orange"
+                              }`,
+                            }}
+                          >
+                            <AiFillStar />
+                          </IconContext.Provider>
+                        ))}
+                      </Stars>
+                    </UserIconDiv>
+                  </TitleDiv>
+                  <Text>{item.comment}</Text>
+                </ItemDiv>
+              </ListItem>
+            ))}
+          </Slider>
         </List>
       </Container>
     </ReviewsContainer>

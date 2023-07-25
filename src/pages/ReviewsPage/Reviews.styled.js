@@ -20,14 +20,16 @@ export const ReviewsContainer = styled.div`
 
 export const List = styled.ul`
   width: 300px;
+  margin: 0 auto;
+  height: 100vh;
   @media screen and (min-width: 375px) {
-    width: 350px;
+    width: 300px;
   }
   @media screen and (min-width: 768px) {
-    width: 600px;
+    width: 450px;
   }
   @media screen and (min-width: 1440px) {
-    width: 800px;
+    width: 700px;
   }
 `;
 
@@ -36,21 +38,32 @@ export const ListItem = styled.li`
   border: 1px solid #e3e2e2;
   background: #fff;
   box-shadow: -3px 4px 15px 0px rgba(0, 0, 0, 0.06);
-  height: 245px;
+  height: 450px;
   width: 100%;
   border-radius: 8px;
   padding: 20px;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px;
+  margin-right: 20px; */
   overflow-y: scroll;
   box-sizing: border-box;
-  @media screen and (min-width: 375px) {
-    height: 230px;
-  }
+
   @media screen and (min-width: 768px) {
-    height: 200px;
+    height: 500px;
+    width: 350px;
   }
   @media screen and (min-width: 1440px) {
-    height: 220px;
+    padding: 40px;
+    width: 300px;
+  }
+`;
+
+export const TitleDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+  @media screen and (min-width: 768px) {
+    padding: 20px;
   }
 `;
 
@@ -61,12 +74,25 @@ export const Div = styled.div`
   margin-bottom: 10px;
 `;
 
+export const UserIconDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+`;
+
 export const ItemDiv = styled.div`
   height: 100%;
   overflow: hidden;
   padding-bottom: 20px;
   box-sizing: border-box;
   overflow-y: scroll;
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const UserDiv = styled.div`
@@ -74,15 +100,14 @@ export const UserDiv = styled.div`
   background-color: #fff;
   width: 20px;
   padding: 6px 8px;
-  margin-right: 20px;
   border: 1px solid #007586;
-  // box-shadow: inset 0px 0px 11px -2px rgba(0, 117, 134, 1);
+  margin-bottom: 20px;
 `;
 
 export const UserName = styled.p`
   color: #007586;
   text-shadow: 0px 0px 7px rgba(0, 117, 134, 1);
-  margin-bottom: 5px;
+  margin-bottom: 20px;
 `;
 
 export const Title = styled.h2`
@@ -113,4 +138,11 @@ export const StarsText = styled.p`
 export const Text = styled.p`
   font-size: 16px;
   font-weight: lighter;
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+  }
+  @media screen and (min-width: 1440px) {
+    font-size: 20px;
+    padding-top: 20px;
+  }
 `;

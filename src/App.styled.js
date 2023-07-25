@@ -20,6 +20,7 @@ export const Header = styled.header`
   position: sticky;
   top: 0;
   background-color: #fff;
+  z-index: 2;
 `;
 
 export const Main = styled.main`
