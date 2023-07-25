@@ -8,16 +8,13 @@ import "slick-carousel/slick/slick-theme.css";
 import "../../index.css";
 import {
   Stars,
-  StarButton,
   ReviewsContainer,
   List,
   ListItem,
-  Div,
   UserDiv,
   UserIconDiv,
   UserName,
   Title,
-  StarsTitle,
   TitleContainer,
   Text,
   ItemDiv,
@@ -46,24 +43,6 @@ const ReviewsPage = () => {
       <Container>
         <TitleContainer>
           <Title>Відгуки</Title>
-          <Div>
-            <StarsTitle>5.0</StarsTitle>
-            <Stars>
-              {starArr.map((el, index) => (
-                <IconContext.Provider
-                  key={index}
-                  value={{
-                    color: "orange",
-                    size: "20px",
-                  }}
-                >
-                  <StarButton type="button">
-                    <AiFillStar />
-                  </StarButton>
-                </IconContext.Provider>
-              ))}
-            </Stars>
-          </Div>
         </TitleContainer>
 
         <List>
