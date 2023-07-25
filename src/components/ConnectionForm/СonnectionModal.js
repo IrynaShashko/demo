@@ -180,7 +180,7 @@ const ConnectionForm = ({ isOpen, onClose }) => {
                         as="select"
                         id="service"
                         name="service"
-                        value={selectedSubService}
+                        value={selectedService}
                         onChange={handleServiceChange}
                       >
                         <option value="">Оберіть</option>
@@ -202,7 +202,7 @@ const ConnectionForm = ({ isOpen, onClose }) => {
                           as="select"
                           id="subService"
                           name="subService"
-                          value={values.subService}
+                          value={selectedSubService}
                           onChange={handleSubServiceChange}
                         >
                           <option value="">Оберіть</option>
