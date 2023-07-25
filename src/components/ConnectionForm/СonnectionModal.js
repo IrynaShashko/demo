@@ -205,7 +205,7 @@ const ConnectionForm = ({ isOpen, onClose }) => {
                           onChange={setFieldValue}
                         >
                           <option value="">Оберіть</option>
-                          {services.map((subService) => (
+                          {values.subService.map((subService) => (
                             <option key={subService} value={subService}>
                               {subService}
                             </option>
