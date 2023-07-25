@@ -17,6 +17,8 @@ import {
   Input,
   Label,
   Comment,
+  Option,
+  OptionLable,
 } from "./ConnectionModal.styled";
 import priceData from "../../price.json";
 
@@ -159,20 +161,20 @@ const ConnectionForm = ({ isOpen, onClose }) => {
                 <div>
                   <Label htmlFor="service">
                     Для кого:
-                    <Input
+                    <OptionLable
                       as="select"
                       id="service"
                       name="service"
                       value={selectedService}
                       onChange={handleServiceChange}
                     >
-                      <option value="">Оберіть</option>
+                      <Option value="">Оберіть</Option>
                       {services.map((service) => (
-                        <option key={service.name} value={service.name}>
+                        <Option key={service.name} value={service.name}>
                           {service.name}
-                        </option>
+                        </Option>
                       ))}
-                    </Input>
+                    </OptionLable>
                     <ErrorMessage name="service" component="div" />
                   </Label>
                 </div>
@@ -181,14 +183,19 @@ const ConnectionForm = ({ isOpen, onClose }) => {
                   <div>
                     <Label htmlFor="subService">
                       Оберіть послугу:
-                      <Input as="select" id="subService" name="subService">
-                        <option value="">Оберіть</option>
+                      <OptionLable
+                        as="select"
+                        id="subService"
+                        name="subService"
+                        onChange={handleChange}
+                      >
+                        <Option value="">Оберіть</Option>
                         {subServiceOptions.map((subService) => (
-                          <option key={subService} value={subService}>
+                          <Option key={subService} value={subService}>
                             {subService}
-                          </option>
+                          </Option>
                         ))}
-                      </Input>
+                      </OptionLable>
                       <ErrorMessage name="subService" component="div" />
                     </Label>
                   </div>

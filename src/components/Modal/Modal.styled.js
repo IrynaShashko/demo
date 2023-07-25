@@ -23,7 +23,7 @@ export const ModalContent = styled.div`
     top: 100px;
     left: 220px;
     width: 400px;
-    max-height: 550px;
+    height: 620px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 8px;
@@ -48,9 +48,8 @@ export const ModalHeader = styled.div`
   margin-bottom: 30px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   @media screen and (min-width: 768px) {
-    width: 300px;
-    padding: 0;
     margin-bottom: 0;
+    box-shadow: none;
   }
 `;
 

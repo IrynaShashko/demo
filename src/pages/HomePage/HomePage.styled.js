@@ -16,13 +16,8 @@ export const HomeContainer = styled.div`
   background-size: cover;
   background-position: center;
   width: 100%;
-  min-height: 90vh;
-
-  @media screen and (min-width: 768px) {
-    height: 85vh;
-  }
+  height: calc(100vh - 85.05px);
   @media screen and (min-width: 1440px) {
-    height: 90vh;
     padding-top: auto;
     flex-direction: row;
     justify-content: space-evenly;

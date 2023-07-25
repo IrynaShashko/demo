@@ -12,8 +12,10 @@ export const BackgroundImageStyle = styled.div`
   background-size: cover;
   background-position: center;
   width: 100%;
-  min-height: 90vh;
+  min-height: calc(100vh - 85.05px);
   padding-top: 20px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
   @media screen and (min-width: 678px) {
     padding-top: 50px;
   }

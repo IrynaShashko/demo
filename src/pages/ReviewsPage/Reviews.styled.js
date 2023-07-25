@@ -15,7 +15,7 @@ export const ReviewsContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #f8f8f8;
+  background-color: #fff;
   padding-top: 20px;
   @media screen and (min-width: 375px) {
     padding-top: 50px;
@@ -38,10 +38,10 @@ export const List = styled.ul`
 `;
 
 export const ListItem = styled.li`
-  border-radius: 8px;
-  border: 1px solid #e3e2e2;
+  /* border-radius: 8px; */
+  /* border: 1px solid #e3e2e2; */
   background: #fff;
-  box-shadow: -3px 4px 15px 0px rgba(0, 0, 0, 0.06);
+  /* box-shadow: -3px 4px 15px 0px rgba(0, 0, 0, 0.06); */
   height: 450px;
   width: 100%;
   border-radius: 8px;
@@ -142,6 +142,7 @@ export const StarsText = styled.p`
 export const Text = styled.p`
   font-size: 16px;
   font-weight: lighter;
+  text-align: center;
   @media screen and (min-width: 768px) {
     font-size: 18px;
   }
