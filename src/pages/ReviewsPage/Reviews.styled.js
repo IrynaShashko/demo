@@ -16,9 +16,9 @@ export const ReviewsContainer = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #f8f8f8;
-  padding: 20px;
+  padding-top: 20px;
   @media screen and (min-width: 375px) {
-    padding: 50px;
+    padding-top: 50px;
   }
 `;
 

@@ -31,10 +31,6 @@ const ReviewsPage = () => {
 
   const settings = {
     dots: true,
-    // fade: true,
-    // className: "center",
-    // centerMode: true,
-    // centerPadding: "10px",
     infinite: true,
     speed: 1000,
     slidesToShow: 1,

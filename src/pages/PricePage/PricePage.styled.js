@@ -13,9 +13,9 @@ export const BackgroundImageStyle = styled.div`
   background-position: center;
   width: 100%;
   min-height: 90vh;
-  padding: 20px;
+  padding-top: 20px;
   @media screen and (min-width: 375px) {
-    padding: 50px;
+    padding-top: 50px;
   }
 `;
 
