@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { Formik, ErrorMessage } from "formik";
 import { IconContext } from "react-icons";
 import { FiX } from "react-icons/fi";
@@ -69,6 +69,18 @@ const services = [
 ];
 
 const ConnectionForm = ({ isOpen, onClose }) => {
+  const [subServiceOptions, setSubServiceOptions] = useState([]);
+
+  const handleServiceChange = useCallback((event) => {
+    const selectedService = event.target.value;
+    // Знаходимо вибраний сервіс зі списку services
+    const selectedServiceObj = services.find(
+      (service) => service.name === selectedService
+    );
+    // Оновлюємо стейт для поля subService
+    setSubServiceOptions(selectedServiceObj.subServices);
+  }, []);
+
   useEffect(() => {
     if (isOpen) {
       document.body.classList.add("modal-open");
@@ -155,7 +167,7 @@ const ConnectionForm = ({ isOpen, onClose }) => {
                         as="select"
                         id="service"
                         name="service"
-                        onChange={handleChange}
+                        onChange={handleServiceChange}
                       >
                         <option value="">Оберіть</option>
                         {services.map((service) => (
@@ -168,7 +180,7 @@ const ConnectionForm = ({ isOpen, onClose }) => {
                     </Label>
                   </div>
 
-                  {values.service && (
+                  {subServiceOptions.length > 0 && ( // Перевіряємо чи є підсервіси перед їх відображенням
                     <div>
                       <Label htmlFor="subService">
                         Оберіть послугу:
@@ -179,13 +191,11 @@ const ConnectionForm = ({ isOpen, onClose }) => {
                           onChange={handleChange}
                         >
                           <option value="">Оберіть</option>
-                          {services
-                            .find((service) => service.name === values.service)
-                            .subServices.map((subService) => (
-                              <option key={subService} value={subService}>
-                                {subService}
-                              </option>
-                            ))}
+                          {subServiceOptions.map((subService) => (
+                            <option key={subService} value={subService}>
+                              {subService}
+                            </option>
+                          ))}
                         </OptionLable>
                         <ErrorMessage name="subService" component="div" />
                       </Label>

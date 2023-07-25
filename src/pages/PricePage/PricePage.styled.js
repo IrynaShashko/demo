@@ -14,7 +14,7 @@ export const BackgroundImageStyle = styled.div`
   width: 100%;
   min-height: 90vh;
   padding-top: 20px;
-  @media screen and (min-width: 375px) {
+  @media screen and (min-width: 678px) {
     padding-top: 50px;
   }
 `;
