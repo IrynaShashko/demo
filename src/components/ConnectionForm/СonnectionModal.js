@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback } from "react";
+import React, { useEffect, useCallback, useState } from "react";
 import { Formik, ErrorMessage } from "formik";
 import { IconContext } from "react-icons";
 import { FiX } from "react-icons/fi";
@@ -68,6 +68,24 @@ const services = [
 ];
 
 const ConnectionForm = ({ isOpen, onClose }) => {
+  const [selectedService, setSelectedService] = useState("");
+  const [subServiceOptions, setSubServiceOptions] = useState([]);
+
+  // Виконується при зміні значення поля service
+  useEffect(() => {
+    // Знайти вибраний сервіс
+    const selectedServiceData = services.find(
+      (service) => service.name === selectedService
+    );
+
+    // Оновити опції підпослуг для вибраного сервісу
+    if (selectedServiceData) {
+      setSubServiceOptions(selectedServiceData.subServices);
+    } else {
+      setSubServiceOptions([]);
+    }
+  }, [selectedService]);
+
   useEffect(() => {
     if (isOpen) {
       document.body.classList.add("modal-open");
@@ -102,6 +120,11 @@ const ConnectionForm = ({ isOpen, onClose }) => {
     },
     [onClose]
   );
+
+  const handleServiceChange = (event) => {
+    setSelectedService(event.target.value);
+  };
+
   const handleSubmit = (values, { resetForm }) => {
     // Handle form submission logic here
     console.log(values);
@@ -143,7 +166,7 @@ const ConnectionForm = ({ isOpen, onClose }) => {
                       as="select"
                       id="service"
                       name="service"
-                      onChange={handleChange}
+                      onChange={handleServiceChange}
                     >
                       <option value="">Оберіть</option>
                       {services.map((service) => (
@@ -156,19 +179,17 @@ const ConnectionForm = ({ isOpen, onClose }) => {
                   </Label>
                 </div>
 
-                {values.service && (
+                {subServiceOptions && (
                   <div>
                     <Label htmlFor="subService">
                       Оберіть послугу:
                       <Input as="select" id="subService" name="subService">
                         <option value="">Оберіть</option>
-                        {services
-                          .find((service) => service.name === values.service)
-                          .subServices.map((subService) => (
-                            <option key={subService} value={subService}>
-                              {subService}
-                            </option>
-                          ))}
+                        {subServiceOptions.map((subService) => (
+                          <option key={subService} value={subService}>
+                            {subService}
+                          </option>
+                        ))}
                       </Input>
                       <ErrorMessage name="subService" component="div" />
                     </Label>
