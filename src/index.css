@@ -28,6 +28,21 @@ body.modal-open {
   background-color: transparent; /* Колір кінцівки скрола */
 }
 
+/* Стилі для точок (dots) */
+.slider .slick-dots li button:before {
+  color: #007586; /* Змініть колір точок тут */
+}
+
+.slider .slick-dots li.slick-active button:before {
+  color: #007586; /* Колір активної точки */
+}
+
+/* Стилі для стрілок */
+.slider .slick-prev:before,
+.slider .slick-next:before {
+  color: #007586; /* Змініть колір стрілок тут */
+}
+
 ul,
 li,
 a,
