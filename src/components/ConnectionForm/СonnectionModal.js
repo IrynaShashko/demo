@@ -70,17 +70,30 @@ const services = [
 
 const ConnectionForm = ({ isOpen, onClose }) => {
   const [subServiceOptions, setSubServiceOptions] = useState([]);
+  const [selectedService, setSelectedService] = useState("");
+  const [selectedSubService, setSelectedSubService] = useState("");
 
   const handleServiceChange = useCallback((event) => {
     const selectedService = event.target.value;
-    // Знаходимо вибраний сервіс зі списку services
-    const selectedServiceObj = services.find(
-      (service) => service.name === selectedService
-    );
-    // Оновлюємо стейт для поля subService
-    setSubServiceOptions(selectedServiceObj.subServices);
+    setSelectedService(selectedService);
   }, []);
 
+  const handleSubServiceChange = useCallback((event) => {
+    const selectedSubService = event.target.value;
+    setSelectedSubService(selectedSubService);
+  }, []);
+
+  useEffect(() => {
+    // Оновлюємо стан subServiceOptions при зміні вибраного сервісу (selectedService)
+    if (selectedService) {
+      const selectedServiceObj = services.find(
+        (service) => service.name === selectedService
+      );
+      setSubServiceOptions(selectedServiceObj.subServices);
+    } else {
+      setSubServiceOptions([]);
+    }
+  }, [selectedService]);
   useEffect(() => {
     if (isOpen) {
       document.body.classList.add("modal-open");
@@ -167,6 +180,7 @@ const ConnectionForm = ({ isOpen, onClose }) => {
                         as="select"
                         id="service"
                         name="service"
+                        value={selectedSubService}
                         onChange={handleServiceChange}
                       >
                         <option value="">Оберіть</option>
@@ -189,7 +203,7 @@ const ConnectionForm = ({ isOpen, onClose }) => {
                           id="subService"
                           name="subService"
                           value={values.subService}
-                          onChange={handleChange}
+                          onChange={handleSubServiceChange}
                         >
                           <option value="">Оберіть</option>
                           {subServiceOptions.map((subService) => (
