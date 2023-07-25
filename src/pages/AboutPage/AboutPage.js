@@ -40,7 +40,7 @@ const AboutPage = () => {
   ));
 
   return (
-    <Container>
+    <div>
       <StudyContainer>
         <ImageContainer>
           <Image src={photo} alt="masseur" />
@@ -52,14 +52,18 @@ const AboutPage = () => {
             </AboutNumber>
           </TitleContainer>
         </ImageContainer>
-        <ItemTitle>Освіта:</ItemTitle>
-        <ul>{studyItems}</ul>
+        <Container>
+          <ItemTitle>Освіта:</ItemTitle>
+          <ul>{studyItems}</ul>
+        </Container>
       </StudyContainer>
-      <ItemTitle>Досвід:</ItemTitle>
-      <ul>{experienceItems}</ul>
-      <ItemTitle>Додаткові навички:</ItemTitle>
-      <ul>{elseItems}</ul>
-    </Container>
+      <Container>
+        <ItemTitle>Досвід:</ItemTitle>
+        <ul>{experienceItems}</ul>
+        <ItemTitle>Додаткові навички:</ItemTitle>
+        <ul>{elseItems}</ul>
+      </Container>
+    </div>
   );
 };
 
