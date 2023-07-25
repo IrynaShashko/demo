@@ -71,14 +71,11 @@ const ConnectionForm = ({ isOpen, onClose }) => {
   const [selectedService, setSelectedService] = useState("");
   const [subServiceOptions, setSubServiceOptions] = useState([]);
 
-  // Виконується при зміні значення поля service
   useEffect(() => {
-    // Знайти вибраний сервіс
     const selectedServiceData = services.find(
       (service) => service.name === selectedService
     );
 
-    // Оновити опції підпослуг для вибраного сервісу
     if (selectedServiceData) {
       setSubServiceOptions(selectedServiceData.subServices);
     } else {
