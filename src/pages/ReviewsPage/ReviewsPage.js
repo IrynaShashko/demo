@@ -36,12 +36,13 @@ const ReviewsPage = () => {
     // centerMode: true,
     // centerPadding: "10px",
     infinite: true,
-    speed: 3000,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplaySpeed: 3000,
-    // autoplay: true,
-    // cssEase: "linear",
+    autoplay: true,
+    cssEase: "linear",
+    pauseOnHover: true,
   };
 
   return (
