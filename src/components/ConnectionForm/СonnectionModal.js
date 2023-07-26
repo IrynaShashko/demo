@@ -71,6 +71,7 @@ const services = [
 
 const ConnectionForm = ({ isOpen, onClose }) => {
   const [selectedService, setSelectedService] = useState("");
+  const [selectedSubService, setSelectedSubService] = useState("");
   const [subServiceOptions, setSubServiceOptions] = useState([]);
 
   useEffect(() => {
@@ -84,6 +85,18 @@ const ConnectionForm = ({ isOpen, onClose }) => {
       setSubServiceOptions([]);
     }
   }, [selectedService]);
+
+  useEffect(() => {
+    const selectedServiceData = services.find(
+      (service) => service.subServices === selectedSubService
+    );
+
+    if (selectedServiceData) {
+      setSelectedSubService(selectedServiceData.subServices);
+    } else {
+      setSelectedSubService("");
+    }
+  }, [selectedSubService]);
 
   useEffect(() => {
     if (isOpen) {
@@ -165,7 +178,7 @@ const ConnectionForm = ({ isOpen, onClose }) => {
                       as="select"
                       id="service"
                       name="service"
-                      value={subServiceOptions}
+                      value={selectedService}
                       onChange={handleServiceChange}
                     >
                       <Option value="">Оберіть</Option>
@@ -187,8 +200,8 @@ const ConnectionForm = ({ isOpen, onClose }) => {
                         as="select"
                         id="subService"
                         name="subService"
-                        value={subServiceOptions.subService}
-                        onChange={handleChange}
+                        value={selectedSubService}
+                        onChange={handleServiceChange}
                       >
                         <Option value="">Оберіть</Option>
                         {subServiceOptions.map((subService) => (
