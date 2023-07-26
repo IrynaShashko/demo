@@ -137,6 +137,10 @@ const ConnectionForm = ({ isOpen, onClose }) => {
     setSelectedService(event.target.value);
   };
 
+  const handleSubServiceChange = (event) => {
+    setSelectedSubService(event.target.value);
+  };
+
   const handleSubmit = (values, { resetForm }) => {
     // Handle form submission logic here
     console.log(values);
@@ -201,7 +205,7 @@ const ConnectionForm = ({ isOpen, onClose }) => {
                         id="subService"
                         name="subService"
                         value={selectedSubService}
-                        onChange={handleServiceChange}
+                        onChange={handleSubServiceChange}
                       >
                         <Option value="">Оберіть</Option>
                         {subServiceOptions.map((subService) => (
