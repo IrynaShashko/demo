@@ -150,12 +150,12 @@ const ConnectionForm = ({ isOpen, onClose }) => {
           </ModalHeader>
           <FormTitle>Записатись</FormTitle>
           <Formik initialValues={initialValues} onSubmit={handleSubmit}>
-            {({ values, handleChange, handleSubmit }) => (
+            {({ values, handleChange }) => (
               <FormStyled
                 name="connection-form"
                 data-netlify="true"
                 method="post"
-                onSubmit={handleSubmit}
+                onSubmit="submit"
               >
                 <input type="hidden" name="form-name" value="connection-form" />
                 <div>
@@ -187,7 +187,8 @@ const ConnectionForm = ({ isOpen, onClose }) => {
                         as="select"
                         id="subService"
                         name="subService"
-                        onChange={handleChange}
+                        value={values.subService}
+                        onChange={handleChange(values.subService)}
                       >
                         <Option value="">Оберіть</Option>
                         {subServiceOptions.map((subService) => (
