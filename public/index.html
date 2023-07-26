@@ -36,6 +36,27 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <div id="modal"></div>
+    <form name="connection-form" netlify netlify-honeypot="bot-field" hidden>
+      <select type="text" name="service" />
+      <select type="text" name="subService" />
+      <input type="text" name="name" />
+      <input type="tel" name="tel" />
+      <textarea name="text"></textarea>
+    </form>
+    <script>
+      ReactDOM.render(
+        <form name="connection-form" method="post">
+          <input type="hidden" name="form-name" value="contact" />
+          <select type="text" name="service" />
+          <select type="text" name="subService" />
+          <input type="text" name="name" />
+          <input type="tel" name="tel" />
+          <textarea name="text"></textarea>
+          <button type="submit">Send</button>
+        </form>,
+        document.getElementById("root")
+      );
+    </script>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
