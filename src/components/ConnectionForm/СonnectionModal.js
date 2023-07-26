@@ -86,17 +86,17 @@ const ConnectionForm = ({ isOpen, onClose }) => {
     }
   }, [selectedService]);
 
-  useEffect(() => {
-    const selectedServiceData = services.find(
-      (service) => service.subServices === selectedSubService
-    );
+  // useEffect(() => {
+  //   const selectedServiceData = services.find(
+  //     (service) => service.subServices === selectedSubService
+  //   );
 
-    if (selectedServiceData) {
-      setSelectedSubService(selectedServiceData.subServices);
-    } else {
-      setSelectedSubService("");
-    }
-  }, [selectedSubService]);
+  //   if (selectedServiceData) {
+  //     setSelectedSubService(selectedServiceData.subServices);
+  //   } else {
+  //     setSelectedSubService("");
+  //   }
+  // }, [selectedSubService]);
 
   useEffect(() => {
     if (isOpen) {
