@@ -188,10 +188,7 @@ const ConnectionForm = ({ isOpen, onClose }) => {
                         id="subService"
                         name="subService"
                         value={values.subService}
-                        onChange={setFieldValue(
-                          "subService",
-                          values.subService
-                        )}
+                        onChange={handleChange}
                       >
                         <Option value="">Оберіть</Option>
                         {subServiceOptions.map((subService) => (
