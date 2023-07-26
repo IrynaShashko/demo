@@ -150,12 +150,12 @@ const ConnectionForm = ({ isOpen, onClose }) => {
           </ModalHeader>
           <FormTitle>Записатись</FormTitle>
           <Formik initialValues={initialValues} onSubmit={handleSubmit}>
-            {({ values, handleChange }) => (
+            {({ values, handleChange, handleSubmit }) => (
               <FormStyled
                 name="connection-form"
                 data-netlify="true"
                 method="post"
-                onSubmit="submit"
+                onSubmit={handleSubmit}
               >
                 <input type="hidden" name="form-name" value="connection-form" />
                 <div>

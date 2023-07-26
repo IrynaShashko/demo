@@ -20,7 +20,7 @@ export const ModalContent = styled.div`
   justify-content: center;
   background-color: #fff;
   @media screen and (min-width: 768px) {
-    top: 100px;
+    top: 85px;
     left: 220px;
     width: 400px;
     height: 620px;
