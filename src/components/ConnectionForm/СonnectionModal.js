@@ -226,6 +226,7 @@ const ConnectionForm = ({ isOpen, onClose }) => {
                       id="name"
                       name="name"
                       placeholder="Введіть ім'я"
+                      required
                     />
                     <ErrorMessage name="name" component="div" />
                   </Label>
@@ -239,6 +240,7 @@ const ConnectionForm = ({ isOpen, onClose }) => {
                       id="tel"
                       name="tel"
                       placeholder="Введіть телефон"
+                      required
                     />
                     <ErrorMessage name="tel" component="div" />
                   </Label>
