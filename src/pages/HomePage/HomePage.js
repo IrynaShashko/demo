@@ -35,7 +35,7 @@ const HomePage = () => {
           >
             <IconContext.Provider
               value={{
-                size: "25px",
+                size: "18px",
                 color: "#fff",
               }}
             >
