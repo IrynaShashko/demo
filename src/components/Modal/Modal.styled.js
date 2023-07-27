@@ -5,7 +5,7 @@ export const ModalBackdrop = styled.div`
   position: fixed;
   top: 0;
   right: 0;
-  width: 120vw;
+  width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.5);
   z-index: 2;
@@ -20,13 +20,15 @@ export const ModalContent = styled.div`
   justify-content: center;
   background-color: #fff;
   @media screen and (min-width: 768px) {
-    top: 85px;
-    left: 220px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 400px;
     height: 620px;
-    margin-left: auto;
-    margin-right: auto;
+    background-color: #fff;
     border-radius: 8px;
+    z-index: 3;
   }
 `;
 
