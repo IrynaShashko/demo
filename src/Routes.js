@@ -18,8 +18,8 @@ const NavRoutes = () => {
   return (
     <Suspense fallback={<Loader />}>
       <Routes>
-        <Route path="/" element={<HomePage />} />
         <Route path="/success" element={<SuccessPage />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/portfolio" element={<PortfolioPage />} />
         <Route path="/reviews" element={<ReviewsPage />} />
