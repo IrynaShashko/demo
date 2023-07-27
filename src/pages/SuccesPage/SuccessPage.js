@@ -1,3 +1,5 @@
+import React, { useEffect } from "react";
+
 import {
   SuccessBackdrop,
   SuccessContent,
@@ -7,6 +9,11 @@ import {
 } from "../SuccesPage/SuccessPage.styled";
 
 const SuccessPage = () => {
+  useEffect(() => {
+    // Додайте скрипт, що змусить React Router показати компонент успіху
+    window.history.replaceState(null, null, "/success");
+  }, []);
+
   return (
     <SuccessBackdrop>
       <SuccessContent>
