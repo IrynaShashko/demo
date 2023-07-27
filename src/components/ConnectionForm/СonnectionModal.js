@@ -3,7 +3,6 @@ import { Formik, ErrorMessage } from "formik";
 import { IconContext } from "react-icons";
 import { FiX } from "react-icons/fi";
 import logo from "../../logo.png";
-import SuccessPage from "../../pages/SuccesPage/SuccessPage";
 import {
   ModalBackdrop,
   ModalContent,
@@ -74,7 +73,6 @@ const ConnectionForm = ({ isOpen, onClose }) => {
   const [selectedService, setSelectedService] = useState("");
   const [selectedSubService, setSelectedSubService] = useState("");
   const [subServiceOptions, setSubServiceOptions] = useState([]);
-  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 
   useEffect(() => {
     const selectedServiceData = services.find(
@@ -87,18 +85,6 @@ const ConnectionForm = ({ isOpen, onClose }) => {
       setSubServiceOptions([]);
     }
   }, [selectedService]);
-
-  // useEffect(() => {
-  //   const selectedServiceData = services.find(
-  //     (service) => service.subServices === selectedSubService
-  //   );
-
-  //   if (selectedServiceData) {
-  //     setSelectedSubService(selectedServiceData.subServices);
-  //   } else {
-  //     setSelectedSubService("");
-  //   }
-  // }, [selectedSubService]);
 
   useEffect(() => {
     if (isOpen) {
@@ -146,14 +132,12 @@ const ConnectionForm = ({ isOpen, onClose }) => {
   const handleSubmit = (values, { resetForm }) => {
     // Handle form submission logic here
     console.log(values);
-    setIsFormSubmitted(true);
     resetForm();
     onClose();
   };
 
   return (
     <>
-      {isFormSubmitted && <SuccessPage />}
       <ModalBackdrop onClick={handleBackdropClick}>
         <ModalContent onClose={onClose}>
           <Container>

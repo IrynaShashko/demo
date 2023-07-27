@@ -7,7 +7,6 @@ const AboutPage = lazy(() => import("./pages/AboutPage/AboutPage"));
 const PortfolioPage = lazy(() => import("./pages/PortfolioPage/PortfolioPage"));
 const ReviewsPage = lazy(() => import("./pages/ReviewsPage/ReviewsPage"));
 const PricePage = lazy(() => import("./pages/PricePage/PricePage"));
-const SuccessPage = lazy(() => import("./pages/SuccesPage/SuccessPage"));
 const PriceWomen = lazy(() => import("./components/Women/Women"));
 const PriceMen = lazy(() => import("./components/Men/Men"));
 const PriceChildren = lazy(() => import("./components/Children/Children"));
@@ -18,7 +17,6 @@ const NavRoutes = () => {
   return (
     <Suspense fallback={<Loader />}>
       <Routes>
-        <Route path="/success" element={<SuccessPage />} />
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/portfolio" element={<PortfolioPage />} />
