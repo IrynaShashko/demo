@@ -177,7 +177,7 @@ const ConnectionForm = ({ isOpen, onClose }) => {
                   name="connection-form"
                   data-netlify="true"
                   method="post"
-                  onSubmit="submit"
+                  onSubmit={handleSubmit}
                   action="success"
                 >
                   <input
