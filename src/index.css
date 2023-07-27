@@ -77,7 +77,7 @@ a {
   clip: rect(0 0 0 0);
 }
 
-#modal {
+#success {
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
@@ -87,7 +87,7 @@ a {
   z-index: 9999;
 }
 
-#modal div {
+#success div {
   background-color: #fff;
   width: 200px;
   margin: 10% auto;
