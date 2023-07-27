@@ -3,6 +3,7 @@
 import photo from "../../images/photo.jpg";
 import experience from "../../experience.json";
 import {
+  AboutContainer,
   StudyContainer,
   Image,
   ImageContainer,
@@ -40,7 +41,7 @@ const AboutPage = () => {
   ));
 
   return (
-    <div>
+    <AboutContainer>
       <StudyContainer>
         <ImageContainer>
           <Image src={photo} alt="masseur" />
@@ -63,7 +64,7 @@ const AboutPage = () => {
         <ItemTitle>Додаткові навички:</ItemTitle>
         <ul>{elseItems}</ul>
       </Container>
-    </div>
+    </AboutContainer>
   );
 };
 

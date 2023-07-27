@@ -1,9 +1,9 @@
 import styled from "@emotion/styled";
 
 export const AboutContainer = styled.div`
-  padding: 20px;
-  @media screen and (min-width: 375px) {
-    padding: 50px;
+  padding-bottom: 30px;
+  @media screen and (min-width: 768px) {
+    padding-bottom: 50px;
   }
 `;
 
@@ -108,6 +108,7 @@ export const AfterTitle = styled.p`
 export const ItemText = styled.p`
   font-size: 14px;
   margin-bottom: 10px;
+  color: #696969;
   @media screen and (min-width: 768px) {
     font-size: 16px;
   }
@@ -118,12 +119,16 @@ export const ItemTitle = styled.h4`
   color: #007586;
   margin-bottom: 10px;
   text-transform: uppercase;
+  line-height: 80px;
 `;
 
 export const DataTitle = styled.span`
-  font-weight: lighter;
+  /* font-weight: lighter; */
   color: #000;
-  font-size: 18px;
+  font-size: 14px;
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
 `;
 
 export const AboutNumber = styled.a`
