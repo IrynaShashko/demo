@@ -1,6 +1,6 @@
 [[redirects]]
   from = "/success"
-  to = "/success-page"
+  to = "/src/pages/SuccesPage/SuccessPage.js"
   status = 200
   force = true
 
