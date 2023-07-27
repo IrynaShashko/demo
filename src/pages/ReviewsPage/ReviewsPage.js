@@ -33,7 +33,7 @@ const ReviewsPage = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplaySpeed: 3000,
-    autoplay: true,
+    // autoplay: true,
     cssEase: "linear",
     pauseOnHover: true,
   };

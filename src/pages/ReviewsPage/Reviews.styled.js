@@ -41,8 +41,6 @@ export const ListItem = styled.li`
   width: 100%;
   border-radius: 8px;
   padding: 20px;
-  /* margin-bottom: 10px;
-  margin-right: 20px; */
   overflow-y: scroll;
   box-sizing: border-box;
 
@@ -78,7 +76,7 @@ export const ItemDiv = styled.div`
   overflow: hidden;
   padding-bottom: 20px;
   box-sizing: border-box;
-  overflow-y: scroll;
+  // overflow-y: scroll;
   @media screen and (min-width: 1440px) {
     display: flex;
     flex-direction: row;
@@ -98,8 +96,8 @@ export const UserDiv = styled.div`
 
 export const UserName = styled.p`
   color: #007586;
-  text-shadow: 0px 0px 7px rgba(0, 117, 134, 1);
   margin-bottom: 20px;
+  font-size: 18px;
 `;
 
 export const Title = styled.h2`
@@ -121,14 +119,14 @@ export const StarsText = styled.p`
 `;
 
 export const Text = styled.p`
-  font-size: 16px;
-  font-weight: lighter;
+  font-size: 14px;
+  color: #696969;
   text-align: center;
   @media screen and (min-width: 768px) {
-    font-size: 18px;
+    font-size: 16px;
   }
   @media screen and (min-width: 1440px) {
-    font-size: 20px;
+    font-size: 18px;
     padding-top: 20px;
   }
 `;
