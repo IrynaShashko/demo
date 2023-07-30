@@ -23,7 +23,7 @@ const PhoneButton = () => {
   }
 
   function openViber() {
-    window.open("viber://chat?number=+380999304877");
+    window.open("viber://chat?number=+380974719433");
   }
 
   function makeCall() {
