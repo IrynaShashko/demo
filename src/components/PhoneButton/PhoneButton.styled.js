@@ -26,14 +26,14 @@ const slideInFromLeft = keyframes`
 
 export const PhoneContainer = styled.div`
   position: fixed;
-  bottom: 10px;
-  right: 10px;
+  bottom: 20px;
+  right: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   @media screen and (width: 768px) {
-    bottom: 20px;
-    right: 20px;
+    bottom: 30px;
+    right: 30px;
   }
   @media screen and (width: 1440px) {
     bottom: 50px;
