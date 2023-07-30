@@ -6,6 +6,7 @@ export const HomeContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  box-sizing: border-box;
   align-items: center;
   background-image: linear-gradient(
       0deg,
