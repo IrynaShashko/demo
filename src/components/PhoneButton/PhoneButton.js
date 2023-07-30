@@ -77,7 +77,7 @@ const PhoneButton = () => {
       <MainButton onClick={toggleButtons}>
         <IconContext.Provider
           value={{
-            size: "30px",
+            size: "25px",
             color: "#fff",
           }}
         >

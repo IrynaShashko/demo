@@ -83,7 +83,7 @@ export const ButtonDiv = styled.div`
 `;
 
 export const Buttons = styled.button`
-  padding: 10px;
+  padding: 10px 14px;
   border: none;
   border-radius: 50px;
   background-color: #007586;
