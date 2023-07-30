@@ -13,7 +13,10 @@ import {
   ModalSubmitBtn,
 } from "./HomePage.styled";
 
+import "../../index.css";
+
 import { Container } from "../../App.styled";
+import PhoneButton from "../../components/PhoneButton/PhoneButton";
 
 const HomePage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -25,6 +28,7 @@ const HomePage = () => {
     <HomeContainer>
       <Container>
         <TextContainer>
+          <PhoneButton />
           <Text>Медична освіта</Text>
           <Text>Досвід 10+ років</Text>
           <Text>Симбіоз технік та методик</Text>
