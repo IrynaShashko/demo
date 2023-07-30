@@ -15,6 +15,13 @@ const PhoneButton = () => {
     useState(false);
 
   function toggleButtons() {
+    const icon = document.getElementById("icon");
+
+    if (!isAdditionalButtonsVisible) {
+      icon.style.transform = "rotate(-45deg)";
+    } else {
+      icon.style.transform = "rotate(0deg)";
+    }
     setAdditionalButtonsVisible((prevValue) => !prevValue);
   }
 
@@ -23,7 +30,7 @@ const PhoneButton = () => {
   }
 
   function openViber() {
-    window.open("viber://chat?number=+380974719433");
+    window.open("viber://chat?number=+380999304877");
   }
 
   function makeCall() {
@@ -39,7 +46,7 @@ const PhoneButton = () => {
         <Buttons type="button" onClick={makeCall}>
           <IconContext.Provider
             value={{
-              size: "30px",
+              size: "20px",
               color: "#fff",
             }}
           >
@@ -49,7 +56,7 @@ const PhoneButton = () => {
         <Buttons type="button" onClick={openTelegram}>
           <IconContext.Provider
             value={{
-              size: "30px",
+              size: "20px",
               color: "#fff",
             }}
           >
@@ -59,7 +66,7 @@ const PhoneButton = () => {
         <Buttons type="button" onClick={openViber}>
           <IconContext.Provider
             value={{
-              size: "30px",
+              size: "20px",
               color: "#fff",
             }}
           >
@@ -74,7 +81,7 @@ const PhoneButton = () => {
             color: "#fff",
           }}
         >
-          <LuPhone />
+          <LuPhone id="icon" />
         </IconContext.Provider>
       </MainButton>
     </PhoneContainer>

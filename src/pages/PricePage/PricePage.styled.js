@@ -16,8 +16,9 @@ export const BackgroundImageStyle = styled.div`
   padding-top: 20px;
   padding-bottom: 20px;
   box-sizing: border-box;
-  @media screen and (min-width: 678px) {
+  @media screen and (min-width: 768px) {
     padding-top: 50px;
+    padding-bottom: 50px;
   }
 `;
 

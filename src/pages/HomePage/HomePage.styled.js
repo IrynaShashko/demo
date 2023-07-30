@@ -19,7 +19,6 @@ export const HomeContainer = styled.div`
   width: 100%;
   height: calc(100vh - 85px);
   @media screen and (min-width: 1440px) {
-    padding-top: auto;
     flex-direction: row;
     justify-content: space-evenly;
   }
@@ -85,9 +84,9 @@ export const ModalSubmitBtn = styled.button`
   background-color: #007586;
   border-radius: 8px;
   align-self: center;
-  padding: 10px 20px;
+  padding: 10px;
   color: #ffffff;
-  width: 280px;
+  width: 220px;
   font-size: 20px;
   font-family: 400;
   font-weight: lighter;

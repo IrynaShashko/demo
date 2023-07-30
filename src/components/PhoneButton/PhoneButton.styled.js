@@ -31,24 +31,25 @@ export const PhoneContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media screen and (width: 768px) {
+  @media screen and (min-width: 768px) {
     bottom: 30px;
     right: 30px;
   }
-  @media screen and (width: 1440px) {
-    bottom: 50px;
-    right: 50px;
+  @media screen and (min-width: 1440px) {
+    bottom: 70px;
+    right: 70px;
   }
 `;
 
 export const MainButton = styled.button`
-  padding: 20px;
+  padding: 10px;
   font-size: 16px;
   animation: ${pulse} 2s infinite;
   border-radius: 50px;
   background-color: #007586;
   border: none;
   box-shadow: 0px 1px 8px 1px rgba(255, 255, 255, 1);
+  cursor: pointer;
 `;
 
 export const ButtonDiv = styled.div`
@@ -86,6 +87,7 @@ export const Buttons = styled.button`
   border: none;
   border-radius: 50px;
   background-color: #007586;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   box-shadow: 0px 1px 8px 1px rgba(255, 255, 255, 1);
+  cursor: pointer;
 `;
