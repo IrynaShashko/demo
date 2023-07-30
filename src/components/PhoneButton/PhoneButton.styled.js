@@ -47,6 +47,8 @@ export const MainButton = styled.button`
   animation: ${pulse} 2s infinite;
   border-radius: 50px;
   background-color: #007586;
+  border: none;
+  box-shadow: 0px 1px 8px 1px rgba(255, 255, 255, 1);
 `;
 
 export const ButtonDiv = styled.div`
@@ -81,7 +83,9 @@ export const ButtonDiv = styled.div`
 
 export const Buttons = styled.button`
   padding: 10px;
+  border: none;
   border-radius: 50px;
   background-color: #007586;
   margin-bottom: 10px;
+  box-shadow: 0px 1px 8px 1px rgba(255, 255, 255, 1);
 `;

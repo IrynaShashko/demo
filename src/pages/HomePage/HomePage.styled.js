@@ -16,7 +16,7 @@ export const HomeContainer = styled.div`
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: calc(100vh - 85.05px);
+  height: calc(100vh - 85px);
   @media screen and (min-width: 1440px) {
     padding-top: auto;
     flex-direction: row;
@@ -51,36 +51,6 @@ export const Text = styled.p`
   text-transform: uppercase;
   @media screen and (min-width: 1440px) {
     font-size: 30px;
-  }
-`;
-
-export const ImageContainer = styled.div`
-  display: flex;
-  justify-content: space-around;
-  height: 150px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  @media screen and (min-width: 768px) {
-    height: 250px;
-  }
-`;
-
-export const ImageLeft = styled.img`
-  width: 150px;
-  object-fit: cover;
-  border-top-left-radius: 50%;
-  @media screen and (min-width: 768px) {
-    width: 250px;
-  }
-`;
-
-export const ImageRight = styled.img`
-  width: 150px;
-  object-fit: cover;
-  margin-left: 5px;
-  border-bottom-right-radius: 50%;
-  @media screen and (min-width: 768px) {
-    width: 250px;
   }
 `;
 
