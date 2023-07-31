@@ -11,11 +11,8 @@ export const ReviewsContainer = styled.div`
   align-items: center;
   background-color: #cfb495;
   height: calc(100vh - 85.05px);
-  /* height: 100%; */
-  /* padding-top: 50px;
-  padding-bottom: 20px; */
-  justify-content: center;
-  padding: 0;
+  padding-top: 60px;
+  padding-bottom: 20px;
   @media screen and (min-width: 768px) {
     justify-content: center;
     padding: 0;
@@ -34,8 +31,6 @@ export const List = styled.ul`
 `;
 
 export const ListItem = styled.li`
-  // border: 1px solid #f4e6c7;
-  // background-color: #f4e6c7;
   background-image: linear-gradient(
       0deg,
       rgba(50, 49, 49, 0.437) 0%,
@@ -49,8 +44,6 @@ export const ListItem = styled.li`
   width: 100%;
   border-radius: 8px;
   padding: 20px;
-  /* padding-top: 50px; */
-  /* overflow-y: scroll; */
   box-sizing: border-box;
 
   @media screen and (min-width: 768px) {
@@ -84,9 +77,7 @@ export const ItemDiv = styled.div`
   overflow: hidden;
   padding: 20px;
   box-sizing: border-box;
-  /* border-radius: 8px; */
   background-color: rgba(255, 255, 255, 0.8);
-  // overflow-y: scroll;
   @media screen and (min-width: 1440px) {
     display: flex;
     flex-direction: row;
