@@ -11,7 +11,7 @@ export const ReviewsContainer = styled.div`
   align-items: center;
   background-color: #cfb495;
   min-height: calc(100vh - 85.05px);
-  padding-top: 20px;
+  padding-top: 50px;
   padding-bottom: 20px;
   @media screen and (min-width: 768px) {
     padding-top: 50px;
