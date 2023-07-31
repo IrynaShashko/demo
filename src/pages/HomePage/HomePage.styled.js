@@ -18,7 +18,7 @@ export const HomeContainer = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   width: 100vw;
-  padding-top: 120px;
+  padding-top: 150px;
   /* height: calc(100vh - 85px); */
   height: 80vh;
   @media screen and (min-width: 768px) {
