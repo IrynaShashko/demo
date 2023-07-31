@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 import { AiFillStar } from "react-icons/ai";
-import { BiUser } from "react-icons/bi";
+// import { BiUser } from "react-icons/bi";
 import { IconContext } from "react-icons";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -11,7 +11,7 @@ import {
   ReviewsContainer,
   List,
   ListItem,
-  UserDiv,
+  // UserDiv,
   UserIconDiv,
   UserName,
   Title,
@@ -29,10 +29,10 @@ const ReviewsPage = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 1000,
+    speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplaySpeed: 3000,
+    // autoplaySpeed: 3000,
     // autoplay: true,
     cssEase: "linear",
     pauseOnHover: true,
@@ -51,7 +51,7 @@ const ReviewsPage = () => {
               <ListItem key={item.id}>
                 <ItemDiv>
                   <TitleDiv>
-                    <UserDiv>
+                    {/* <UserDiv>
                       <IconContext.Provider
                         value={{
                           color: "#007586",
@@ -60,7 +60,7 @@ const ReviewsPage = () => {
                       >
                         <BiUser />
                       </IconContext.Provider>
-                    </UserDiv>
+                    </UserDiv> */}
                     <UserIconDiv>
                       <UserName>{item.name}</UserName>
                       <Stars>

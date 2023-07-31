@@ -42,9 +42,9 @@ export const PhoneContainer = styled.div`
 `;
 
 export const MainButton = styled.button`
-  padding: 10px;
+  padding: 16px 18px;
   font-size: 16px;
-  animation: ${pulse} 2s infinite;
+  animation: ${pulse} 6s infinite;
   border-radius: 50px;
   background-color: #007586;
   border: none;
@@ -83,7 +83,7 @@ export const ButtonDiv = styled.div`
 `;
 
 export const Buttons = styled.button`
-  padding: 10px 14px;
+  padding: 12px 14px;
   border: none;
   border-radius: 50px;
   background-color: #007586;

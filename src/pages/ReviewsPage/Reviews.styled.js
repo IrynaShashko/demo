@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-
+import photo from "../../images/11.jpg";
 export const Stars = styled.div`
   display: flex;
   align-items: center;
@@ -10,10 +10,10 @@ export const ReviewsContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #f8f8f8;
+  background-color: #f8fbfc;
   padding-top: 20px;
   padding-bottom: 20px;
-  @media screen and (min-width: 375px) {
+  @media screen and (min-width: 768px) {
     padding-top: 50px;
     padding-bottom: 50px;
   }
@@ -34,15 +34,23 @@ export const List = styled.ul`
 `;
 
 export const ListItem = styled.li`
-  border-radius: 8px;
-  border: 1px solid #e3e2e2;
-  background-color: #fff;
+  // border: 1px solid #f4e6c7;
+  // background-color: #f4e6c7;
+  background-image: linear-gradient(
+      0deg,
+      rgba(50, 49, 49, 0.437) 0%,
+      rgba(50, 49, 49, 0.527) 100%
+    ),
+    url(${photo});
+  background-size: cover;
+  background-position: center;
   box-shadow: -3px 4px 15px 0px rgba(0, 0, 0, 0.06);
   height: 450px;
   width: 100%;
   border-radius: 8px;
   padding: 20px;
-  overflow-y: scroll;
+  /* padding-top: 50px; */
+  /* overflow-y: scroll; */
   box-sizing: border-box;
 
   @media screen and (min-width: 768px) {
@@ -75,8 +83,10 @@ export const UserIconDiv = styled.div`
 export const ItemDiv = styled.div`
   height: 100%;
   overflow: hidden;
-  padding-bottom: 20px;
+  padding: 20px;
   box-sizing: border-box;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.8);
   // overflow-y: scroll;
   @media screen and (min-width: 1440px) {
     display: flex;
@@ -97,13 +107,13 @@ export const UserDiv = styled.div`
 
 export const UserName = styled.p`
   color: #007586;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-size: 18px;
 `;
 
 export const Title = styled.h2`
   font-size: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   text-transform: uppercase;
   color: #007586;
 `;

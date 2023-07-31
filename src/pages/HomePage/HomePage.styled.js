@@ -15,9 +15,13 @@ export const HomeContainer = styled.div`
     ),
     url(${photo});
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
-  width: 100%;
+  width: 100vw;
   height: calc(100vh - 85px);
+  @media screen and (min-width: 768px) {
+    /* width: 100vw; */
+  }
   @media screen and (min-width: 1440px) {
     flex-direction: row;
     justify-content: space-evenly;

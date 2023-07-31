@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { NavLink } from "react-router-dom";
 
 export const ContainerNav = styled.div`
-  background-color: #ffffff;
+  background-color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;

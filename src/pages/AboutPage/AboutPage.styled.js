@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 
 export const AboutContainer = styled.div`
   padding-bottom: 30px;
+  background-color: #f8fbfc;
   @media screen and (min-width: 768px) {
     padding-bottom: 50px;
   }
@@ -25,12 +26,12 @@ export const ImageContainer = styled.div`
   align-items: center;
   background-image: linear-gradient(
     to bottom,
-    #fff 15%,
+    #f8fbfc 15%,
     #007586 15%,
     #007586 50%,
     #007586 50%,
     #007586 65%,
-    #fff 65%
+    #f8fbfc 65%
   );
   @media screen and (min-width: 768px) {
     display: flex;
@@ -39,24 +40,24 @@ export const ImageContainer = styled.div`
     margin-bottom: 20px;
     background-image: linear-gradient(
       to bottom,
-      #fff 25%,
+      #f8fbfc 25%,
       #007586 25%,
       #007586 60%,
       #007586 60%,
       #007586 85%,
-      #fff 85%
+      #f8fbfc 85%
     );
   }
 
   @media screen and (min-width: 1440px) {
     background-image: linear-gradient(
       to bottom,
-      #fff 30%,
+      #f8fbfc 30%,
       #007586 30%,
       #007586 50%,
       #007586 50%,
       #007586 75%,
-      #fff 75%
+      #f8fbfc 75%
     );
   }
 `;
