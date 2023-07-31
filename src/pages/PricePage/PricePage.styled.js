@@ -3,14 +3,15 @@ import { NavLink } from "react-router-dom";
 import photo from "../../images/11.jpg";
 
 export const BackgroundImageStyle = styled.div`
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
       0deg,
       rgba(50, 49, 49, 0.437) 0%,
       rgba(50, 49, 49, 0.527) 100%
     ),
     url(${photo});
   background-size: cover;
-  background-position: center;
+  background-position: center; */
+  background-color: #cfb495;
   width: 100%;
   min-height: calc(100vh - 85.05px);
   padding-top: 20px;
@@ -107,8 +108,8 @@ export const PriceItem = styled.tr`
 export const ItemTitle = styled.td`
   font-size: 16px;
   padding: 10px;
-  color: #fff;
-  text-shadow: 2px 2px 5px #585858;
+  color: #696969;
+  /* text-shadow: 2px 2px 5px #585858; */
   @media screen and (min-width: 768px) {
     font-size: 18px;
     padding: 10px;

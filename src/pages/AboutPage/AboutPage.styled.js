@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 export const AboutContainer = styled.div`
   padding-bottom: 30px;
-  background-color: #f8fbfc;
+  background-color: #cfb495;
   @media screen and (min-width: 768px) {
     padding-bottom: 50px;
   }
@@ -26,12 +26,12 @@ export const ImageContainer = styled.div`
   align-items: center;
   background-image: linear-gradient(
     to bottom,
-    #f8fbfc 15%,
+    #cfb495 15%,
     #007586 15%,
     #007586 50%,
     #007586 50%,
     #007586 65%,
-    #f8fbfc 65%
+    #cfb495 65%
   );
   @media screen and (min-width: 768px) {
     display: flex;
@@ -40,24 +40,24 @@ export const ImageContainer = styled.div`
     margin-bottom: 20px;
     background-image: linear-gradient(
       to bottom,
-      #f8fbfc 25%,
+      #cfb495 25%,
       #007586 25%,
       #007586 60%,
       #007586 60%,
       #007586 85%,
-      #f8fbfc 85%
+      #cfb495 85%
     );
   }
 
   @media screen and (min-width: 1440px) {
     background-image: linear-gradient(
       to bottom,
-      #f8fbfc 30%,
-      #007586 30%,
+      #cfb495 15%,
+      #007586 15%,
       #007586 50%,
       #007586 50%,
-      #007586 75%,
-      #f8fbfc 75%
+      #007586 90%,
+      #cfb495 90%
     );
   }
 `;
@@ -88,19 +88,18 @@ export const TitleContainer = styled.div`
 export const Title = styled.h2`
   font-size: 30px;
   margin-top: 20px;
-  color: #007586;
+  color: #fff;
   margin-bottom: 10px;
   font-weight: lighter;
+  text-shadow: 0px 0px 7px rgba(255, 255, 255, 1);
   @media screen and (min-width: 768px) {
     font-size: 35px;
-    color: #fff;
   }
 `;
 
 export const AfterTitle = styled.p`
   font-size: 16px;
   margin-bottom: 10px;
-  /* font-weight: lighter; */
   @media screen and (min-width: 768px) {
     font-size: 20px;
   }
@@ -124,7 +123,6 @@ export const ItemTitle = styled.h4`
 `;
 
 export const DataTitle = styled.span`
-  /* font-weight: lighter; */
   color: #000;
   font-size: 14px;
   @media screen and (min-width: 768px) {
@@ -134,10 +132,10 @@ export const DataTitle = styled.span`
 
 export const AboutNumber = styled.a`
   text-decoration: none;
-  color: #007586;
+  color: #fff;
   font-size: 18px;
   font-weight: lighter;
-  text-shadow: 0px 0px 7px rgba(0, 117, 134, 1);
+  text-shadow: 0px 0px 7px rgba(255, 255, 255, 1);
   &:hover {
     font-size: 20px;
     @media screen and (min-width: 768px) {
@@ -146,6 +144,5 @@ export const AboutNumber = styled.a`
   }
   @media screen and (min-width: 768px) {
     font-size: 25px;
-    color: #fff;
   }
 `;

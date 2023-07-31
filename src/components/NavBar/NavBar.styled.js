@@ -6,6 +6,7 @@ export const ContainerNav = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0 auto;
 `;
 
 export const NavLinkContainer = styled.div`

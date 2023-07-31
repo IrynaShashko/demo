@@ -14,8 +14,8 @@ import {
   // UserDiv,
   UserIconDiv,
   UserName,
-  Title,
-  TitleContainer,
+  // Title,
+  // TitleContainer,
   Text,
   ItemDiv,
   TitleDiv,
@@ -29,7 +29,7 @@ const ReviewsPage = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 0,
     slidesToShow: 1,
     slidesToScroll: 1,
     // autoplaySpeed: 3000,
@@ -41,26 +41,12 @@ const ReviewsPage = () => {
   return (
     <ReviewsContainer>
       <Container>
-        <TitleContainer>
-          <Title>Відгуки</Title>
-        </TitleContainer>
-
         <List>
           <Slider {...settings} className="slider">
             {reviews.map((item) => (
               <ListItem key={item.id}>
                 <ItemDiv>
                   <TitleDiv>
-                    {/* <UserDiv>
-                      <IconContext.Provider
-                        value={{
-                          color: "#007586",
-                          size: "20px",
-                        }}
-                      >
-                        <BiUser />
-                      </IconContext.Provider>
-                    </UserDiv> */}
                     <UserIconDiv>
                       <UserName>{item.name}</UserName>
                       <Stars>
