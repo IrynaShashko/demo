@@ -10,12 +10,15 @@ export const ReviewsContainer = styled.div`
   flex-direction: column;
   align-items: center;
   background-color: #cfb495;
-  min-height: calc(100vh - 85.05px);
-  padding-top: 50px;
-  padding-bottom: 20px;
+  height: calc(100vh - 85.05px);
+  /* height: 100%; */
+  /* padding-top: 50px;
+  padding-bottom: 20px; */
+  justify-content: center;
+  padding: 0;
   @media screen and (min-width: 768px) {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    justify-content: center;
+    padding: 0;
   }
 `;
 

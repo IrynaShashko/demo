@@ -27,5 +27,5 @@ export const Header = styled.header`
 `;
 
 export const Main = styled.main`
-  min-height: 75vh;
+  // height: 100vh;
 `;
