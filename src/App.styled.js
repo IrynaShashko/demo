@@ -26,6 +26,4 @@ export const Header = styled.header`
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 `;
 
-export const Main = styled.main`
-  // height: 100vh;
-`;
+export const Main = styled.main``;

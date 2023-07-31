@@ -5,7 +5,7 @@ import photo from "../../images/10.jpg";
 export const HomeContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   box-sizing: border-box;
   align-items: center;
   background-image: linear-gradient(
@@ -18,7 +18,9 @@ export const HomeContainer = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   width: 100vw;
-  height: calc(100vh - 85px);
+  padding-top: 120px;
+  /* height: calc(100vh - 85px); */
+  height: 80vh;
   @media screen and (min-width: 768px) {
     /* width: 100vw; */
   }
