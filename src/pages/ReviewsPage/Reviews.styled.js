@@ -8,18 +8,15 @@ export const Stars = styled.div`
 export const ReviewsContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  flex: 1;
   background-color: #cfb495;
-  box-sizing: border-box;
-  height: calc(100vh - 85.05px);
-  /* padding-top: 20px;
+  min-height: calc(100vh - 85.05px);
+  padding-top: 20px;
   padding-bottom: 20px;
   @media screen and (min-width: 768px) {
     padding-top: 50px;
     padding-bottom: 50px;
-  } */
+  }
 `;
 
 export const List = styled.ul`
