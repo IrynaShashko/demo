@@ -12,15 +12,14 @@ export const ReviewsContainer = styled.div`
   align-items: center;
   flex: 1;
   background-color: #cfb495;
-  /* box-sizing: border-box; */
-  height: calc(100vh - 85.05px);
-  padding-top: 20px;
-  padding-bottom: 20px;
   box-sizing: border-box;
+  height: calc(100vh - 85.05px);
+  /* padding-top: 20px;
+  padding-bottom: 20px;
   @media screen and (min-width: 768px) {
     padding-top: 50px;
     padding-bottom: 50px;
-  }
+  } */
 `;
 
 export const List = styled.ul`
