@@ -48,7 +48,7 @@ export const MainButton = styled.button`
   border-radius: 50px;
   background-color: #007586;
   border: none;
-  box-shadow: 0px 1px 8px 1px rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 2px 1px rgba(255, 255, 255, 1);
   cursor: pointer;
 `;
 
@@ -88,6 +88,6 @@ export const Buttons = styled.button`
   border-radius: 50px;
   background-color: #007586;
   margin-bottom: 20px;
-  box-shadow: 0px 1px 8px 1px rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 2px 1px rgba(255, 255, 255, 1);
   cursor: pointer;
 `;

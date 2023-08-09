@@ -66,7 +66,7 @@ export const Image = styled.img`
   width: 280px;
   border-radius: 8px;
   border: none;
-  box-shadow: 0px 1px 8px 1px rgba(0, 0, 0, 1);
+  box-shadow: 0px 0px 2px 1px rgba(105, 105, 105, 1);
   @media screen and (min-width: 768px) {
     width: 200px;
   }
@@ -98,7 +98,7 @@ export const Title = styled.h2`
 `;
 
 export const AfterTitle = styled.p`
-  font-size: 16px;
+  font-size: 18px;
   margin-bottom: 10px;
   @media screen and (min-width: 768px) {
     font-size: 20px;
@@ -106,13 +106,12 @@ export const AfterTitle = styled.p`
 `;
 
 export const TitleText = styled.p`
-  font-size: 16px;
-  line-height: 14px;
+  font-size: 14px;
+  line-height: 20px;
   text-align: center;
   color: #696969;
   @media screen and (min-width: 768px) {
-    font-size: 20px;
-    line-height: 20px;
+    font-size: 18px;
   }
 `;
 
@@ -130,7 +129,8 @@ export const ItemTitle = styled.h4`
   color: #007586;
   margin-bottom: 10px;
   text-transform: uppercase;
-  line-height: 80px;
+  line-height: 50px;
+  text-align: center;
 `;
 
 export const DataTitle = styled.span`
@@ -138,24 +138,5 @@ export const DataTitle = styled.span`
   font-size: 14px;
   @media screen and (min-width: 768px) {
     font-size: 16px;
-  }
-`;
-
-export const AboutNumber = styled.a`
-  text-decoration: none;
-  margin-bottom: 10px;
-  color: #000;
-  font-size: 18px;
-  font-weight: lighter;
-  text-shadow: 0px 0px 7px rgba(255, 255, 255, 1);
-  &:hover {
-    font-size: 20px;
-    @media screen and (min-width: 768px) {
-      font-size: 27px;
-      margin-bottom: 20px;
-    }
-  }
-  @media screen and (min-width: 768px) {
-    font-size: 25px;
   }
 `;

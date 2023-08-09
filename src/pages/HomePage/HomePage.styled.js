@@ -48,11 +48,11 @@ export const TextContainer = styled.div`
 `;
 
 export const Text = styled.p`
-  font-size: 18px;
+  font-size: 20px;
   color: #fff;
   text-align: center;
   font-weight: lighter;
-  line-height: 20px;
+  line-height: 25px;
   width: 280px;
   @media screen and (min-width: 768px) {
     line-height: 30px;
@@ -113,7 +113,8 @@ export const ModalSubmitBtn = styled.button`
   font-family: 400;
   font-weight: lighter;
   cursor: pointer;
-  box-shadow: 0px 1px 8px 1px rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 2px 1px rgba(255, 255, 255, 1);
+  text-transform: uppercase;
   margin-top: 20px;
   @media screen and (min-width: 425px) {
     width: 250px;

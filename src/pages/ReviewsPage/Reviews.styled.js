@@ -10,13 +10,21 @@ export const ReviewsContainer = styled.div`
   flex-direction: column;
   align-items: center;
   background-color: #f2efee;
-  height: calc(100vh - 85.05px);
-  padding-top: 60px;
+  height: 550px;
+  padding-top: 20px;
   padding-bottom: 20px;
   @media screen and (min-width: 768px) {
     justify-content: center;
     padding: 0;
   }
+`;
+
+export const ReviewsTitle = styled.h3`
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-weight: lighter;
+  text-align: center;
 `;
 
 export const List = styled.ul`

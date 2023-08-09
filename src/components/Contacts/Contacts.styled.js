@@ -25,7 +25,7 @@ export const Title = styled.h3`
 export const ContactsLink = styled.a`
   text-decoration: none;
   color: #fff;
-  font-size: 14px;
+  font-size: 18px;
 `;
 
 export const IconList = styled.ul`
@@ -48,4 +48,5 @@ export const IconContainer = styled.li`
   border-radius: 50px;
   padding: 10px;
   cursor: pointer;
+  box-shadow: 0px 0px 2px 1px rgba(105, 105, 105, 1);
 `;

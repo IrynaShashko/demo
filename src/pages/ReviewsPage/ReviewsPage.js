@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 import { AiFillStar } from "react-icons/ai";
-// import { BiUser } from "react-icons/bi";
+import Contacts from "../../components/Contacts/Contacts";
 import { IconContext } from "react-icons";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -16,6 +16,7 @@ import {
   UserName,
   // Title,
   // TitleContainer,
+  ReviewsTitle,
   Text,
   ItemDiv,
   TitleDiv,
@@ -39,42 +40,46 @@ const ReviewsPage = () => {
   };
 
   return (
-    <ReviewsContainer>
-      <Container>
-        <List>
-          <Slider {...settings} className="slider">
-            {reviews.map((item) => (
-              <ListItem key={item.id}>
-                <ItemDiv>
-                  <TitleDiv>
-                    <UserIconDiv>
-                      <UserName>{item.name}</UserName>
-                      <Stars>
-                        {starArr.map((el, index) => (
-                          <IconContext.Provider
-                            key={index}
-                            value={{
-                              color: `${
-                                index >= item.totalPositiveStars
-                                  ? "#ccc"
-                                  : "orange"
-                              }`,
-                            }}
-                          >
-                            <AiFillStar />
-                          </IconContext.Provider>
-                        ))}
-                      </Stars>
-                    </UserIconDiv>
-                  </TitleDiv>
-                  <Text>{item.comment}</Text>
-                </ItemDiv>
-              </ListItem>
-            ))}
-          </Slider>
-        </List>
-      </Container>
-    </ReviewsContainer>
+    <>
+      <ReviewsContainer>
+        <Container>
+          <ReviewsTitle>Відгуки клієнтів</ReviewsTitle>
+          <List>
+            <Slider {...settings} className="slider">
+              {reviews.map((item) => (
+                <ListItem key={item.id}>
+                  <ItemDiv>
+                    <TitleDiv>
+                      <UserIconDiv>
+                        <UserName>{item.name}</UserName>
+                        <Stars>
+                          {starArr.map((el, index) => (
+                            <IconContext.Provider
+                              key={index}
+                              value={{
+                                color: `${
+                                  index >= item.totalPositiveStars
+                                    ? "#ccc"
+                                    : "orange"
+                                }`,
+                              }}
+                            >
+                              <AiFillStar />
+                            </IconContext.Provider>
+                          ))}
+                        </Stars>
+                      </UserIconDiv>
+                    </TitleDiv>
+                    <Text>{item.comment}</Text>
+                  </ItemDiv>
+                </ListItem>
+              ))}
+            </Slider>
+          </List>
+        </Container>
+      </ReviewsContainer>
+      <Contacts />
+    </>
   );
 };
 

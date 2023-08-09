@@ -116,7 +116,8 @@ export const ModalSubmitBtn = styled.button`
   font-family: 400;
   font-weight: lighter;
   cursor: pointer;
-  box-shadow: 0px 1px 8px 1px rgba(0, 0, 0, 1);
+  text-transform: uppercase;
+  box-shadow: 0px 0px 2px 1px rgba(105, 105, 105, 1);
   @media screen and (min-width: 425px) {
     width: 300px;
   }

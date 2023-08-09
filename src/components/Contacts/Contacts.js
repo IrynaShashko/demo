@@ -35,7 +35,7 @@ const Contacts = () => {
             <IconContext.Provider
               value={{
                 size: "25px",
-                color: "#007586",
+                color: "#696969",
               }}
             >
               <LuPhone />
@@ -45,7 +45,7 @@ const Contacts = () => {
             <IconContext.Provider
               value={{
                 size: "25px",
-                color: "#007586",
+                color: "#696969",
               }}
             >
               <SlLocationPin />
@@ -55,7 +55,7 @@ const Contacts = () => {
             <IconContext.Provider
               value={{
                 size: "25px",
-                color: "#007586",
+                color: "#696969",
               }}
             >
               <FaInstagram />
@@ -65,7 +65,7 @@ const Contacts = () => {
             <IconContext.Provider
               value={{
                 size: "25px",
-                color: "#007586",
+                color: "#696969",
               }}
             >
               <PiTelegramLogoBold />
