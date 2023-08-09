@@ -11,7 +11,7 @@ export const BackgroundImageStyle = styled.div`
     url(${photo});
   background-size: cover;
   background-position: center; */
-  background-color: #cfb495;
+  background-color: #f2efee;
   width: 100%;
   min-height: calc(100vh - 85.05px);
   padding-top: 20px;
@@ -44,20 +44,20 @@ export const List = styled.ul`
 `;
 
 export const Item = styled(NavLink)`
-  color: #fff;
+  color: #696969;
   font-size: 14px;
   padding: 5px;
-
+  padding-bottom: 0;
   &.active {
-    box-shadow: 1px -4px 6px -4px rgba(255, 255, 255, 1);
-    color: #fff;
+    box-shadow: 1px -4px 6px -4px rgba(105, 105, 105, 1);
+    font-weight: 600;
     font-size: 16px;
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
-    border-top: 1px solid #fff;
-    border-left: 1px solid #fff;
-    border-right: 1px solid #fff;
-    text-shadow: 2px 2px 15px #fff;
+    border-top: 1px solid #696969;
+    border-left: 1px solid #696969;
+    border-right: 1px solid #696969;
+    padding-bottom: 0;
     @media screen and (min-width: 767px) {
       font-size: 18px;
     }
@@ -66,10 +66,12 @@ export const Item = styled(NavLink)`
     }
   }
   @media screen and (min-width: 767px) {
+    padding-bottom: 0;
     padding: 10px;
     font-size: 16px;
   }
   @media screen and (min-width: 1440px) {
+    padding-bottom: 0;
     font-size: 18px;
   }
 `;

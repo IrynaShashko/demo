@@ -2,6 +2,7 @@
 
 import photo from "../../images/photo.jpg";
 import experience from "../../experience.json";
+import Contacts from "../../components/Contacts/Contacts";
 import {
   AboutContainer,
   StudyContainer,
@@ -13,7 +14,8 @@ import {
   AfterTitle,
   ItemText,
   DataTitle,
-  AboutNumber,
+  // AboutNumber,
+  TitleText,
 } from "../AboutPage/AboutPage.styled";
 import { Container } from "../../App.styled";
 
@@ -41,30 +43,48 @@ const AboutPage = () => {
   ));
 
   return (
-    <AboutContainer>
-      <StudyContainer>
-        <ImageContainer>
-          <Image src={photo} alt="masseur" />
-          <TitleContainer>
-            <Title>Марія Глушенко</Title>
-            <AfterTitle>Масажист / реабілітолог</AfterTitle>
-            <AboutNumber href="tel:+380966193616">
-              +38 (093) 619 3616
-            </AboutNumber>
-          </TitleContainer>
-        </ImageContainer>
+    <>
+      <AboutContainer>
+        <StudyContainer>
+          <ImageContainer>
+            <Image src={photo} alt="masseur" />
+            <TitleContainer>
+              <Title>Марія Глушенко</Title>
+              <AfterTitle>Масажист / реабілітолог</AfterTitle>
+              {/* <AboutNumber href="tel:+380966193616">
+                +38 (093) 619 3616
+              </AboutNumber> */}
+            </TitleContainer>
+          </ImageContainer>
+          <Container>
+            <TitleText>
+              Ласкаво просимо до нашого спокійного оазису масажу! Мене звати
+              Марія Глушенко, і я є сертифікованим фахівцем з багаторічним
+              досвідом. Моя мета - не просто зняти фізичний дискомфорт, а й
+              створити глибокий зв'язок між вашим тілом та розумом. Масаж - це
+              не тільки про розслаблення м'язів, а й про відновлення внутрішньої
+              гармонії. У своїй роботі я використовую натуральні олії та
+              аромати, які підсилюють ефект масажу і допомагають вам зануритися
+              у атмосферу спокою та розслаблення. Запрошую вас на сесію масажу,
+              де вас оточить увага, турбота та професійний підхід. Дозвольте
+              собі на мить відірватися від щоденних турбот та дати своєму тілу
+              заслужений відпочинок. Разом ми зможемо знайти ту гармонію, яку ви
+              шукаєте. Запишіться на сеанс масажу вже сьогодні, і дозвольте собі
+              відчути справжнє блаженство і відновлення.
+            </TitleText>
+            <ItemTitle>Освіта:</ItemTitle>
+            <ul>{studyItems}</ul>
+          </Container>
+        </StudyContainer>
         <Container>
-          <ItemTitle>Освіта:</ItemTitle>
-          <ul>{studyItems}</ul>
+          <ItemTitle>Досвід:</ItemTitle>
+          <ul>{experienceItems}</ul>
+          <ItemTitle>Додаткові навички:</ItemTitle>
+          <ul>{elseItems}</ul>
         </Container>
-      </StudyContainer>
-      <Container>
-        <ItemTitle>Досвід:</ItemTitle>
-        <ul>{experienceItems}</ul>
-        <ItemTitle>Додаткові навички:</ItemTitle>
-        <ul>{elseItems}</ul>
-      </Container>
-    </AboutContainer>
+      </AboutContainer>
+      <Contacts />
+    </>
   );
 };
 

@@ -5,7 +5,7 @@ import photo from "../../images/10.jpg";
 export const HomeContainer = styled.div`
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
+  justify-content: center;
   box-sizing: border-box;
   align-items: center;
   background-image: linear-gradient(
@@ -18,15 +18,12 @@ export const HomeContainer = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   width: 100vw;
-  padding-top: 150px;
-  /* height: calc(100vh - 85px); */
-  height: 80vh;
+  height: 500px;
   @media screen and (min-width: 768px) {
-    /* width: 100vw; */
+    height: 600px;
   }
   @media screen and (min-width: 1440px) {
-    flex-direction: row;
-    justify-content: space-evenly;
+    height: 600px;
   }
 `;
 
@@ -41,6 +38,7 @@ export const TextContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 20px 0;
   & p:not(:last-child) {
     margin-bottom: 10px;
     @media screen and (min-width: 1440px) {
@@ -50,13 +48,31 @@ export const TextContainer = styled.div`
 `;
 
 export const Text = styled.p`
-  font-size: 20px;
+  font-size: 18px;
   color: #fff;
   text-align: center;
   font-weight: lighter;
-  text-transform: uppercase;
+  line-height: 20px;
+  width: 280px;
+  @media screen and (min-width: 768px) {
+    line-height: 30px;
+    font-size: 25px;
+    width: 500px;
+  }
   @media screen and (min-width: 1440px) {
+    line-height: 50px;
     font-size: 30px;
+    width: 800px;
+  }
+`;
+
+export const MainText = styled.p`
+  font-size: 16px;
+  color: #696969;
+  text-align: center;
+
+  @media screen and (min-width: 1440px) {
+    font-size: 18px;
   }
 `;
 
@@ -87,7 +103,7 @@ export const LocationButton = styled.a`
 
 export const ModalSubmitBtn = styled.button`
   border: none;
-  background-color: #007586;
+  background-color: transparent;
   border-radius: 8px;
   align-self: center;
   padding: 10px;
@@ -105,4 +121,73 @@ export const ModalSubmitBtn = styled.button`
   @media screen and (min-width: 768px) {
     width: 280px;
   }
+`;
+
+export const InfoDiv = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+  text-align: center;
+`;
+
+export const Title = styled.h3`
+  color: #007586;
+  font-size: 30px;
+  font-weight: lighter;
+  text-transform: uppercase;
+  align-self: center;
+  margin: auto;
+  margin-bottom: 20px;
+`;
+
+export const InfoContainer = styled.ul`
+  padding: 0 20px;
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    flex-direction: row;
+  }
+`;
+
+export const InfoItem = styled.li`
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px 0;
+  @media screen and (min-width: 768px) {
+    padding: 20px;
+  }
+`;
+
+export const InfoTitle = styled.p`
+  font-size: 20px;
+  margin-bottom: 20px;
+  // text-transform: uppercase;
+  color: #007586;
+`;
+
+export const SvgContainer = styled.div`
+  background-color: #007586;
+  width: 120px;
+  height: 120px;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+`;
+
+export const Icon = styled.img`
+  display: inline-block;
+  width: 4em;
+  height: 4em;
+  stroke-width: 0;
+  stroke: #007586;
+  fill: #007586;
 `;

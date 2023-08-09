@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 export const AboutContainer = styled.div`
   padding-bottom: 30px;
-  background-color: #cfb495;
+  background-color: #f2efee;
   @media screen and (min-width: 768px) {
     padding-bottom: 50px;
   }
@@ -26,12 +26,12 @@ export const ImageContainer = styled.div`
   align-items: center;
   background-image: linear-gradient(
     to bottom,
-    #cfb495 15%,
+    #f2efee 15%,
     #007586 15%,
     #007586 50%,
     #007586 50%,
     #007586 65%,
-    #cfb495 65%
+    #f2efee 65%
   );
   @media screen and (min-width: 768px) {
     display: flex;
@@ -40,24 +40,24 @@ export const ImageContainer = styled.div`
     margin-bottom: 20px;
     background-image: linear-gradient(
       to bottom,
-      #cfb495 25%,
+      #f2efee 25%,
       #007586 25%,
       #007586 60%,
       #007586 60%,
       #007586 85%,
-      #cfb495 85%
+      #f2efee 85%
     );
   }
 
   @media screen and (min-width: 1440px) {
     background-image: linear-gradient(
       to bottom,
-      #cfb495 15%,
+      #f2efee 15%,
       #007586 15%,
       #007586 50%,
       #007586 50%,
       #007586 90%,
-      #cfb495 90%
+      #f2efee 90%
     );
   }
 `;
@@ -88,7 +88,7 @@ export const TitleContainer = styled.div`
 export const Title = styled.h2`
   font-size: 30px;
   margin-top: 20px;
-  color: #fff;
+  color: #000;
   margin-bottom: 10px;
   font-weight: lighter;
   text-shadow: 0px 0px 7px rgba(255, 255, 255, 1);
@@ -102,6 +102,17 @@ export const AfterTitle = styled.p`
   margin-bottom: 10px;
   @media screen and (min-width: 768px) {
     font-size: 20px;
+  }
+`;
+
+export const TitleText = styled.p`
+  font-size: 16px;
+  line-height: 14px;
+  text-align: center;
+  color: #696969;
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+    line-height: 20px;
   }
 `;
 
@@ -132,7 +143,8 @@ export const DataTitle = styled.span`
 
 export const AboutNumber = styled.a`
   text-decoration: none;
-  color: #fff;
+  margin-bottom: 10px;
+  color: #000;
   font-size: 18px;
   font-weight: lighter;
   text-shadow: 0px 0px 7px rgba(255, 255, 255, 1);
@@ -140,6 +152,7 @@ export const AboutNumber = styled.a`
     font-size: 20px;
     @media screen and (min-width: 768px) {
       font-size: 27px;
+      margin-bottom: 20px;
     }
   }
   @media screen and (min-width: 768px) {

@@ -9,7 +9,7 @@ export const ReviewsContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #cfb495;
+  background-color: #f2efee;
   height: calc(100vh - 85.05px);
   padding-top: 60px;
   padding-bottom: 20px;

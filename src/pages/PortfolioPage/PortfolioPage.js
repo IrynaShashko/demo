@@ -1,10 +1,11 @@
-import { Container } from "../../App.styled";
+// import { Container } from "../../App.styled";
+import Contacts from "../../components/Contacts/Contacts";
 
 const PortfolioPage = () => {
   return (
-    <Container>
-      <h1>Portfolio Page</h1>
-    </Container>
+    <div>
+      <Contacts />
+    </div>
   );
 };
 
