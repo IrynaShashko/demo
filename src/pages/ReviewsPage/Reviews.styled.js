@@ -30,8 +30,11 @@ export const ReviewsTitle = styled.h3`
 export const List = styled.ul`
   width: 300px;
   margin: 0 auto;
+  @media screen and (min-width: 375px) {
+    width: 320px;
+  }
   @media screen and (min-width: 768px) {
-    width: 450px;
+    width: 550px;
   }
   @media screen and (min-width: 1440px) {
     width: 700px;
@@ -48,18 +51,16 @@ export const ListItem = styled.li`
   background-size: cover;
   background-position: center;
   box-shadow: -3px 4px 15px 0px rgba(0, 0, 0, 0.06);
-  height: 450px;
+  height: 460px;
   width: 100%;
   border-radius: 8px;
-  padding: 20px;
+  padding: 30px;
   box-sizing: border-box;
-
   @media screen and (min-width: 768px) {
-    height: 400px;
-    width: 350px;
+    padding: 40px;
   }
   @media screen and (min-width: 1440px) {
-    width: 300px;
+    padding: 60px;
   }
 `;
 
@@ -84,6 +85,7 @@ export const ItemDiv = styled.div`
   height: 100%;
   overflow: hidden;
   padding: 20px;
+  border-radius: 4px;
   box-sizing: border-box;
   background-color: rgba(255, 255, 255, 0.8);
   @media screen and (min-width: 1440px) {

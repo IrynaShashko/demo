@@ -66,7 +66,6 @@ const services = [
     name: "Додатково",
     subServices: elseServises,
   },
-  // Add more services and their subServices as needed
 ];
 
 const ConnectionForm = ({ isOpen, onClose }) => {

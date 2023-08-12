@@ -11,7 +11,7 @@ export const Container = styled.div`
 export const FormTitle = styled.h1`
   font-size: 30px;
   color: #007586;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-weight: lighter;
   text-transform: uppercase;
 `;
@@ -58,6 +58,7 @@ export const Comment = styled(Field)`
   font-size: 16px;
   margin-bottom: 20px;
   resize: none;
+  // font-family: "Montserrat", sans-serif;
 `;
 
 export const Option = styled.option`

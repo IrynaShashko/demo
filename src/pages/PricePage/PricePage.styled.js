@@ -40,6 +40,7 @@ export const Item = styled(NavLink)`
   padding: 5px;
   padding-bottom: 0;
   &.active {
+    color: #696969;
     box-shadow: 1px -4px 6px -4px rgba(105, 105, 105, 1);
     font-weight: 600;
     font-size: 16px;
@@ -55,6 +56,9 @@ export const Item = styled(NavLink)`
     @media screen and (min-width: 1440px) {
       font-size: 20px;
     }
+  }
+  &:hover {
+    color: #000;
   }
   @media screen and (min-width: 767px) {
     padding-bottom: 0;
@@ -92,7 +96,7 @@ export const PriceItem = styled.tr`
   background-color: #fff;
   height: 50px;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 20px;
   margin-bottom: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -102,7 +106,6 @@ export const ItemTitle = styled.td`
   font-size: 16px;
   padding: 10px;
   color: #696969;
-  /* text-shadow: 2px 2px 5px #585858; */
   @media screen and (min-width: 768px) {
     font-size: 18px;
     padding: 10px;
