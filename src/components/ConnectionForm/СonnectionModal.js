@@ -156,7 +156,7 @@ const ConnectionForm = ({ isOpen, onClose }) => {
             </ModalHeader>
             <FormTitle>Записатись</FormTitle>
             <Formik initialValues={initialValues} onSubmit={handleSubmit}>
-              {({ values, handleChange, setFieldValue }) => (
+              {() => (
                 <FormStyled
                   name="connection-form"
                   data-netlify="true"

@@ -51,6 +51,10 @@ export const NavLinks = styled(NavLink)`
       font-size: 20px;
     }
   }
+  &:hover {
+    color: #007586;
+    filter: brightness(1.2);
+  }
   @media screen and (min-width: 1440px) {
     font-size: 18px;
   }

@@ -50,6 +50,10 @@ export const MainButton = styled.button`
   border: none;
   box-shadow: 0px 0px 2px 1px rgba(255, 255, 255, 1);
   cursor: pointer;
+  &:hover,
+  &:focus {
+    background: #01606e;
+  }
 `;
 
 export const ButtonDiv = styled.div`
@@ -90,4 +94,8 @@ export const Buttons = styled.button`
   margin-bottom: 20px;
   box-shadow: 0px 0px 2px 1px rgba(255, 255, 255, 1);
   cursor: pointer;
+  &:hover,
+  &:focus {
+    background: #01606e;
+  }
 `;

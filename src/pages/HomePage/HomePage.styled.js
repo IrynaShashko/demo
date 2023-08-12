@@ -116,6 +116,9 @@ export const ModalSubmitBtn = styled.button`
   box-shadow: 0px 0px 2px 1px rgba(255, 255, 255, 1);
   text-transform: uppercase;
   margin-top: 20px;
+  &:hover {
+    background: rgba(0, 0, 0, 0.5);
+  }
   @media screen and (min-width: 425px) {
     width: 250px;
   }

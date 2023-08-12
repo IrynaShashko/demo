@@ -21,9 +21,14 @@ export const ButtonsItem = styled.li`
   width: 30px;
   padding: 10px;
   border-radius: 50px;
+  cursor: pointer;
+  &:hover {
+    filter: brightness(0.8);
+  }
 `;
 
 export const Buttons = styled.button`
   border: none;
   background-color: transparent;
+  cursor: pointer;
 `;

@@ -9,7 +9,7 @@ export const ContactsContainer = styled.div`
 export const ContactsLinkContainer = styled.div`
   display: flex;
   flex-direction: column;
-  & a {
+  & p {
     margin-bottom: 20px;
   }
 `;
@@ -22,7 +22,7 @@ export const Title = styled.h3`
   margin-bottom: 20px;
 `;
 
-export const ContactsLink = styled.a`
+export const ContactsLink = styled.p`
   text-decoration: none;
   color: #fff;
   font-size: 18px;

@@ -13,16 +13,8 @@ const Contacts = () => {
       <Container>
         <Title>Контакти</Title>
         <ContactsLinkContainer>
-          <ContactsLink
-            href="https://goo.gl/maps/o3qvsXRkfv8h3hdw5"
-            rel="noreferrer"
-            target="_blank"
-          >
-            Київ, проспект Перемоги, 121а.
-          </ContactsLink>
-          <ContactsLink href="tel:+380936193616">
-            +38 (096) 619 3616
-          </ContactsLink>
+          <ContactsLink>Київ, проспект Перемоги, 121а.</ContactsLink>
+          <ContactsLink>+38 (096) 619 3616</ContactsLink>
         </ContactsLinkContainer>
         <ConnectionButtons background={"#fff"} color={"#696969"} />
       </Container>

@@ -115,7 +115,7 @@ export const TitleText = styled.p`
   text-indent: 50px;
   text-align: justify;
   @media screen and (min-width: 768px) {
-    font-size: 18px;
+    font-size: 16px;
   }
 `;
 
@@ -123,6 +123,7 @@ export const ItemText = styled.p`
   font-size: 14px;
   margin-bottom: 10px;
   color: #696969;
+  text-align: justify;
   @media screen and (min-width: 768px) {
     font-size: 16px;
   }
