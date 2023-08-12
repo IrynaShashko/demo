@@ -2,9 +2,8 @@ import React, { useEffect, useCallback, useState } from "react";
 import { createPortal } from "react-dom";
 import logo from "../../logo.png";
 import ConnectionForm from "../ConnectionForm/СonnectionModal";
+import ConnectionButtons from "../ConnectionButton/ConnectionButton";
 import { FiX } from "react-icons/fi";
-import { SlLocationPin } from "react-icons/sl";
-import { LocationButton } from "./Modal.styled";
 import { IconContext } from "react-icons";
 import {
   ModalBackdrop,
@@ -14,11 +13,8 @@ import {
   ModalButton,
   ModalList,
   ModalTitle,
-  ModalTextContainer,
   ModalSubmitBtn,
   NavLinkStyled,
-  ModalNumber,
-  LocationText,
 } from "./Modal.styled";
 
 const modalRoot = document.querySelector("#modal");
@@ -70,25 +66,7 @@ export default function Modal({ onClose, children }) {
                 </IconContext.Provider>
               </ModalButton>
             </ModalHeader>
-            <LocationButton
-              href="https://goo.gl/maps/o3qvsXRkfv8h3hdw5"
-              target="_blank"
-            >
-              <IconContext.Provider
-                value={{
-                  size: "25px",
-                  color: "#007586",
-                }}
-              >
-                <SlLocationPin />
-              </IconContext.Provider>
-              <LocationText>пр.Перемоги, 121а, м.Київ</LocationText>
-            </LocationButton>
-            <ModalTextContainer>
-              <ModalNumber href="tel:+380966193616">
-                +38 (093) 619 3616
-              </ModalNumber>
-            </ModalTextContainer>
+            <ConnectionButtons background={"#007586"} color={"#fff"} />
             <ModalList>
               <ModalTitle onClick={onClose}>
                 <NavLinkStyled to={"/"}>Головна</NavLinkStyled>

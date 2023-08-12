@@ -12,7 +12,7 @@ export default function Body() {
   const styxData = priceData.styx;
 
   return (
-    <section>
+    <>
       <PriceContainer>
         <thead>
           <tr>
@@ -34,6 +34,6 @@ export default function Body() {
           ))}
         </tbody>
       </PriceContainer>
-    </section>
+    </>
   );
 }

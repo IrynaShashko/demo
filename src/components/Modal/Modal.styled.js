@@ -79,29 +79,12 @@ export const ModalTitle = styled.li`
   color: #000000;
 `;
 
-export const ModalTextContainer = styled.div`
-  justify-self: center;
-  align-items: center;
-  font-size: 20px;
-  margin: 0 auto;
-  padding: 0;
-  margin-bottom: 20px;
-`;
-
 export const ModalText = styled.a`
   text-decoration: none;
   color: #007586;
   font-size: 20px;
   text-shadow: 0px 0px 7px rgba(0, 117, 134, 1);
   /* margin-bottom: 20px; */
-`;
-
-export const ModalNumber = styled.a`
-  text-decoration: none;
-  color: #007586;
-  font-size: 25px;
-  font-weight: lighter;
-  text-shadow: 0px 0px 7px rgba(0, 117, 134, 1);
 `;
 
 export const ModalSubmitBtn = styled.button`
@@ -126,27 +109,10 @@ export const ModalSubmitBtn = styled.button`
   }
 `;
 
-export const LocationButton = styled.a`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  color: #000;
-  margin-bottom: 20px;
-`;
-
 export const NavLinkStyled = styled(NavLink)`
   color: #000;
   text-decoration: none;
   margin-left: 10px;
   font-size: 20px;
   font-weight: lighter;
-`;
-
-export const LocationText = styled.p`
-  text-decoration: none;
-  color: #007586;
-  font-size: 20px;
-  font-weight: lighter;
-  // text-shadow: 0px 0px 7px rgba(0, 117, 134, 1);
 `;

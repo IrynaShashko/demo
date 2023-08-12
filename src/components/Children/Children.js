@@ -12,7 +12,7 @@ export default function Children() {
   const сhildrenData = priceData.children;
 
   return (
-    <section>
+    <>
       <div>
         <PriceContainer>
           <thead>
@@ -33,6 +33,6 @@ export default function Children() {
           </tbody>
         </PriceContainer>
       </div>
-    </section>
+    </>
   );
 }

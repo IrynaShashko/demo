@@ -27,26 +27,3 @@ export const ContactsLink = styled.a`
   color: #fff;
   font-size: 18px;
 `;
-
-export const IconList = styled.ul`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  & li:not(:last-child) {
-    margin-right: 20px;
-  }
-`;
-
-export const IconContainer = styled.li`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-  width: 30px;
-  height: 30px;
-  border-radius: 50px;
-  padding: 10px;
-  cursor: pointer;
-  box-shadow: 0px 0px 2px 1px rgba(105, 105, 105, 1);
-`;

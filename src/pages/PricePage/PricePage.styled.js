@@ -1,22 +1,13 @@
 import styled from "@emotion/styled";
 import { NavLink } from "react-router-dom";
-import photo from "../../images/11.jpg";
 
 export const BackgroundImageStyle = styled.div`
-  /* background-image: linear-gradient(
-      0deg,
-      rgba(50, 49, 49, 0.437) 0%,
-      rgba(50, 49, 49, 0.527) 100%
-    ),
-    url(${photo});
-  background-size: cover;
-  background-position: center; */
+  box-sizing: border-box;
   background-color: #f2efee;
   width: 100%;
-  min-height: calc(100vh - 85.05px);
+  min-height: 550px;
   padding-top: 20px;
   padding-bottom: 20px;
-  box-sizing: border-box;
   @media screen and (min-width: 768px) {
     padding-top: 50px;
     padding-bottom: 50px;

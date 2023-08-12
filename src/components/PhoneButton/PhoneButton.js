@@ -36,6 +36,7 @@ const PhoneButton = () => {
   function makeCall() {
     window.open("tel:+380999304877");
   }
+
   return (
     <PhoneContainer>
       <ButtonDiv

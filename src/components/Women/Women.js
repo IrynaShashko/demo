@@ -13,7 +13,7 @@ export default function Women() {
   const womenData = priceData.women;
 
   return (
-    <section>
+    <>
       <Container>
         <PriceContainer>
           <thead>
@@ -34,6 +34,6 @@ export default function Women() {
           </tbody>
         </PriceContainer>
       </Container>
-    </section>
+    </>
   );
 }

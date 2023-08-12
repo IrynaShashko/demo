@@ -12,7 +12,7 @@ export default function Else() {
   const elseData = priceData.else;
 
   return (
-    <section>
+    <>
       <div>
         <PriceContainer>
           <thead>
@@ -31,6 +31,6 @@ export default function Else() {
           </tbody>
         </PriceContainer>
       </div>
-    </section>
+    </>
   );
 }

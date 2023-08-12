@@ -1,16 +1,10 @@
-import { LuPhone } from "react-icons/lu";
-import { SlLocationPin } from "react-icons/sl";
-import { FaInstagram } from "react-icons/fa";
-import { PiTelegramLogoBold } from "react-icons/pi";
-import { IconContext } from "react-icons";
 import { Container } from "../../App.styled";
+import ConnectionButtons from "../ConnectionButton/ConnectionButton";
 import {
   ContactsContainer,
   Title,
   ContactsLinkContainer,
   ContactsLink,
-  IconList,
-  IconContainer,
 } from "../../components/Contacts/Contacts.styled";
 
 const Contacts = () => {
@@ -30,48 +24,7 @@ const Contacts = () => {
             +38 (096) 619 3616
           </ContactsLink>
         </ContactsLinkContainer>
-        <IconList>
-          <IconContainer>
-            <IconContext.Provider
-              value={{
-                size: "25px",
-                color: "#696969",
-              }}
-            >
-              <LuPhone />
-            </IconContext.Provider>
-          </IconContainer>
-          <IconContainer>
-            <IconContext.Provider
-              value={{
-                size: "25px",
-                color: "#696969",
-              }}
-            >
-              <SlLocationPin />
-            </IconContext.Provider>
-          </IconContainer>
-          <IconContainer>
-            <IconContext.Provider
-              value={{
-                size: "25px",
-                color: "#696969",
-              }}
-            >
-              <FaInstagram />
-            </IconContext.Provider>
-          </IconContainer>
-          <IconContainer>
-            <IconContext.Provider
-              value={{
-                size: "25px",
-                color: "#696969",
-              }}
-            >
-              <PiTelegramLogoBold />
-            </IconContext.Provider>
-          </IconContainer>
-        </IconList>
+        <ConnectionButtons background={"#fff"} color={"#696969"} />
       </Container>
     </ContactsContainer>
   );

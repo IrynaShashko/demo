@@ -12,7 +12,7 @@ export default function Men() {
   const menData = priceData.men;
 
   return (
-    <section>
+    <>
       <div>
         <PriceContainer>
           <thead>
@@ -33,6 +33,6 @@ export default function Men() {
           </tbody>
         </PriceContainer>
       </div>
-    </section>
+    </>
   );
 }

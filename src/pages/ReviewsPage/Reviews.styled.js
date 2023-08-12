@@ -12,10 +12,10 @@ export const ReviewsContainer = styled.div`
   background-color: #f2efee;
   height: 550px;
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
+  justify-content: center;
   @media screen and (min-width: 768px) {
-    justify-content: center;
-    padding: 0;
+    height: 600px;
   }
 `;
 

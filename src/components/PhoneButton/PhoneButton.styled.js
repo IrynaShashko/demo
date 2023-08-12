@@ -20,7 +20,7 @@ const slideInFromLeft = keyframes`
   }
   to {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateX(20);
   }
 `;
 
