@@ -36,7 +36,7 @@ const ConnectionButtons = ({ background, color }) => {
   return (
     <ButtonContainer>
       <ButtonsItem backgroundColor={background}>
-        <Buttons type="button" onClick={openInstagram}>
+        <Buttons onClick={openInstagram}>
           <IconContext.Provider
             value={{
               size: "25px",
@@ -60,7 +60,7 @@ const ConnectionButtons = ({ background, color }) => {
         </Buttons>
       </ButtonsItem>
       <ButtonsItem backgroundColor={background}>
-        <Buttons type="button" onClick={openTelegram}>
+        <Buttons onClick={openTelegram}>
           <IconContext.Provider
             value={{
               size: "25px",
@@ -72,7 +72,7 @@ const ConnectionButtons = ({ background, color }) => {
         </Buttons>
       </ButtonsItem>
       <ButtonsItem backgroundColor={background}>
-        <Buttons type="button" onClick={openWhatsApp}>
+        <Buttons onClick={openWhatsApp}>
           <IconContext.Provider
             value={{
               size: "25px",
@@ -84,7 +84,7 @@ const ConnectionButtons = ({ background, color }) => {
         </Buttons>
       </ButtonsItem>
       <ButtonsItem backgroundColor={background}>
-        <Buttons type="button" onClick={openViber}>
+        <Buttons onClick={openViber}>
           <IconContext.Provider
             value={{
               size: "25px",
@@ -96,7 +96,7 @@ const ConnectionButtons = ({ background, color }) => {
         </Buttons>
       </ButtonsItem>
       <ButtonsItem backgroundColor={background}>
-        <Buttons type="button" onClick={makeCall}>
+        <Buttons onClick={makeCall}>
           <IconContext.Provider
             value={{
               size: "25px",

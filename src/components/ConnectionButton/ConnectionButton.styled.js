@@ -27,7 +27,7 @@ export const ButtonsItem = styled.li`
   }
 `;
 
-export const Buttons = styled.button`
+export const Buttons = styled.a`
   border: none;
   background-color: transparent;
   cursor: pointer;
