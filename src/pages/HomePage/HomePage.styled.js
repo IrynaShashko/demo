@@ -23,7 +23,7 @@ export const HomeContainer = styled.div`
     height: 600px;
   }
   @media screen and (min-width: 1440px) {
-    height: 600px;
+    height: 700px;
   }
 `;
 
@@ -60,8 +60,7 @@ export const Text = styled.p`
     width: 500px;
   }
   @media screen and (min-width: 1440px) {
-    line-height: 50px;
-    font-size: 30px;
+    line-height: 40px;
     width: 800px;
   }
 `;
