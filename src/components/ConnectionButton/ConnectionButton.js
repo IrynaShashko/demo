@@ -12,15 +12,15 @@ import {
 
 const ConnectionButtons = ({ background, color }) => {
   function openTelegram() {
-    window.open("https://t.me/Iryna_Shashko");
+    window.open("https://t.me/MashaHlushenko");
   }
 
   function openWhatsApp() {
-    window.open("https://api.whatsapp.com/send?phone=380999304877");
+    window.open("https://api.whatsapp.com/send?phone=380936193616");
   }
 
   function openViber() {
-    window.open("viber://chat?number=+380999304877");
+    window.open("viber://chat?number=+380936193616");
   }
 
   function openInstagram() {
@@ -30,7 +30,7 @@ const ConnectionButtons = ({ background, color }) => {
   }
 
   function makeCall() {
-    window.open("tel:+380999304877");
+    window.open("tel:+380936193616");
   }
 
   return (
