@@ -1,3 +1,5 @@
+import { IconContext } from "react-icons";
+import { SlLocationPin } from "react-icons/sl";
 import { Container } from "../../App.styled";
 import ConnectionButtons from "../ConnectionButton/ConnectionButton";
 import {
@@ -11,10 +13,19 @@ const Contacts = () => {
   return (
     <ContactsContainer>
       <Container>
-        <Title>Контакти</Title>
+        <Title>Контактна інформація:</Title>
         <ContactsLinkContainer>
-          <ContactsLink>Київ, проспект Перемоги, 121а.</ContactsLink>
-          <ContactsLink>+38 (096) 619 3616</ContactsLink>
+          <ContactsLink>
+            <IconContext.Provider
+              value={{
+                size: "15px",
+                color: "#fff",
+              }}
+            >
+              <SlLocationPin />
+            </IconContext.Provider>
+            Київ, проспект Перемоги, 121а.
+          </ContactsLink>
         </ContactsLinkContainer>
         <ConnectionButtons background={"#fff"} color={"#696969"} />
       </Container>

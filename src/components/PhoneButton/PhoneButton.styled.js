@@ -73,13 +73,17 @@ export const ButtonDiv = styled.div`
     `
     button:nth-of-type(1) {
       opacity: 1;
-      transition-delay: 0.6s;
+      transition-delay: 0.5s;
     }
     button:nth-of-type(2) {
       opacity: 1;
       transition-delay: 0.4s;
     }
     button:nth-of-type(3) {
+      opacity: 1;
+      transition-delay: 0.3s;
+    }
+    button:nth-of-type(4) {
       opacity: 1;
       transition-delay: 0.2s;
     }
@@ -91,7 +95,7 @@ export const Buttons = styled.button`
   border: none;
   border-radius: 50px;
   background-color: #007586;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   box-shadow: 0px 0px 2px 1px rgba(255, 255, 255, 1);
   cursor: pointer;
   &:hover,

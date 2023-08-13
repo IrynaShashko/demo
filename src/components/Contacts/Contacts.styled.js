@@ -26,4 +26,8 @@ export const ContactsLink = styled.p`
   text-decoration: none;
   color: #fff;
   font-size: 18px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 `;

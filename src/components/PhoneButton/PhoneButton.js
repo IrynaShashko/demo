@@ -2,6 +2,7 @@ import { useState } from "react";
 import { IconContext } from "react-icons";
 import { LuPhone } from "react-icons/lu";
 import { FaViber } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
 import { LiaTelegram } from "react-icons/lia";
 import {
   PhoneContainer,
@@ -27,6 +28,10 @@ const PhoneButton = () => {
 
   function openTelegram() {
     window.open("https://t.me/Iryna_Shashko");
+  }
+
+  function openWhatsApp() {
+    window.open("https://api.whatsapp.com/send?phone=380999304877");
   }
 
   function openViber() {
@@ -62,6 +67,16 @@ const PhoneButton = () => {
             }}
           >
             <LiaTelegram />
+          </IconContext.Provider>
+        </Buttons>
+        <Buttons type="button" onClick={openWhatsApp}>
+          <IconContext.Provider
+            value={{
+              size: "20px",
+              color: "#fff",
+            }}
+          >
+            <FaWhatsapp />
           </IconContext.Provider>
         </Buttons>
         <Buttons type="button" onClick={openViber}>

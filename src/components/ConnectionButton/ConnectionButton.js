@@ -2,7 +2,7 @@ import { IconContext } from "react-icons";
 import { LuPhone } from "react-icons/lu";
 import { FaViber } from "react-icons/fa";
 import { LiaTelegram } from "react-icons/lia";
-import { FaInstagram } from "react-icons/fa";
+import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { SlLocationPin } from "react-icons/sl";
 import {
   ButtonContainer,
@@ -13,6 +13,10 @@ import {
 const ConnectionButtons = ({ background, color }) => {
   function openTelegram() {
     window.open("https://t.me/Iryna_Shashko");
+  }
+
+  function openWhatsApp() {
+    window.open("https://api.whatsapp.com/send?phone=380999304877");
   }
 
   function openViber() {
@@ -64,6 +68,18 @@ const ConnectionButtons = ({ background, color }) => {
             }}
           >
             <LiaTelegram />
+          </IconContext.Provider>
+        </Buttons>
+      </ButtonsItem>
+      <ButtonsItem backgroundColor={background}>
+        <Buttons type="button" onClick={openWhatsApp}>
+          <IconContext.Provider
+            value={{
+              size: "25px",
+              color: `${color}`,
+            }}
+          >
+            <FaWhatsapp />
           </IconContext.Provider>
         </Buttons>
       </ButtonsItem>

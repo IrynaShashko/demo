@@ -48,7 +48,7 @@ export const TextContainer = styled.div`
 `;
 
 export const Text = styled.p`
-  font-size: 20px;
+  font-size: 18px;
   color: #fff;
   text-align: center;
   font-weight: lighter;
@@ -147,11 +147,13 @@ export const Title = styled.h3`
 
 export const InfoContainer = styled.ul`
   padding: 0 20px;
+
   @media screen and (min-width: 768px) {
   }
   @media screen and (min-width: 1440px) {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
   }
 `;
 
