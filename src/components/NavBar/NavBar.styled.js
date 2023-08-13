@@ -51,7 +51,7 @@ export const NavLinks = styled(NavLink)`
     font-size: 12px;
   }
   @media screen and (min-width: 1440px) {
-    font-size: 14px;
+    font-size: 16px;
   }
 `;
 
@@ -61,6 +61,7 @@ export const ContactButton = styled.button`
   border: none;
   background-color: transparent;
   margin-left: 10px;
+  cursor: pointer;
   &:hover {
     color: #007586;
     filter: brightness(1.2);
@@ -69,6 +70,6 @@ export const ContactButton = styled.button`
     font-size: 12px;
   }
   @media screen and (min-width: 1440px) {
-    font-size: 14px;
+    font-size: 16px;
   }
 `;
