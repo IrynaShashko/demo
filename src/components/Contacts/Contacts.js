@@ -11,7 +11,7 @@ import {
 
 const Contacts = () => {
   return (
-    <ContactsContainer>
+    <ContactsContainer id="contacts">
       <Container>
         <Title>Контактна інформація:</Title>
         <ContactsLinkContainer>

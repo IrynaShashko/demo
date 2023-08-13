@@ -35,27 +35,40 @@ export const ModalButton = styled.button`
 `;
 
 export const NavLinks = styled(NavLink)`
-  font-size: 14px;
   color: #000000;
   text-decoration: none;
-  margin-left: 20px;
+  margin-left: 10px;
   &.active {
     border-bottom: 2px solid #007586;
     color: #007586;
     padding: 10px;
-    font-size: 20px;
-    @media screen and (min-width: 768px) {
-      font-size: 16px;
-    }
-    @media screen and (min-width: 1440px) {
-      font-size: 20px;
-    }
   }
   &:hover {
     color: #007586;
     filter: brightness(1.2);
   }
+  @media screen and (min-width: 768px) {
+    font-size: 12px;
+  }
   @media screen and (min-width: 1440px) {
-    font-size: 18px;
+    font-size: 14px;
+  }
+`;
+
+export const ContactButton = styled.button`
+  font-size: 12px;
+  color: #000000;
+  border: none;
+  background-color: transparent;
+  margin-left: 10px;
+  &:hover {
+    color: #007586;
+    filter: brightness(1.2);
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 12px;
+  }
+  @media screen and (min-width: 1440px) {
+    font-size: 14px;
   }
 `;
