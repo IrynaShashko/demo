@@ -15,6 +15,9 @@ export const ReviewsContainer = styled.div`
   padding-bottom: 30px;
   justify-content: center;
   @media screen and (min-width: 768px) {
+    height: 800px;
+  }
+  @media screen and (min-width: 1440px) {
     height: 600px;
   }
 `;
