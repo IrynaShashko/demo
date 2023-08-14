@@ -1,13 +1,44 @@
-import { ArticleContainer } from "./ArticlePage.styled";
+import { Outlet } from "react-router-dom";
+import {
+  ArticleContainer,
+  ArticleItem,
+  ArticleLink,
+} from "./ArticlePage.styled";
 import { Container } from "../../App.styled";
+import Contacts from "../../components/Contacts/Contacts";
 
 const ArticlePage = () => {
   return (
-    <ArticleContainer>
-      <Container>
-        <h1>Статті</h1>
-      </Container>
-    </ArticleContainer>
+    <>
+      <ArticleContainer>
+        <Container>
+          <div>
+            <Container>
+              <ul>
+                <li>
+                  <ArticleLink to="/article/questions">
+                    <ArticleItem>Питання, які часто задають.</ArticleItem>
+                  </ArticleLink>
+                </li>
+
+                <li>
+                  <ArticleLink to="/article/health">
+                    <ArticleItem>Здорове тіло.</ArticleItem>
+                  </ArticleLink>
+                </li>
+                <li>
+                  <ArticleLink to="/article/expectation">
+                    <ArticleItem>Масаж: чого очікувати від сеансу?</ArticleItem>
+                  </ArticleLink>
+                </li>
+              </ul>
+              <Outlet />
+            </Container>
+          </div>
+        </Container>
+      </ArticleContainer>
+      <Contacts />
+    </>
   );
 };
 

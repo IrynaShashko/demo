@@ -13,6 +13,9 @@ const PriceMen = lazy(() => import("./components/Men/Men"));
 const PriceChildren = lazy(() => import("./components/Children/Children"));
 const PriceBody = lazy(() => import("./components/Body/Body"));
 const PriceElse = lazy(() => import("./components/Else/Else"));
+const Questions = lazy(() => import("./components/Questions/Questions"));
+const Health = lazy(() => import("./components/Health/Health"));
+const Expectation = lazy(() => import("./components/Expectation/Expectation"));
 
 const NavRoutes = () => {
   return (
@@ -30,7 +33,12 @@ const NavRoutes = () => {
           <Route path="body" element={<PriceBody />} />
           <Route path="else" element={<PriceElse />} />
         </Route>
-        <Route path="/article" element={<ArticlePage />} />
+        <Route path="/article/*" element={<ArticlePage />}>
+          <Route index element={<Navigate to="questions" replace />} />
+          <Route path="questions" element={<Questions />} />
+          <Route path="health" element={<Health />} />
+          <Route path="expectation" element={<Expectation />} />
+        </Route>
       </Routes>
     </Suspense>
   );
