@@ -80,6 +80,7 @@ const NavBar = () => {
           <NavLinks to={"/"}>Головна</NavLinks>
           <NavLinks to={"/about"}>Давайте знайомитись</NavLinks>
           <NavLinks to={"/portfolio"}>Портфоліо</NavLinks>
+          <NavLinks to={"/article"}>Статті</NavLinks>
           <NavLinks to={"/reviews"}>Відгуки</NavLinks>
           <NavLinks to={"/price"}>Ціни</NavLinks>
           <ContactButton onClick={scrollToContacts}>Контакти</ContactButton>

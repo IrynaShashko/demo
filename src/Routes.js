@@ -7,6 +7,7 @@ const AboutPage = lazy(() => import("./pages/AboutPage/AboutPage"));
 const PortfolioPage = lazy(() => import("./pages/PortfolioPage/PortfolioPage"));
 const ReviewsPage = lazy(() => import("./pages/ReviewsPage/ReviewsPage"));
 const PricePage = lazy(() => import("./pages/PricePage/PricePage"));
+const ArticlePage = lazy(() => import("./pages/ArticlePage/ArticlePage"));
 const PriceWomen = lazy(() => import("./components/Women/Women"));
 const PriceMen = lazy(() => import("./components/Men/Men"));
 const PriceChildren = lazy(() => import("./components/Children/Children"));
@@ -29,6 +30,7 @@ const NavRoutes = () => {
           <Route path="body" element={<PriceBody />} />
           <Route path="else" element={<PriceElse />} />
         </Route>
+        <Route path="/article" element={<ArticlePage />} />
       </Routes>
     </Suspense>
   );
