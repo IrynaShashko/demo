@@ -51,7 +51,8 @@ export const NavLinks = styled(NavLink)`
     font-size: 12px;
   }
   @media screen and (min-width: 1440px) {
-    font-size: 16px;
+    margin-left: 20px;
+    font-size: 18px;
   }
 `;
 
@@ -70,6 +71,7 @@ export const ContactButton = styled.button`
     font-size: 12px;
   }
   @media screen and (min-width: 1440px) {
-    font-size: 16px;
+    font-size: 18px;
+    margin-left: 20px;
   }
 `;

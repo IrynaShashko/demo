@@ -1,11 +1,28 @@
 import styled from "@emotion/styled";
 
+export const ContactsLinkContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  & p {
+    margin-bottom: 20px;
+  }
+`;
+
+export const ContactsLink = styled.p`
+  text-decoration: none;
+  color: ${(props) => props.color};
+  font-size: 18px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+`;
+
 export const ButtonContainer = styled.ul`
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
   margin-bottom: 20px;
   & li:not(:last-child) {
     margin-right: 10px;

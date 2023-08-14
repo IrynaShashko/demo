@@ -1,5 +1,6 @@
 import React, { useEffect, useCallback, useState } from "react";
 import { createPortal } from "react-dom";
+import { Link } from "react-router-dom";
 import logo from "../../logo.png";
 import ConnectionForm from "../ConnectionForm/СonnectionModal";
 import ConnectionButtons from "../ConnectionButton/ConnectionButton";
@@ -54,7 +55,9 @@ export default function Modal({ onClose, children }) {
         <ModalContent onClose={onClose}>
           <Container>
             <ModalHeader>
-              <img src={logo} width={120} alt="logo" />
+              <Link to={"/"}>
+                <img src={logo} width={120} alt="logo" />
+              </Link>
               <ModalButton onClick={onClose}>
                 <IconContext.Provider
                   value={{
