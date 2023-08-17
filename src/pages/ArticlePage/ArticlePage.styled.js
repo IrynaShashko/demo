@@ -16,15 +16,9 @@ export const ArticleLink = styled(NavLink)`
   font-size: 20px;
   color: #000;
   cursor: pointer;
-  /* margin-bottom: 20px;
-  border: 1px solid #f1f1f1;
-  padding: 10px;
-  border-radius: 8px;
-  background-color: #f1f1f1;
-  text-align: center;
-  box-shadow: 0px 0px 4px 2px rgba(166, 166, 169, 1); */
   &.active {
     color: #007586;
+    font-weight: 600;
   }
 `;
 
@@ -52,11 +46,13 @@ export const ArticleAfterTitle = styled.h2`
   color: #007586;
   margin-top: 10px;
   margin-bottom: 10px;
+  text-align: center;
 `;
 
 export const ArticleText = styled.p`
   font-size: 16px;
   color: #696969;
   margin-bottom: 10px;
-  text-align: justify;
+  text-indent: 50px;
+  /* text-align: justify; */
 `;
