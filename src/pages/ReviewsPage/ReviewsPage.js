@@ -30,7 +30,7 @@ const ReviewsPage = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 0,
+    speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     // autoplaySpeed: 3000,
@@ -39,6 +39,33 @@ const ReviewsPage = () => {
     pauseOnHover: true,
   };
 
+  const reviewsItem = reviews.map((item) => (
+    <ListItem key={item.id}>
+      <ItemDiv>
+        <TitleDiv>
+          <UserIconDiv>
+            <UserName>{item.name}</UserName>
+            <Stars>
+              {starArr.map((el, index) => (
+                <IconContext.Provider
+                  key={index}
+                  value={{
+                    color: `${
+                      index >= item.totalPositiveStars ? "#ccc" : "orange"
+                    }`,
+                  }}
+                >
+                  <AiFillStar />
+                </IconContext.Provider>
+              ))}
+            </Stars>
+          </UserIconDiv>
+        </TitleDiv>
+        <Text>{item.comment}</Text>
+      </ItemDiv>
+    </ListItem>
+  ));
+
   return (
     <>
       <ReviewsContainer>
@@ -46,34 +73,7 @@ const ReviewsPage = () => {
           <ReviewsTitle>Відгуки клієнтів</ReviewsTitle>
           <List>
             <Slider {...settings} className="slider">
-              {reviews.map((item) => (
-                <ListItem key={item.id}>
-                  <ItemDiv>
-                    <TitleDiv>
-                      <UserIconDiv>
-                        <UserName>{item.name}</UserName>
-                        <Stars>
-                          {starArr.map((el, index) => (
-                            <IconContext.Provider
-                              key={index}
-                              value={{
-                                color: `${
-                                  index >= item.totalPositiveStars
-                                    ? "#ccc"
-                                    : "orange"
-                                }`,
-                              }}
-                            >
-                              <AiFillStar />
-                            </IconContext.Provider>
-                          ))}
-                        </Stars>
-                      </UserIconDiv>
-                    </TitleDiv>
-                    <Text>{item.comment}</Text>
-                  </ItemDiv>
-                </ListItem>
-              ))}
+              {reviewsItem}
             </Slider>
           </List>
         </Container>

@@ -25,7 +25,7 @@ export const ButtonContainer = styled.ul`
   align-items: center;
   margin-bottom: 20px;
   & li:not(:last-child) {
-    margin-right: 10px;
+    margin-right: 5px;
   }
 `;
 
@@ -33,12 +33,15 @@ export const ButtonsItem = styled.li`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${(props) => props.backgroundColor};
-  height: 30px;
-  width: 30px;
+  background-color: transparent;
+  height: 25px;
+  width: 25px;
   padding: 10px;
-  border-radius: 50px;
+  outline: none;
+  border-radius: 10px;
+  border: 2px solid ${(props) => props.backgroundColor};
   cursor: pointer;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   &:hover {
     filter: brightness(0.8);
   }

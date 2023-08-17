@@ -51,72 +51,72 @@ const ConnectionButtons = ({ background, color }) => {
         </ContactsLink>
       </ContactsLinkContainer>
       <ButtonContainer>
-        <ButtonsItem backgroundColor={background}>
+        <ButtonsItem backgroundColor={background} color={color}>
           <Buttons onClick={openInstagram}>
             <IconContext.Provider
               value={{
-                size: "25px",
-                color: `${color}`,
+                size: "28px",
+                color: `${background}`,
               }}
             >
               <FaInstagram />
             </IconContext.Provider>
           </Buttons>
         </ButtonsItem>
-        <ButtonsItem backgroundColor={background}>
+        <ButtonsItem backgroundColor={background} color={color}>
           <Buttons href="https://goo.gl/maps/o3qvsXRkfv8h3hdw5" target="_blank">
             <IconContext.Provider
               value={{
-                size: "25px",
-                color: `${color}`,
+                size: "30px",
+                color: `${background}`,
               }}
             >
               <SlLocationPin />
             </IconContext.Provider>
           </Buttons>
         </ButtonsItem>
-        <ButtonsItem backgroundColor={background}>
+        <ButtonsItem backgroundColor={background} color={color}>
           <Buttons onClick={openTelegram}>
             <IconContext.Provider
               value={{
-                size: "25px",
-                color: `${color}`,
+                size: "32px",
+                color: `${background}`,
               }}
             >
               <LiaTelegram />
             </IconContext.Provider>
           </Buttons>
         </ButtonsItem>
-        <ButtonsItem backgroundColor={background}>
+        <ButtonsItem backgroundColor={background} color={color}>
           <Buttons onClick={openWhatsApp}>
             <IconContext.Provider
               value={{
-                size: "25px",
-                color: `${color}`,
+                size: "32px",
+                color: `${background}`,
               }}
             >
               <FaWhatsapp />
             </IconContext.Provider>
           </Buttons>
         </ButtonsItem>
-        <ButtonsItem backgroundColor={background}>
+        <ButtonsItem backgroundColor={background} color={color}>
           <Buttons onClick={openViber}>
             <IconContext.Provider
               value={{
-                size: "25px",
-                color: `${color}`,
+                size: "28px",
+                color: `${background}`,
               }}
             >
               <FaViber />
             </IconContext.Provider>
           </Buttons>
         </ButtonsItem>
-        <ButtonsItem backgroundColor={background}>
+        <ButtonsItem backgroundColor={background} color={color}>
           <Buttons onClick={makeCall}>
             <IconContext.Provider
               value={{
                 size: "25px",
-                color: `${color}`,
+                color: `${background}`,
               }}
             >
               <LuPhone />
