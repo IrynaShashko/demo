@@ -150,16 +150,16 @@ export const InfoContainer = styled.ul`
   @media screen and (min-width: 768px) {
   }
   @media screen and (min-width: 1440px) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    gap: 10px 10px;
   }
 `;
 
 export const InfoItem = styled.li`
   display: flex;
   flex-direction: column;
-  // justify-content: center;
   align-items: center;
   text-align: center;
   padding: 20px 0;

@@ -37,19 +37,6 @@ const ConnectionButtons = ({ background, color }) => {
 
   return (
     <div>
-      <ContactsLinkContainer>
-        <ContactsLink style={{ color: `${background}` }}>
-          <IconContext.Provider
-            value={{
-              size: "15px",
-              color: `${background}`,
-            }}
-          >
-            <SlLocationPin />
-          </IconContext.Provider>
-          Київ, проспект Перемоги, 121а.
-        </ContactsLink>
-      </ContactsLinkContainer>
       <ButtonContainer>
         <ButtonsItem backgroundColor={background} color={color}>
           <Buttons onClick={openInstagram}>
@@ -124,6 +111,19 @@ const ConnectionButtons = ({ background, color }) => {
           </Buttons>
         </ButtonsItem>
       </ButtonContainer>
+      <ContactsLinkContainer>
+        <ContactsLink style={{ color: `${background}` }}>
+          <IconContext.Provider
+            value={{
+              size: "15px",
+              color: `${background}`,
+            }}
+          >
+            <SlLocationPin />
+          </IconContext.Provider>
+          Київ, проспект Перемоги, 121а.
+        </ContactsLink>
+      </ContactsLinkContainer>
     </div>
   );
 };
