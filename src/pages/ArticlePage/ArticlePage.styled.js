@@ -54,5 +54,5 @@ export const ArticleText = styled.p`
   color: #696969;
   margin-bottom: 10px;
   text-indent: 50px;
-  /* text-align: justify; */
+  text-align: justify;
 `;
