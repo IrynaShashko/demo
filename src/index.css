@@ -11,32 +11,39 @@ body {
 body.modal-open {
   overflow: hidden;
 }
+
 /* CSS код зі стилізаціями для скрола */
 ::-webkit-scrollbar {
-  width: 1px; /* Ширина скрола */
+  width: 1px;
+  /* Ширина скрола */
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #f1f1f1; /* Колір треку скрола */
+  background-color: #f1f1f1;
+  /* Колір треку скрола */
 }
 
 ::-webkit-scrollbar-button {
-  background-color: transparent; /* Колір кінцівки скрола */
+  background-color: transparent;
+  /* Колір кінцівки скрола */
 }
 
 /* Стилі для точок (dots) */
 .slider .slick-dots li button:before {
-  color: #007586; /* Змініть колір точок тут */
+  color: #007586;
+  /* Змініть колір точок тут */
 }
 
 .slider .slick-dots li.slick-active button:before {
-  color: #007586; /* Колір активної точки */
+  color: #007586;
+  /* Колір активної точки */
 }
 
 /* Стилі для стрілок */
 .slider .slick-prev:before,
 .slider .slick-next:before {
-  color: #007586; /* Змініть колір стрілок тут */
+  color: #007586;
+  /* Змініть колір стрілок тут */
 }
 
 ul,
@@ -76,6 +83,7 @@ a {
   border: 0;
   clip: rect(0 0 0 0);
 }
+
 /* 
   color #EAEAC7 
   color #F2EFEE

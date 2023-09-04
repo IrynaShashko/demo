@@ -69,7 +69,7 @@ export default function Modal({ onClose, children }) {
                 </IconContext.Provider>
               </ModalButton>
             </ModalHeader>
-            <ConnectionButtons background={"#007586"} color={"#fff"} />
+            <ConnectionButtons background={"#007586"} color={"#f1f1f1"} />
             <ModalList>
               <ModalTitle onClick={onClose}>
                 <NavLinkStyled to={"/"}>Головна</NavLinkStyled>

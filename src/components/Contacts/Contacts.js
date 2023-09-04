@@ -16,7 +16,7 @@ const Contacts = () => {
         <GridContainer>
           <Grid1>
             <Title>Контактна інформація:</Title>
-            <ConnectionButtons background={"#fff"} color={"#696969"} />
+            <ConnectionButtons background={"#fff"} color={"#015b69"} />
           </Grid1>
           <Grid2>
             <Location
