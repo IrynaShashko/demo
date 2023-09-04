@@ -46,13 +46,12 @@ export const MainButton = styled.button`
   font-size: 16px;
   animation: ${pulse} 6s infinite;
   border-radius: 50px;
-  background-color: #007586;
-  border: none;
+  background-color:#007586;
+  border: 2px solid #fff;
   box-shadow: 0px 0px 2px 1px rgba(255, 255, 255, 1);
   cursor: pointer;
-  &:hover,
-  &:focus {
-    background: #01606e;
+  &:hover {
+    background-color: #015b69;
   }
 `;
 
