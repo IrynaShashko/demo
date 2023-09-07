@@ -35,7 +35,7 @@ const AboutPage = () => {
 
   const elseItems = experience.else.map((item) => (
     <li key={item.id}>
-      <ItemText>{item.type}</ItemText>
+      <ItemText style={{ textIndent: "0px" }}>{item.type}</ItemText>
     </li>
   ));
 

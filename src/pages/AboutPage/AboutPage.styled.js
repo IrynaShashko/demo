@@ -126,6 +126,7 @@ export const ItemText = styled.p`
   margin-bottom: 10px;
   color: #696969;
   text-align: justify;
+  text-indent: 50px;
   @media screen and (min-width: 768px) {
     font-size: 16px;
   }
@@ -144,7 +145,8 @@ export const ItemTitle = styled.h4`
 export const DataTitle = styled.span`
   color: #000;
   font-size: 14px;
-  @media screen and (min-width: 768px) {
+  letter-spacing: 2px;
+    @media screen and (min-width: 768px) {
     font-size: 16px;
   }
 `;

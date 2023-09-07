@@ -3,9 +3,7 @@ import { NavLink } from "react-router-dom";
 
 export const ArticleContainer = styled.div`
   min-height: 700px;
-  width: 100vw;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px;
   @media screen and (min-width: 768px) {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -55,6 +53,7 @@ export const ArticleAfterTitle = styled.h2`
   text-align: center;
   margin-top:20px;
   margin-bottom: 20px;
+  letter-spacing: 2px;
 `;
 
 export const ArticleText = styled.p`

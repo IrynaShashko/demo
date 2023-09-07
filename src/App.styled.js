@@ -2,12 +2,9 @@ import styled from "@emotion/styled";
 
 export const Container = styled.div`
   width: 320px;
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* padding: 20px; */
   margin: 0 auto;
   @media screen and (min-width: 375px) {
-    width: 350px;
+    width: 330px;
   }
   @media screen and (min-width: 767px) {
     width: 650px;

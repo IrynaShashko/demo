@@ -34,8 +34,8 @@ const slideInFromRight = keyframes`
 
 export const PhoneContainer = styled.div`
   position: fixed;
-  bottom: 5px;
-  right: 5px;
+  bottom: 20px;
+  right: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
