@@ -49,7 +49,7 @@ const HomePage = () => {
         <Container>
           <TextContainer>
             <PhoneButton />
-            <AnimationDiv><Text style={{ letterSpacing: "5px", textTransform: "uppercase" }}>
+            <AnimationDiv><Text style={{ letterSpacing: "3px" }}>
               Ласкаво прошу у світ, де масаж стає особливою історією! </Text >
               <Text>Тут ви зможете: </Text>
               <Text>
@@ -60,7 +60,7 @@ const HomePage = () => {
                 {mark}позбутися стресу та напруги
               </Text><Text>
                 {mark}втамувати біль
-              </Text><Text>
+              </Text><Text >
                 {mark}відновити або покращити функцію опорно-рухового апарату</Text></AnimationDiv>
             <ButtonContainer>
               <ModalSubmitBtn onClick={() => setIsModalOpen(true)}>

@@ -34,11 +34,12 @@ const slideInFromRight = keyframes`
 
 export const PhoneContainer = styled.div`
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 5px;
+  right: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 2;
   @media screen and (min-width: 768px) {
     bottom: 30px;
     right: 30px;
@@ -71,7 +72,7 @@ export const ButtonDiv = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 20px;
-
+  z-index: 5;
   & button {
     opacity: 0; 
     animation: ${({ animationShow }) => animationShow ? css`${slideInFromRight} 0.3s ease-out forwards` : "none"};
@@ -97,7 +98,7 @@ padding: 12px 14px;
 border: none;
 border-radius: 50px;
 background-color: #007586;
-margin-bottom: 10px;
+margin-bottom: 5px;
 border: 2px solid #fff;
 cursor: pointer;
   &:hover,

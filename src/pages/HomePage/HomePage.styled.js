@@ -30,7 +30,7 @@ export const HomeContainer = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   width: 100vw;
-  height: 500px;
+  height: 550px;
   @media screen and (min-width: 768px) {
     height: 600px;
   }
@@ -115,7 +115,7 @@ export const MainText = styled.p`
   font-size: 16px;
   color: #696969;
   text-align: center;
-
+  width: 260px;
   @media screen and (min-width: 1440px) {
     font-size: 18px;
   }
