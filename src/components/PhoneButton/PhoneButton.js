@@ -14,15 +14,9 @@ import {
 const PhoneButton = () => {
   const [isAdditionalButtonsVisible, setAdditionalButtonsVisible] =
     useState(false);
-  const icon = document.getElementById("icon");
 
   const toggleButtons = () => {
     setAdditionalButtonsVisible((prevValue) => !prevValue);
-    if (!isAdditionalButtonsVisible) {
-      icon.style.transform = "rotate(-45deg)";
-    } else {
-      icon.style.transform = "rotate(0deg)";
-    }
   };
 
   const openLink = (url) => {
@@ -35,6 +29,7 @@ const PhoneButton = () => {
         id="additionalButtons"
         className={isAdditionalButtonsVisible ? "show" : "hidden"}
         show={isAdditionalButtonsVisible}
+        animationShow={isAdditionalButtonsVisible}
       >
         <Buttons type="button"
           onClick={() => openLink("tel:+380936193616")}>
@@ -94,7 +89,7 @@ const PhoneButton = () => {
             color: "#fff",
           }}
         >
-          <LuPhone id="icon" />
+          <LuPhone id="icon" style={{ transform: isAdditionalButtonsVisible ? "rotate(-45deg)" : "rotate(0deg)" }} />
         </IconContext.Provider>
       </MainButton>
     </PhoneContainer>

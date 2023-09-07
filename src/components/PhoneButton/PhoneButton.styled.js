@@ -23,12 +23,12 @@ transform: scale(1.2) rotate(15deg);
 
 const slideInFromRight = keyframes`
   from {
-    transform: translateX(250px);
     opacity: 0;
+    transform: translate(200px, 0px); 
   }
   to {
-    transform: translateX(0);
     opacity: 1;
+    transform: translate(0px, 0px);
   }
 `;
 
@@ -71,46 +71,37 @@ export const ButtonDiv = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 20px;
-  opacity: ${(props) => (props.show ? 1 : 0)};
-  animation: ${(props) => (props.show ? slideInFromRight : "none")} 0.8s ease;
 
-   & button {
-    opacity: 0;
-    transition: opacity 0.1s ease;
+  & button {
+    opacity: 0; 
+    animation: ${({ animationShow }) => animationShow ? css`${slideInFromRight} 0.3s ease-out forwards` : "none"};
+    
   }
 
-  ${(props) =>
-    props.show &&
-    `
-    button:nth-of-type(1) {
-      opacity: 1;
-      transition-delay: 0.8s;
-    }
-    button:nth-of-type(2) {
-      opacity: 1;
-      transition-delay: 0.6s;
-    }
-    button:nth-of-type(3) {
-      opacity: 1;
-      transition-delay: 0.4s;
-    }
-    button:nth-of-type(4) {
-      opacity: 1;
-      transition-delay: 0.2s;
-    }
-  `}
+  & button:nth-of-type(4) {
+  animation-delay: 0.6s;
+}
+  & button:nth-of-type(3) {
+  animation-delay: 0.8s;
+}
+  & button:nth-of-type(2) {
+  animation-delay: 1s;
+}
+  & button:nth-of-type(1) {
+  animation-delay: 1.2s;
+}
 `;
 
 export const Buttons = styled.button`
-  padding: 12px 14px;
-  border: none;
-  border-radius: 50px;
-  background-color: #007586;
-  margin-bottom: 10px;
-  box-shadow: 0px 0px 2px 1px rgba(255, 255, 255, 1);
-  cursor: pointer;
+padding: 12px 14px;
+border: none;
+border-radius: 50px;
+background-color: #007586;
+margin-bottom: 10px;
+border: 2px solid #fff;
+cursor: pointer;
   &:hover,
   &:focus {
-    background: #01606e;
-  }
+  background-color: #01606e;
+}
 `;

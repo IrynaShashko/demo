@@ -67,7 +67,6 @@ export const AnimationDiv = styled.div`
 
   & p:nth-of-type(1) {
     animation-delay: 0.4s;
-
     }
 
   & p:nth-of-type(2) {
