@@ -14,13 +14,14 @@ import {
 const PhoneButton = () => {
   const [isAdditionalButtonsVisible, setAdditionalButtonsVisible] =
     useState(false);
-
-  const [buttonAnimationClasses, setButtonAnimationClasses] = useState(["", "", "", ""]);
+  const icon = document.getElementById("icon");
 
   const toggleButtons = () => {
     setAdditionalButtonsVisible((prevValue) => !prevValue);
     if (!isAdditionalButtonsVisible) {
-      setButtonAnimationClasses(["slide-in-1", "slide-in-2", "slide-in-3", "slide-in-4"]);
+      icon.style.transform = "rotate(-45deg)";
+    } else {
+      icon.style.transform = "rotate(0deg)";
     }
   };
 
@@ -48,7 +49,6 @@ const PhoneButton = () => {
         </Buttons>
         <Buttons
           type="button"
-          className={buttonAnimationClasses[1]}
           onClick={() => openLink("https://t.me/MashaHlushenko")}
         >
           <IconContext.Provider
@@ -62,7 +62,6 @@ const PhoneButton = () => {
         </Buttons>
         <Buttons
           type="button"
-          className={buttonAnimationClasses[2]}
           onClick={() => openLink("https://api.whatsapp.com/send?phone=380936193616")}
         >
           <IconContext.Provider
@@ -76,7 +75,6 @@ const PhoneButton = () => {
         </Buttons>
         <Buttons
           type="button"
-          className={buttonAnimationClasses[3]}
           onClick={() => openLink("viber://chat?number=+380936193616")}
         >
           <IconContext.Provider

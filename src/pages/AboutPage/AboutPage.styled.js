@@ -89,9 +89,10 @@ export const Title = styled.h2`
   font-size: 30px;
   margin-top: 20px;
   color: #000;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-weight: lighter;
   text-shadow: 0px 0px 7px rgba(255, 255, 255, 1);
+  letter-spacing: 5px;
   @media screen and (min-width: 768px) {
     font-size: 35px;
     color: #fff;
@@ -100,7 +101,8 @@ export const Title = styled.h2`
 
 export const AfterTitle = styled.p`
   font-size: 18px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  letter-spacing: 5px;
   @media screen and (min-width: 768px) {
     font-size: 20px;
   }

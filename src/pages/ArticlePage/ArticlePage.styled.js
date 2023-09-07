@@ -30,7 +30,7 @@ export const ArticleItem = styled.div`
   background-color: #f1f1f1;
   box-sizing: border-box;
   text-align: center;
-  box-shadow: 0px 0px 4px 2px rgba(166, 166, 169, 1);
+    box-shadow: 0px 0px 4px 2px rgba(166, 166, 169, 1);
 `;
 
 export const ArticleTitle = styled.h1`
@@ -39,7 +39,7 @@ export const ArticleTitle = styled.h1`
   font-weight: lighter;
   text-transform: uppercase;
   margin-bottom: 20px;
-`;
+  `;
 
 export const ArticleAfterTitle = styled.h2`
   font-size: 20px;
@@ -47,6 +47,8 @@ export const ArticleAfterTitle = styled.h2`
   margin-top: 10px;
   margin-bottom: 10px;
   text-align: center;
+  margin-top:20px;
+  margin-bottom: 20px;
 `;
 
 export const ArticleText = styled.p`
