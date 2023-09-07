@@ -52,7 +52,7 @@ const AboutPage = () => {
           </ImageContainer>
           <Container>
             <TitleText
-              style={{ textAlign: "center", textIndent: "0", fontSize: "18px", textTransform: "uppercase", marginBottom: "20px" }}
+              style={{ textAlign: "center", textIndent: "0", fontSize: "18px", textTransform: "uppercase", marginBottom: "20px", letterSpacing: "5px" }}
             >
               Ласкаво просимо до нашого спокійного оазису масажу!
             </TitleText>

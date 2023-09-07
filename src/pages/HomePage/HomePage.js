@@ -49,9 +49,9 @@ const HomePage = () => {
         <Container>
           <TextContainer>
             <PhoneButton />
-            <AnimationDiv><Text>
-              Ласкаво прошу у світ, де масаж стає особливою історією! <br /> Тут
-              ви зможете: <br /></Text>
+            <AnimationDiv><Text style={{ letterSpacing: "5px", textTransform: "uppercase" }}>
+              Ласкаво прошу у світ, де масаж стає особливою історією! </Text >
+              <Text>Тут ви зможете: </Text>
               <Text>
                 {mark}відчути гармонію
               </Text><Text>

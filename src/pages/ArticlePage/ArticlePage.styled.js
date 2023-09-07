@@ -30,7 +30,7 @@ export const ArticleItem = styled.div`
   background-color: #f1f1f1;
   box-sizing: border-box;
   text-align: center;
-    box-shadow: 0px 0px 4px 2px rgba(166, 166, 169, 1);
+  box-shadow: 0px 0px 4px 2px rgba(166, 166, 169, 1);
 `;
 
 export const ArticleTitle = styled.h1`
@@ -38,7 +38,13 @@ export const ArticleTitle = styled.h1`
   text-align: center;
   font-weight: lighter;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-bottom:30px;
+  letter-spacing: 5px;
+  @media screen and (min-width: 768px) {
+    margin-top: 50px;
+  margin-bottom:50px;
+  }
   `;
 
 export const ArticleAfterTitle = styled.h2`
