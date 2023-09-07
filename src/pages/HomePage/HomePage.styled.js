@@ -43,6 +43,13 @@ export const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  & button{
+    animation: ${growFont} 0.3s ease-out forwards;
+    opacity: 0; 
+  }
+  & button:nth-child(1){
+    animation-delay: 3.2s;
+  }
 `;
 
 export const TextContainer = styled.div`
@@ -115,7 +122,6 @@ export const MainText = styled.p`
   font-size: 16px;
   color: #696969;
   text-align: center;
-  width: 260px;
   @media screen and (min-width: 1440px) {
     font-size: 18px;
   }
