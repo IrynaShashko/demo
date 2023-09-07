@@ -1,26 +1,33 @@
 import styled from "@emotion/styled";
-import { keyframes } from "styled-components";
+import { css, keyframes } from '@emotion/react';
 
 const pulse = keyframes`
   0% {
     transform: scale(1);
   }
-  50% {
-    transform: scale(1.2);
+  20%{transform: scale(1.2) rotate(15deg);
+    background-color: #01606e;}
+  60% {
+    transform: scale(1.2) rotate(-15deg);
+    background-color: #01606e;
+  }
+  80%{
+transform: scale(1.2) rotate(15deg);
+    background-color: #01606e;
   }
   100% {
     transform: scale(1);
   }
 `;
 
-const slideInFromLeft = keyframes`
+const slideInFromRight = keyframes`
   from {
+    transform: translateX(250px);
     opacity: 0;
-    transform: translateX(-20px);
   }
   to {
+    transform: translateX(0);
     opacity: 1;
-    transform: translateX(20);
   }
 `;
 
@@ -44,7 +51,12 @@ export const PhoneContainer = styled.div`
 export const MainButton = styled.button`
   padding: 16px 18px;
   font-size: 16px;
-  animation: ${pulse} 6s infinite;
+  animation: ${({ stopAnimation }) =>
+    stopAnimation
+      ? 'none'
+      : css`
+          ${pulse} 2s infinite
+        `};
   border-radius: 50px;
   background-color:#007586;
   border: 2px solid #fff;
@@ -60,11 +72,11 @@ export const ButtonDiv = styled.div`
   flex-direction: column;
   margin-top: 20px;
   opacity: ${(props) => (props.show ? 1 : 0)};
-  animation: ${(props) => (props.show ? slideInFromLeft : "none")} 0.3s ease;
+  animation: ${(props) => (props.show ? slideInFromRight : "none")} 0.8s ease;
 
-  button {
+   & button {
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.1s ease;
   }
 
   ${(props) =>
@@ -72,15 +84,15 @@ export const ButtonDiv = styled.div`
     `
     button:nth-of-type(1) {
       opacity: 1;
-      transition-delay: 0.5s;
+      transition-delay: 0.8s;
     }
     button:nth-of-type(2) {
       opacity: 1;
-      transition-delay: 0.4s;
+      transition-delay: 0.6s;
     }
     button:nth-of-type(3) {
       opacity: 1;
-      transition-delay: 0.3s;
+      transition-delay: 0.4s;
     }
     button:nth-of-type(4) {
       opacity: 1;

@@ -1,9 +1,9 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { IconContext } from "react-icons";
 import { LuPhone } from "react-icons/lu";
-import { FaViber } from "react-icons/fa";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaViber, FaWhatsapp } from "react-icons/fa";
 import { LiaTelegram } from "react-icons/lia";
+import "../../index.css";
 import {
   PhoneContainer,
   MainButton,
@@ -15,32 +15,18 @@ const PhoneButton = () => {
   const [isAdditionalButtonsVisible, setAdditionalButtonsVisible] =
     useState(false);
 
-  function toggleButtons() {
-    const icon = document.getElementById("icon");
+  const [buttonAnimationClasses, setButtonAnimationClasses] = useState(["", "", "", ""]);
 
-    if (!isAdditionalButtonsVisible) {
-      icon.style.transform = "rotate(-45deg)";
-    } else {
-      icon.style.transform = "rotate(0deg)";
-    }
+  const toggleButtons = () => {
     setAdditionalButtonsVisible((prevValue) => !prevValue);
-  }
+    if (!isAdditionalButtonsVisible) {
+      setButtonAnimationClasses(["slide-in-1", "slide-in-2", "slide-in-3", "slide-in-4"]);
+    }
+  };
 
-  function openTelegram() {
-    window.open("https://t.me/MashaHlushenko");
-  }
-
-  function openWhatsApp() {
-    window.open("https://api.whatsapp.com/send?phone=380936193616");
-  }
-
-  function openViber() {
-    window.open("viber://chat?number=+380936193616");
-  }
-
-  function makeCall() {
-    window.open("tel:+380936193616");
-  }
+  const openLink = (url) => {
+    window.open(url);
+  };
 
   return (
     <PhoneContainer>
@@ -49,7 +35,8 @@ const PhoneButton = () => {
         className={isAdditionalButtonsVisible ? "show" : "hidden"}
         show={isAdditionalButtonsVisible}
       >
-        <Buttons type="button" onClick={makeCall}>
+        <Buttons type="button"
+          onClick={() => openLink("tel:+380936193616")}>
           <IconContext.Provider
             value={{
               size: "20px",
@@ -59,7 +46,11 @@ const PhoneButton = () => {
             <LuPhone />
           </IconContext.Provider>
         </Buttons>
-        <Buttons type="button" onClick={openTelegram}>
+        <Buttons
+          type="button"
+          className={buttonAnimationClasses[1]}
+          onClick={() => openLink("https://t.me/MashaHlushenko")}
+        >
           <IconContext.Provider
             value={{
               size: "20px",
@@ -69,7 +60,11 @@ const PhoneButton = () => {
             <LiaTelegram />
           </IconContext.Provider>
         </Buttons>
-        <Buttons type="button" onClick={openWhatsApp}>
+        <Buttons
+          type="button"
+          className={buttonAnimationClasses[2]}
+          onClick={() => openLink("https://api.whatsapp.com/send?phone=380936193616")}
+        >
           <IconContext.Provider
             value={{
               size: "20px",
@@ -79,7 +74,11 @@ const PhoneButton = () => {
             <FaWhatsapp />
           </IconContext.Provider>
         </Buttons>
-        <Buttons type="button" onClick={openViber}>
+        <Buttons
+          type="button"
+          className={buttonAnimationClasses[3]}
+          onClick={() => openLink("viber://chat?number=+380936193616")}
+        >
           <IconContext.Provider
             value={{
               size: "20px",
@@ -90,7 +89,7 @@ const PhoneButton = () => {
           </IconContext.Provider>
         </Buttons>
       </ButtonDiv>
-      <MainButton onClick={toggleButtons}>
+      <MainButton onClick={toggleButtons} stopAnimation={isAdditionalButtonsVisible}>
         <IconContext.Provider
           value={{
             size: "25px",

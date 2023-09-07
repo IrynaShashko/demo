@@ -1,6 +1,20 @@
 import styled from "@emotion/styled";
-
+import { keyframes } from '@emotion/react';
 import photo from "../../images/10.jpg";
+
+const growFont = keyframes`
+  from {
+    opacity: 0;
+    transform: translate(0px, 0px);
+    
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px,0px);
+    
+  }
+`;
+
 
 export const HomeContainer = styled.div`
   display: flex;
@@ -46,6 +60,38 @@ export const TextContainer = styled.div`
     }
   }
 `;
+
+export const AnimationDiv = styled.div`
+
+  & p {
+    animation: ${growFont} 0.5s ease;
+  }
+
+  & p:nth-of-type(1) {
+    animation-delay: 0.2s;
+    opacity: 1;
+  }
+
+  & p:nth-of-type(2) {
+    animation-delay: 0.6s;
+  }
+
+  & p:nth-of-type(3) {
+    animation-delay: 1s;
+  }
+
+  & p:nth-of-type(4) {
+    animation-delay: 1.2s;
+  }
+
+  & p:nth-of-type(5) {
+    animation-delay: 1.6s;
+  }
+
+  & p:nth-of-type(6) {
+    animation-delay: 1.8s;
+  }
+`
 
 export const Text = styled.p`
   font-size: 18px;

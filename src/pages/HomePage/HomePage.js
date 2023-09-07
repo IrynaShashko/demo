@@ -16,7 +16,7 @@ import {
   InfoTitle,
   MainText,
   Title,
-  InfoDiv,
+  InfoDiv, AnimationDiv
 } from "./HomePage.styled";
 
 import "../../index.css";
@@ -49,23 +49,19 @@ const HomePage = () => {
         <Container>
           <TextContainer>
             <PhoneButton />
-            <Text>
+            <AnimationDiv><Text>
               Ласкаво прошу у світ, де масаж стає особливою історією! <br /> Тут
-              ви зможете: <br />
-              {mark}
-              відчути гармонію
-              <br /> {mark}
-              баланс
-              <br />
-              {mark}
-              позбутися стресу та напруги
-              <br />
-              {mark}
-              втамувати біль
-              <br />
-              {mark}
-              відновити або покращити функцію опорно-рухового апарату
-            </Text>
+              ви зможете: <br /></Text>
+              <Text>
+                {mark}відчути гармонію
+              </Text><Text>
+                {mark}баланс
+              </Text><Text>
+                {mark}позбутися стресу та напруги
+              </Text><Text>
+                {mark}втамувати біль
+              </Text><Text>
+                {mark}відновити або покращити функцію опорно-рухового апарату</Text></AnimationDiv>
             <ButtonContainer>
               <ModalSubmitBtn onClick={() => setIsModalOpen(true)}>
                 Записатись
