@@ -10,6 +10,7 @@ const pulse = keyframes`
   60% {
     transform: scale(1.2) rotate(-15deg);
     background-color: #01606e;
+    box-shadow: 0px 0px 2px 1px rgba(255, 255, 255, 1);
   }
   80%{
 transform: scale(1.2) rotate(15deg);
@@ -60,8 +61,7 @@ export const MainButton = styled.button`
   border-radius: 50px;
   background-color:#007586;
   border: 2px solid #fff;
-  box-shadow: 0px 0px 2px 1px rgba(255, 255, 255, 1);
-  cursor: pointer;
+    cursor: pointer;
   &:hover {
     background-color: #015b69;
   }
