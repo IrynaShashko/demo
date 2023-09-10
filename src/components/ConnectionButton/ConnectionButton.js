@@ -39,7 +39,7 @@ const ConnectionButtons = ({ background, color }) => {
     <div>
       <ButtonContainer>
         <ButtonsItem backgroundColor={background} color={color}>
-          <Buttons href="https://instagram.com/maria.glushenko?igshid=MzRlODBiNWFlZA==" onClick={openInstagram}>
+          <Buttons aria-label="Open instagram" href="https://instagram.com/maria.glushenko?igshid=MzRlODBiNWFlZA==" onClick={openInstagram}>
             <IconContext.Provider
               value={{
                 size: "28px",
@@ -63,7 +63,7 @@ const ConnectionButtons = ({ background, color }) => {
           </Buttons>
         </ButtonsItem>
         <ButtonsItem backgroundColor={background} color={color}>
-          <Buttons href="https://t.me/MashaHlushenko" onClick={openTelegram}>
+          <Buttons aria-label="Open telegram" href="https://t.me/MashaHlushenko" onClick={openTelegram}>
             <IconContext.Provider
               value={{
                 size: "32px",
@@ -75,7 +75,7 @@ const ConnectionButtons = ({ background, color }) => {
           </Buttons>
         </ButtonsItem>
         <ButtonsItem backgroundColor={background} color={color}>
-          <Buttons href="https://api.whatsapp.com/send?phone=380936193616" onClick={openWhatsApp}>
+          <Buttons aria-label="Open whatsapp" href="https://api.whatsapp.com/send?phone=380936193616" onClick={openWhatsApp}>
             <IconContext.Provider
               value={{
                 size: "32px",
@@ -87,7 +87,7 @@ const ConnectionButtons = ({ background, color }) => {
           </Buttons>
         </ButtonsItem>
         <ButtonsItem backgroundColor={background} color={color}>
-          <Buttons href="viber://chat?number=+380936193616" onClick={openViber}>
+          <Buttons aria-label="Open viber" href="viber://chat?number=+380936193616" onClick={openViber}>
             <IconContext.Provider
               value={{
                 size: "28px",
@@ -99,7 +99,7 @@ const ConnectionButtons = ({ background, color }) => {
           </Buttons>
         </ButtonsItem>
         <ButtonsItem backgroundColor={background} color={color}>
-          <Buttons onClick={makeCall}>
+          <Buttons aria-label="Phone number" onClick={makeCall}>
             <IconContext.Provider
               value={{
                 size: "25px",
