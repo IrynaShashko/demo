@@ -58,7 +58,7 @@ export default function Modal({ onClose, children }) {
               <Link to={"/"}>
                 <img src={logo} width={120} alt="logo" />
               </Link>
-              <ModalButton onClick={onClose}>
+              <ModalButton type="button" onClick={onClose}>
                 <IconContext.Provider
                   value={{
                     size: "30px",
@@ -90,7 +90,7 @@ export default function Modal({ onClose, children }) {
                 <NavLinkStyled to={"/price"}>Ціни</NavLinkStyled>
               </ModalTitle>
             </ModalList>
-            <ModalSubmitBtn onClick={() => setIsModalOpen(true)}>
+            <ModalSubmitBtn type="button" onClick={() => setIsModalOpen(true)}>
               Записатись
             </ModalSubmitBtn>
           </Container>

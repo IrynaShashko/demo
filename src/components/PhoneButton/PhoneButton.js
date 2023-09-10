@@ -82,7 +82,7 @@ const PhoneButton = () => {
           </IconContext.Provider>
         </Buttons>
       </ButtonDiv>
-      <MainButton onClick={toggleButtons} stopAnimation={isAdditionalButtonsVisible}>
+      <MainButton type="button" onClick={toggleButtons} stopAnimation={isAdditionalButtonsVisible}>
         <IconContext.Provider
           value={{
             size: "25px",

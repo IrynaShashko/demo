@@ -51,7 +51,7 @@ const ConnectionButtons = ({ background, color }) => {
           </Buttons>
         </ButtonsItem>
         <ButtonsItem backgroundColor={background} color={color}>
-          <Buttons href="https://goo.gl/maps/o3qvsXRkfv8h3hdw5" target="_blank">
+          <Buttons aria-label="Location" href="https://goo.gl/maps/o3qvsXRkfv8h3hdw5" target="_blank">
             <IconContext.Provider
               value={{
                 size: "30px",
