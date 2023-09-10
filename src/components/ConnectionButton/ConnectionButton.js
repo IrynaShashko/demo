@@ -39,7 +39,7 @@ const ConnectionButtons = ({ background, color }) => {
     <div>
       <ButtonContainer>
         <ButtonsItem backgroundColor={background} color={color}>
-          <Buttons onClick={openInstagram}>
+          <Buttons href="https://instagram.com/maria.glushenko?igshid=MzRlODBiNWFlZA==" onClick={openInstagram}>
             <IconContext.Provider
               value={{
                 size: "28px",
@@ -63,7 +63,7 @@ const ConnectionButtons = ({ background, color }) => {
           </Buttons>
         </ButtonsItem>
         <ButtonsItem backgroundColor={background} color={color}>
-          <Buttons onClick={openTelegram}>
+          <Buttons href="https://t.me/MashaHlushenko" onClick={openTelegram}>
             <IconContext.Provider
               value={{
                 size: "32px",
@@ -75,7 +75,7 @@ const ConnectionButtons = ({ background, color }) => {
           </Buttons>
         </ButtonsItem>
         <ButtonsItem backgroundColor={background} color={color}>
-          <Buttons onClick={openWhatsApp}>
+          <Buttons href="https://api.whatsapp.com/send?phone=380936193616" onClick={openWhatsApp}>
             <IconContext.Provider
               value={{
                 size: "32px",
@@ -87,7 +87,7 @@ const ConnectionButtons = ({ background, color }) => {
           </Buttons>
         </ButtonsItem>
         <ButtonsItem backgroundColor={background} color={color}>
-          <Buttons onClick={openViber}>
+          <Buttons href="viber://chat?number=+380936193616" onClick={openViber}>
             <IconContext.Provider
               value={{
                 size: "28px",
