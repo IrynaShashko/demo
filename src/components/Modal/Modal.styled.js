@@ -58,6 +58,7 @@ export const ModalHeader = styled.div`
 export const ModalButton = styled.button`
   border: none;
   background-color: transparent;
+  cursor: pointer;
 `;
 
 export const ModalList = styled.ul`
