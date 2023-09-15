@@ -5,7 +5,7 @@ import photo from "../../images/10.jpg";
 const growFont = keyframes`
   from {
     opacity: 0;
-    transform: translate(500px, 0px); 
+    transform: translate(0px, 50px); 
   }
   to {
     opacity: 1;
