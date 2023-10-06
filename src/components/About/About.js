@@ -1,3 +1,5 @@
+import { useInView } from 'react-intersection-observer';
+
 import { Title, InfoContainer, InfoItem, InfoTitle, SvgContainer, MainText, Icon } from "./About.styled";
 
 import icon1 from "../../icons/massage-spa-body-treatment-svgrepo-com.svg";
@@ -6,9 +8,30 @@ import icon3 from "../../icons/aromatherapy-svgrepo-com.svg";
 
 
 const About = () => {
+    const animationElement = {
+        hidden: {
+            y: -50,
+            opacity: 0,
+        },
+        visible: custom => ({
+            y: 0,
+            opacity: 1,
+            transition: { ease: "easeOut", duration: 2, delay: custom * 0.3 },
+        }),
+    }
+
+    const { ref, inView } = useInView({
+        triggerOnce: true,
+    });
+
     return <><Title>Чому обирають мене?</Title>
-        <InfoContainer>
-            <InfoItem>
+        <InfoContainer
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+            variants={animationElement}
+            ref={ref}
+            custom={1}>
+            <InfoItem variants={animationElement} custom={2}>
                 <SvgContainer>
                     <Icon src={icon2} alt="icon" />
                 </SvgContainer>
@@ -20,7 +43,7 @@ const About = () => {
                     близьким людям дарує відчуття, що я на своєму місці.
                 </MainText>
             </InfoItem>
-            <InfoItem>
+            <InfoItem variants={animationElement} custom={3}>
                 <SvgContainer>
                     <Icon src={icon1} alt="icon" />
                 </SvgContainer>
@@ -36,7 +59,7 @@ const About = () => {
                     здоров'ю вашого тіла.
                 </MainText>
             </InfoItem>
-            <InfoItem>
+            <InfoItem variants={animationElement} custom={4}>
                 <SvgContainer>
                     <Icon src={icon3} alt="icon" />
                 </SvgContainer>

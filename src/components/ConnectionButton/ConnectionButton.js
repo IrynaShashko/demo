@@ -1,3 +1,4 @@
+import { useInView } from 'react-intersection-observer';
 import { IconContext } from "react-icons";
 import { LuPhone } from "react-icons/lu";
 import { SlLocationPin } from "react-icons/sl";
@@ -13,6 +14,22 @@ import {
 } from "./ConnectionButton.styled";
 
 const ConnectionButtons = ({ background, color }) => {
+  const animationElement = {
+    hidden: {
+      y: -50,
+      opacity: 0,
+    },
+    visible: custom => ({
+      y: 0,
+      opacity: 1,
+      transition: { ease: "easeOut", duration: 2, delay: custom * 0.3 },
+    }),
+  }
+
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
+
   function openTelegram() {
     window.open("https://t.me/MashaHlushenko");
   }
@@ -37,8 +54,15 @@ const ConnectionButtons = ({ background, color }) => {
 
   return (
     <div>
-      <ButtonContainer>
-        <ButtonsItem backgroundColor={background} color={color}>
+      <ButtonContainer
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        variants={animationElement}
+        ref={ref}
+        custom={1}>
+        <ButtonsItem
+          variants={animationElement} custom={2}
+          backgroundColor={background} color={color}>
           <Buttons aria-label="Open instagram" href="https://instagram.com/maria.glushenko?igshid=MzRlODBiNWFlZA==" onClick={openInstagram}>
             <IconContext.Provider
               value={{
@@ -50,7 +74,9 @@ const ConnectionButtons = ({ background, color }) => {
             </IconContext.Provider>
           </Buttons>
         </ButtonsItem>
-        <ButtonsItem backgroundColor={background} color={color}>
+        <ButtonsItem
+          variants={animationElement} custom={3}
+          backgroundColor={background} color={color}>
           <Buttons aria-label="Location" href="https://goo.gl/maps/o3qvsXRkfv8h3hdw5" target="_blank">
             <IconContext.Provider
               value={{
@@ -62,7 +88,9 @@ const ConnectionButtons = ({ background, color }) => {
             </IconContext.Provider>
           </Buttons>
         </ButtonsItem>
-        <ButtonsItem backgroundColor={background} color={color}>
+        <ButtonsItem
+          variants={animationElement} custom={4}
+          backgroundColor={background} color={color}>
           <Buttons aria-label="Open telegram" href="https://t.me/MashaHlushenko" onClick={openTelegram}>
             <IconContext.Provider
               value={{
@@ -74,7 +102,9 @@ const ConnectionButtons = ({ background, color }) => {
             </IconContext.Provider>
           </Buttons>
         </ButtonsItem>
-        <ButtonsItem backgroundColor={background} color={color}>
+        <ButtonsItem
+          variants={animationElement} custom={5}
+          backgroundColor={background} color={color}>
           <Buttons aria-label="Open whatsapp" href="https://api.whatsapp.com/send?phone=380936193616" onClick={openWhatsApp}>
             <IconContext.Provider
               value={{
@@ -86,7 +116,9 @@ const ConnectionButtons = ({ background, color }) => {
             </IconContext.Provider>
           </Buttons>
         </ButtonsItem>
-        <ButtonsItem backgroundColor={background} color={color}>
+        <ButtonsItem
+          variants={animationElement} custom={6}
+          backgroundColor={background} color={color}>
           <Buttons aria-label="Open viber" href="viber://chat?number=+380936193616" onClick={openViber}>
             <IconContext.Provider
               value={{
@@ -98,7 +130,9 @@ const ConnectionButtons = ({ background, color }) => {
             </IconContext.Provider>
           </Buttons>
         </ButtonsItem>
-        <ButtonsItem backgroundColor={background} color={color}>
+        <ButtonsItem
+          variants={animationElement} custom={7}
+          backgroundColor={background} color={color}>
           <Buttons aria-label="Phone number" onClick={makeCall}>
             <IconContext.Provider
               value={{

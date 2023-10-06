@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { motion } from "framer-motion";
 
 export const ContactsLinkContainer = styled.div`
   display: flex;
@@ -18,7 +19,7 @@ export const ContactsLink = styled.p`
   justify-content: center;
 `;
 
-export const ButtonContainer = styled.ul`
+export const ButtonContainer = styled(motion.ul)`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -29,7 +30,7 @@ export const ButtonContainer = styled.ul`
   }
 `;
 
-export const ButtonsItem = styled.li`
+export const ButtonsItem = styled(motion.li)`
   display: flex;
   justify-content: center;
   align-items: center;

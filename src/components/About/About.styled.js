@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
+import { motion } from "framer-motion";
 
-export const InfoContainer = styled.ul`
+export const InfoContainer = styled(motion.ul)`
   padding: 0 20px;
 
   @media screen and (min-width: 768px) {
@@ -13,7 +14,7 @@ export const InfoContainer = styled.ul`
   }
 `;
 
-export const InfoItem = styled.li`
+export const InfoItem = styled(motion.li)`
   display: flex;
   flex-direction: column;
   align-items: center;

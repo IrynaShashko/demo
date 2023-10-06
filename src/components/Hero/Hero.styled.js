@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { keyframes } from '@emotion/react';
+import { motion } from 'framer-motion';
 
 const growFont = keyframes`
   from {
@@ -25,7 +26,7 @@ export const ButtonContainer = styled.div`
   }
 `;
 
-export const TextContainer = styled.div`
+export const TextContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -39,7 +40,7 @@ export const TextContainer = styled.div`
   }
 `;
 
-export const Text = styled.p`
+export const Text = styled(motion.p)`
   font-size: 18px;
   color: #fff;
   text-align: center;
@@ -57,7 +58,7 @@ export const Text = styled.p`
   }
 `;
 
-export const ModalSubmitBtn = styled.button`
+export const ModalSubmitBtn = styled(motion.button)`
   border: none;
   background-color: transparent;
   border-radius: 8px;
@@ -84,7 +85,7 @@ export const ModalSubmitBtn = styled.button`
 `;
 
 export const AnimationDiv = styled.div`
-  & p {
+  /* & p {
     animation: ${growFont} 0.3s ease-out forwards;
     opacity: 0; 
   }
@@ -114,5 +115,5 @@ export const AnimationDiv = styled.div`
   }
   & p:nth-of-type(7) {
     animation-delay: 2.8s;
-  }
+  } */
 `

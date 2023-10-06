@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
+import { useInView } from 'react-intersection-observer';
 import { IconContext } from "react-icons";
 import { GiCheckMark } from "react-icons/gi";
 import ConnectionForm from "../ConnectionForm/СonnectionModal";
@@ -7,46 +9,82 @@ import { TextContainer, AnimationDiv, Text, ButtonContainer, ModalSubmitBtn } fr
 
 
 const Hero = () => {
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const onCloseModal = () => {
-        setIsModalOpen(false);
-    };
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const onCloseModal = () => {
+    setIsModalOpen(false);
+  };
 
-    const mark = (
-        <IconContext.Provider
-            value={{
-                size: "20px",
-                color: "#007586",
-            }}
+  const animationElement = {
+    hidden: {
+      y: -50,
+      opacity: 0,
+    },
+    visible: custom => ({
+      y: 0,
+      opacity: 1,
+      transition: { ease: "easeOut", duration: 2, delay: custom * 0.3 },
+    }),
+  }
+
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
+
+
+  const mark = (
+    <IconContext.Provider
+      value={{
+        size: "20px",
+        color: "#007586",
+      }}
+    >
+      <GiCheckMark />
+    </IconContext.Provider>
+  );
+
+  return <>
+    <PhoneButton />
+    <TextContainer
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"}
+      variants={animationElement}
+      ref={ref}
+      custom={1}>
+      <AnimationDiv>
+        <Text variants={animationElement} custom={2} style={{ letterSpacing: "3px" }}>
+          Ласкаво прошу у світ, де масаж стає особливою історією!
+        </Text >
+        <Text variants={animationElement} custom={3}>Тут ви зможете: </Text>
+        <Text variants={animationElement} custom={4}>
+          {mark}відчути гармонію
+        </Text>
+        <Text variants={animationElement} custom={5}>
+          {mark}баланс
+        </Text>
+        <Text variants={animationElement} custom={6}>
+          {mark}позбутися стресу та напруги
+        </Text>
+        <Text variants={animationElement} custom={7}>
+          {mark}втамувати біль
+        </Text>
+        <Text variants={animationElement} custom={8}>
+          {mark}відновити або покращити функцію опорно-рухового апарату</Text></AnimationDiv>
+      <ButtonContainer>
+        <motion.div
+          variants={animationElement}
+          custom={9}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
         >
-            <GiCheckMark />
-        </IconContext.Provider>
-    );
-
-    return <><TextContainer>
-        <PhoneButton />
-        <AnimationDiv><Text style={{ letterSpacing: "3px" }}>
-            Ласкаво прошу у світ, де масаж стає особливою історією! </Text >
-            <Text>Тут ви зможете: </Text>
-            <Text>
-                {mark}відчути гармонію
-            </Text><Text>
-                {mark}баланс
-            </Text><Text>
-                {mark}позбутися стресу та напруги
-            </Text><Text>
-                {mark}втамувати біль
-            </Text><Text >
-                {mark}відновити або покращити функцію опорно-рухового апарату</Text></AnimationDiv>
-        <ButtonContainer>
-            <ModalSubmitBtn onClick={() => setIsModalOpen(true)}>
-                Записатись
-            </ModalSubmitBtn>
-        </ButtonContainer>
+          <ModalSubmitBtn onClick={() => setIsModalOpen(true)}>
+            Записатись
+          </ModalSubmitBtn>
+        </motion.div>
+      </ButtonContainer>
     </TextContainer>
-        {isModalOpen && (
-            <ConnectionForm isOpen={isModalOpen} onClose={onCloseModal} />
-        )}</>
+    {isModalOpen && (
+      <ConnectionForm isOpen={isModalOpen} onClose={onCloseModal} />
+    )}</>
 }
 
 export default Hero;
