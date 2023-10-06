@@ -22,7 +22,7 @@ const ConnectionButtons = ({ background, color }) => {
     visible: custom => ({
       y: 0,
       opacity: 1,
-      transition: { ease: "easeOut", duration: 2, delay: custom * 0.3 },
+      transition: { ease: "easeOut", duration: 1, delay: custom * 0.3 },
     }),
   }
 

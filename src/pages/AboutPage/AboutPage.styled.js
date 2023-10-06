@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { motion } from "framer-motion";
 
 export const AboutContainer = styled.div`
   padding-bottom: 30px;
@@ -62,7 +63,7 @@ export const ImageContainer = styled.div`
   }
 `;
 
-export const Image = styled.img`
+export const Image = styled(motion.img)`
   width: 280px;
   border-radius: 8px;
   border: none;
@@ -75,7 +76,7 @@ export const Image = styled.img`
   }
 `;
 
-export const TitleContainer = styled.div`
+export const TitleContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -85,7 +86,7 @@ export const TitleContainer = styled.div`
   }
 `;
 
-export const Title = styled.h2`
+export const Title = styled(motion.h2)`
   font-size: 30px;
   margin-top: 20px;
   color: #000;
@@ -99,7 +100,7 @@ export const Title = styled.h2`
   }
 `;
 
-export const AfterTitle = styled.p`
+export const AfterTitle = styled(motion.p)`
   font-size: 18px;
   margin-bottom: 20px;
   letter-spacing: 5px;
@@ -108,7 +109,7 @@ export const AfterTitle = styled.p`
   }
 `;
 
-export const TitleText = styled.p`
+export const TitleText = styled(motion.p)`
   font-size: 14px;
   line-height: 20px;
   align-items: center;
