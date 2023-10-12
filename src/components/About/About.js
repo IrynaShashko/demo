@@ -43,7 +43,7 @@ const About = () => {
                     близьким людям дарує відчуття, що я на своєму місці.
                 </MainText>
             </InfoItem>
-            <InfoItem variants={animationElement} custom={3}>
+            <InfoItem variants={animationElement} custom={4}>
                 <SvgContainer>
                     <Icon src={icon1} alt="icon" />
                 </SvgContainer>
@@ -59,7 +59,7 @@ const About = () => {
                     здоров'ю вашого тіла.
                 </MainText>
             </InfoItem>
-            <InfoItem variants={animationElement} custom={4}>
+            <InfoItem variants={animationElement} custom={6}>
                 <SvgContainer>
                     <Icon src={icon3} alt="icon" />
                 </SvgContainer>
