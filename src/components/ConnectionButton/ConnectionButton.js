@@ -62,7 +62,7 @@ const ConnectionButtons = ({ background, color }) => {
         custom={1}>
         <ButtonsItem
           variants={animationElement} custom={2}
-          backgroundColor={background} color={color}>
+          backgroundсolor={background} color={color}>
           <Buttons aria-label="Open instagram" href="https://instagram.com/maria.glushenko?igshid=MzRlODBiNWFlZA==" onClick={openInstagram}>
             <IconContext.Provider
               value={{
@@ -76,7 +76,7 @@ const ConnectionButtons = ({ background, color }) => {
         </ButtonsItem>
         <ButtonsItem
           variants={animationElement} custom={3}
-          backgroundColor={background} color={color}>
+          backgroundсolor={background} color={color}>
           <Buttons aria-label="Location" href="https://goo.gl/maps/o3qvsXRkfv8h3hdw5" target="_blank">
             <IconContext.Provider
               value={{
@@ -90,7 +90,7 @@ const ConnectionButtons = ({ background, color }) => {
         </ButtonsItem>
         <ButtonsItem
           variants={animationElement} custom={4}
-          backgroundColor={background} color={color}>
+          backgroundсolor={background} color={color}>
           <Buttons aria-label="Open telegram" href="https://t.me/MashaHlushenko" onClick={openTelegram}>
             <IconContext.Provider
               value={{
@@ -104,7 +104,7 @@ const ConnectionButtons = ({ background, color }) => {
         </ButtonsItem>
         <ButtonsItem
           variants={animationElement} custom={5}
-          backgroundColor={background} color={color}>
+          backgroundсolor={background} color={color}>
           <Buttons aria-label="Open whatsapp" href="https://api.whatsapp.com/send?phone=380936193616" onClick={openWhatsApp}>
             <IconContext.Provider
               value={{
@@ -118,7 +118,7 @@ const ConnectionButtons = ({ background, color }) => {
         </ButtonsItem>
         <ButtonsItem
           variants={animationElement} custom={6}
-          backgroundColor={background} color={color}>
+          backgroundсolor={background} color={color}>
           <Buttons aria-label="Open viber" href="viber://chat?number=+380936193616" onClick={openViber}>
             <IconContext.Provider
               value={{
@@ -132,7 +132,7 @@ const ConnectionButtons = ({ background, color }) => {
         </ButtonsItem>
         <ButtonsItem
           variants={animationElement} custom={7}
-          backgroundColor={background} color={color}>
+          backgroundсolor={background} color={color}>
           <Buttons aria-label="Phone number" onClick={makeCall}>
             <IconContext.Provider
               value={{

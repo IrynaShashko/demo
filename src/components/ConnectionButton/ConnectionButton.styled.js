@@ -40,7 +40,7 @@ export const ButtonsItem = styled(motion.li)`
   padding: 10px;
   outline: none;
   border-radius: 10px;
-  border: 2px solid ${(props) => props.backgroundColor};
+  border: 2px solid ${(props) => props.backgroundсolor};
   cursor: pointer;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   &:hover {
