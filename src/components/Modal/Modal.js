@@ -77,9 +77,9 @@ export default function Modal({ onClose, children }) {
               <ModalTitle onClick={onClose}>
                 <NavLinkStyled to={"/about"}>Давайте знайомитись</NavLinkStyled>
               </ModalTitle>
-              <ModalTitle onClick={onClose}>
+              {/* <ModalTitle onClick={onClose}>
                 <NavLinkStyled to={"/portfolio"}>Портфоліо</NavLinkStyled>
-              </ModalTitle>
+              </ModalTitle> */}
               <ModalTitle onClick={onClose}>
                 <NavLinkStyled to={"/article"}>Статті</NavLinkStyled>
               </ModalTitle>

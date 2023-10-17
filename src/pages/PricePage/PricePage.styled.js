@@ -25,10 +25,10 @@ export const List = styled.ul`
   flex-direction: row;
   justify-content: center;
   margin: 0 auto;
-  padding-top: 10px;
+  /* padding-top: 10px;
   li:not(:last-child) {
     margin-right: 10px;
-  }
+  } */
   @media screen and (min-width: 767px) {
     padding-top: 20px;
   }
@@ -37,13 +37,14 @@ export const List = styled.ul`
 export const Item = styled(NavLink)`
   color: #696969;
   font-size: 14px;
-  padding: 5px;
+  padding: 4px;
   padding-bottom: 0;
   &.active {
-    color: #696969;
-    box-shadow: 1px -4px 6px -4px rgba(105, 105, 105, 1);
+    color: #fff;
+    background-color: #007586;
+    /* box-shadow: 1px -4px 6px -4px rgba(105, 105, 105, 1); */
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
     border-top: 1px solid #696969;
@@ -57,9 +58,7 @@ export const Item = styled(NavLink)`
       font-size: 20px;
     }
   }
-  &:hover {
-    color: #000;
-  }
+
   @media screen and (min-width: 767px) {
     padding-bottom: 0;
     padding: 10px;
@@ -76,9 +75,8 @@ export const PriceContainer = styled.table`
   padding: 10px;
   border-radius: 10px;
   margin: 0 auto;
-  margin-top: 30px;
-  background-color: rgba(255, 255, 255, 0.6);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #007586;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
   @media screen and (min-width: 375px) {
     width: 350px;
   }
@@ -105,7 +103,7 @@ export const PriceItem = styled.tr`
 export const ItemTitle = styled.td`
   font-size: 16px;
   padding: 10px;
-  color: #696969;
+  color: #fff;
   @media screen and (min-width: 768px) {
     font-size: 18px;
     padding: 10px;
