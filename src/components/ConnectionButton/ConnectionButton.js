@@ -1,4 +1,4 @@
-import { useInView } from 'react-intersection-observer';
+import { useInView } from "react-intersection-observer";
 import { IconContext } from "react-icons";
 import { LuPhone } from "react-icons/lu";
 import { SlLocationPin } from "react-icons/sl";
@@ -19,12 +19,12 @@ const ConnectionButtons = ({ background, color }) => {
       y: -50,
       opacity: 0,
     },
-    visible: custom => ({
+    visible: (custom) => ({
       y: 0,
       opacity: 1,
       transition: { ease: "easeOut", duration: 1, delay: custom * 0.3 },
     }),
-  }
+  };
 
   const { ref, inView } = useInView({
     triggerOnce: true,
@@ -59,11 +59,19 @@ const ConnectionButtons = ({ background, color }) => {
         animate={inView ? "visible" : "hidden"}
         variants={animationElement}
         ref={ref}
-        custom={1}>
+        custom={1}
+      >
         <ButtonsItem
-          variants={animationElement} custom={2}
-          backgroundсolor={background} color={color}>
-          <Buttons aria-label="Open instagram" href="https://instagram.com/maria.glushenko?igshid=MzRlODBiNWFlZA==" onClick={openInstagram}>
+          variants={animationElement}
+          custom={2}
+          backgroundсolor={background}
+          color={color}
+        >
+          <Buttons
+            aria-label="Open instagram"
+            href="https://instagram.com/maria.glushenko?igshid=MzRlODBiNWFlZA=="
+            onClick={openInstagram}
+          >
             <IconContext.Provider
               value={{
                 size: "28px",
@@ -75,9 +83,16 @@ const ConnectionButtons = ({ background, color }) => {
           </Buttons>
         </ButtonsItem>
         <ButtonsItem
-          variants={animationElement} custom={3}
-          backgroundсolor={background} color={color}>
-          <Buttons aria-label="Location" href="https://goo.gl/maps/o3qvsXRkfv8h3hdw5" target="_blank">
+          variants={animationElement}
+          custom={3}
+          backgroundсolor={background}
+          color={color}
+        >
+          <Buttons
+            aria-label="Location"
+            href="https://goo.gl/maps/o3qvsXRkfv8h3hdw5"
+            target="_blank"
+          >
             <IconContext.Provider
               value={{
                 size: "30px",
@@ -89,9 +104,16 @@ const ConnectionButtons = ({ background, color }) => {
           </Buttons>
         </ButtonsItem>
         <ButtonsItem
-          variants={animationElement} custom={4}
-          backgroundсolor={background} color={color}>
-          <Buttons aria-label="Open telegram" href="https://t.me/MashaHlushenko" onClick={openTelegram}>
+          variants={animationElement}
+          custom={4}
+          backgroundсolor={background}
+          color={color}
+        >
+          <Buttons
+            aria-label="Open telegram"
+            href="https://t.me/MashaHlushenko"
+            onClick={openTelegram}
+          >
             <IconContext.Provider
               value={{
                 size: "32px",
@@ -103,9 +125,16 @@ const ConnectionButtons = ({ background, color }) => {
           </Buttons>
         </ButtonsItem>
         <ButtonsItem
-          variants={animationElement} custom={5}
-          backgroundсolor={background} color={color}>
-          <Buttons aria-label="Open whatsapp" href="https://api.whatsapp.com/send?phone=380936193616" onClick={openWhatsApp}>
+          variants={animationElement}
+          custom={5}
+          backgroundсolor={background}
+          color={color}
+        >
+          <Buttons
+            aria-label="Open whatsapp"
+            href="https://api.whatsapp.com/send?phone=380936193616"
+            onClick={openWhatsApp}
+          >
             <IconContext.Provider
               value={{
                 size: "32px",
@@ -117,9 +146,16 @@ const ConnectionButtons = ({ background, color }) => {
           </Buttons>
         </ButtonsItem>
         <ButtonsItem
-          variants={animationElement} custom={6}
-          backgroundсolor={background} color={color}>
-          <Buttons aria-label="Open viber" href="viber://chat?number=+380936193616" onClick={openViber}>
+          variants={animationElement}
+          custom={6}
+          backgroundсolor={background}
+          color={color}
+        >
+          <Buttons
+            aria-label="Open viber"
+            href="viber://chat?number=+380936193616"
+            onClick={openViber}
+          >
             <IconContext.Provider
               value={{
                 size: "28px",
@@ -131,8 +167,11 @@ const ConnectionButtons = ({ background, color }) => {
           </Buttons>
         </ButtonsItem>
         <ButtonsItem
-          variants={animationElement} custom={7}
-          backgroundсolor={background} color={color}>
+          variants={animationElement}
+          custom={7}
+          backgroundсolor={background}
+          color={color}
+        >
           <Buttons aria-label="Phone number" onClick={makeCall}>
             <IconContext.Provider
               value={{

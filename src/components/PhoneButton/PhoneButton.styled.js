@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { css, keyframes } from '@emotion/react';
+import { css, keyframes } from "@emotion/react";
 
 const pulse = keyframes`
   0% {
@@ -55,14 +55,14 @@ export const MainButton = styled.button`
   font-size: 16px;
   animation: ${({ stopAnimation }) =>
     stopAnimation
-      ? 'none'
+      ? "none"
       : css`
           ${pulse} 2s infinite
         `};
   border-radius: 50px;
-  background-color:#007586;
+  background-color: #007586;
   border: 2px solid #fff;
-    cursor: pointer;
+  cursor: pointer;
   &:hover {
     background-color: #015b69;
   }
@@ -74,35 +74,39 @@ export const ButtonDiv = styled.div`
   margin-top: 20px;
   z-index: 5;
   & button {
-    opacity: 0; 
-    animation: ${({ animationShow }) => animationShow ? css`${slideInFromRight} 0.3s ease-out forwards` : "none"};
-    
+    opacity: 0;
+    animation: ${({ animationShow }) =>
+      animationShow
+        ? css`
+            ${slideInFromRight} 0.3s ease-out forwards
+          `
+        : "none"};
   }
 
   & button:nth-of-type(4) {
-  animation-delay: 0.6s;
-}
+    animation-delay: 0.6s;
+  }
   & button:nth-of-type(3) {
-  animation-delay: 0.8s;
-}
+    animation-delay: 0.8s;
+  }
   & button:nth-of-type(2) {
-  animation-delay: 1s;
-}
+    animation-delay: 1s;
+  }
   & button:nth-of-type(1) {
-  animation-delay: 1.2s;
-}
+    animation-delay: 1.2s;
+  }
 `;
 
 export const Buttons = styled.button`
-padding: 12px 14px;
-border: none;
-border-radius: 50px;
-background-color: #007586;
-margin-bottom: 5px;
-border: 2px solid #fff;
-cursor: pointer;
+  padding: 12px 14px;
+  border: none;
+  border-radius: 50px;
+  background-color: #007586;
+  margin-bottom: 5px;
+  border: 2px solid #fff;
+  cursor: pointer;
   &:hover,
   &:focus {
-  background-color: #01606e;
-}
+    background-color: #01606e;
+  }
 `;

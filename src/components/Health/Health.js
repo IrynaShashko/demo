@@ -8,7 +8,6 @@ const Health = () => {
   return (
     <div>
       <ArticleTitle>Здорове тіло</ArticleTitle>
-
       <div>
         <ArticleText>
           Сучасний ритм життя часто залишає наше тіло в стані напруги та стресу.
@@ -25,7 +24,6 @@ const Health = () => {
           відпочинку та відновлення енергії.
         </ArticleText>
       </div>
-
       <div>
         <ArticleAfterTitle>
           Після проходження сеансу масажу, наші клієнти діляться своїми

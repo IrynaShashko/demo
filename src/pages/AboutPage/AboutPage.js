@@ -1,5 +1,5 @@
-import { useInView } from 'react-intersection-observer';
-import { motion } from 'framer-motion';
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 import photo from "../../images/photo.jpg";
 import experience from "../../experience.json";
 import Contacts from "../../components/Contacts/Contacts";
@@ -22,25 +22,25 @@ const AboutPage = () => {
   const animationTitle = {
     hidden: {
       opacity: 0,
-      scale: 0.8
+      scale: 0.8,
     },
-    visible: custom => ({
+    visible: (custom) => ({
       opacity: 1,
       scale: 1,
       transition: { ease: "easeOut", duration: 2, delay: custom * 0.3 },
     }),
-  }
+  };
   const animationElement = {
     hidden: {
       y: -50,
       opacity: 0,
     },
-    visible: custom => ({
+    visible: (custom) => ({
       y: 0,
       opacity: 1,
       transition: { ease: "easeOut", duration: 2, delay: custom * 0.3 },
     }),
-  }
+  };
 
   const { ref, inView } = useInView({
     triggerOnce: true,
@@ -73,14 +73,25 @@ const AboutPage = () => {
       <AboutContainer>
         <StudyContainer>
           <ImageContainer>
-            <Image variants={animationTitle} custom={2} src={photo} alt="masseur" />
-            <TitleContainer initial="hidden"
+            <Image
+              variants={animationTitle}
+              custom={2}
+              src={photo}
+              alt="masseur"
+            />
+            <TitleContainer
+              initial="hidden"
               animate={inView ? "visible" : "hidden"}
               variants={animationTitle}
               ref={ref}
-              custom={1}>
-              <Title variants={animationTitle} custom={3}>Марія Глушенко</Title>
-              <AfterTitle variants={animationTitle} custom={3}>Масажист / реабілітолог</AfterTitle>
+              custom={1}
+            >
+              <Title variants={animationTitle} custom={3}>
+                Марія Глушенко
+              </Title>
+              <AfterTitle variants={animationTitle} custom={3}>
+                Масажист / реабілітолог
+              </AfterTitle>
             </TitleContainer>
           </ImageContainer>
           <Container>
@@ -89,10 +100,19 @@ const AboutPage = () => {
               animate={inView ? "visible" : "hidden"}
               variants={animationElement}
               ref={ref}
-              custom={1}>
+              custom={1}
+            >
               <TitleText
-                variants={animationElement} custom={2}
-                style={{ textAlign: "center", textIndent: "0", fontSize: "18px", textTransform: "uppercase", marginBottom: "20px", letterSpacing: "5px" }}
+                variants={animationElement}
+                custom={2}
+                style={{
+                  textAlign: "center",
+                  textIndent: "0",
+                  fontSize: "18px",
+                  textTransform: "uppercase",
+                  marginBottom: "20px",
+                  letterSpacing: "5px",
+                }}
               >
                 Ласкаво просимо до нашого спокійного оазису масажу!
               </TitleText>
@@ -112,8 +132,8 @@ const AboutPage = () => {
                 Запрошую вас на сесію масажу, де вас оточить увага, турбота та
                 професійний підхід. Дозвольте собі на мить відірватися від
                 щоденних турбот та дати своєму тілу заслужений відпочинок.
-                Запишіться на сеанс масажу вже сьогодні, і дозвольте собі відчути
-                справжнє блаженство і відновлення.
+                Запишіться на сеанс масажу вже сьогодні, і дозвольте собі
+                відчути справжнє блаженство і відновлення.
               </TitleText>
             </motion.div>
             <ItemTitle>Освіта:</ItemTitle>

@@ -2,9 +2,6 @@ import styled from "@emotion/styled";
 
 import photo from "../../images/10.jpg";
 
-
-
-
 export const HomeContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -29,8 +26,6 @@ export const HomeContainer = styled.div`
     height: 700px;
   }
 `;
-
-
 
 export const LocationText = styled.p`
   text-decoration: none;
@@ -64,4 +59,3 @@ export const InfoDiv = styled.div`
   padding: 50px 0;
   text-align: center;
 `;
-

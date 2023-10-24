@@ -8,7 +8,6 @@ const Expectation = () => {
   return (
     <div>
       <ArticleTitle>Масаж: чого очікувати від сеансу?</ArticleTitle>
-
       <div>
         <ArticleAfterTitle>Коли потрібен масаж?</ArticleAfterTitle>
         <ArticleText>
@@ -44,7 +43,6 @@ const Expectation = () => {
           </li>
         </ul>
       </div>
-
       <div>
         <ArticleAfterTitle>
           Які види масажу існують та як обрати свій?
@@ -87,7 +85,6 @@ const Expectation = () => {
           вибрати найкращий вид масажу.
         </ArticleText>
       </div>
-
       <div>
         <ArticleAfterTitle>Критерії хорошого масажиста</ArticleAfterTitle>
         <ArticleText>

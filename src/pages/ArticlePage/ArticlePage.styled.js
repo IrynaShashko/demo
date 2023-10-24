@@ -37,13 +37,13 @@ export const ArticleTitle = styled.h1`
   font-weight: lighter;
   text-transform: uppercase;
   margin-top: 30px;
-  margin-bottom:30px;
+  margin-bottom: 30px;
   letter-spacing: 5px;
   @media screen and (min-width: 768px) {
     margin-top: 50px;
-  margin-bottom:50px;
+    margin-bottom: 50px;
   }
-  `;
+`;
 
 export const ArticleAfterTitle = styled.h2`
   font-size: 20px;
@@ -51,7 +51,7 @@ export const ArticleAfterTitle = styled.h2`
   margin-top: 10px;
   margin-bottom: 10px;
   text-align: center;
-  margin-top:20px;
+  margin-top: 20px;
   margin-bottom: 20px;
   letter-spacing: 2px;
 `;

@@ -19,7 +19,6 @@ const ArticlePage = () => {
                   <ArticleItem>Питання, які часто задають.</ArticleItem>
                 </ArticleLink>
               </li>
-
               <li>
                 <ArticleLink to="/article/health">
                   <ArticleItem>Здорове тіло.</ArticleItem>

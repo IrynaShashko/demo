@@ -31,8 +31,7 @@ const PhoneButton = () => {
         show={isAdditionalButtonsVisible}
         animationShow={isAdditionalButtonsVisible}
       >
-        <Buttons type="button"
-          onClick={() => openLink("tel:+380936193616")}>
+        <Buttons type="button" onClick={() => openLink("tel:+380936193616")}>
           <IconContext.Provider
             value={{
               size: "20px",
@@ -57,7 +56,9 @@ const PhoneButton = () => {
         </Buttons>
         <Buttons
           type="button"
-          onClick={() => openLink("https://api.whatsapp.com/send?phone=380936193616")}
+          onClick={() =>
+            openLink("https://api.whatsapp.com/send?phone=380936193616")
+          }
         >
           <IconContext.Provider
             value={{
@@ -82,14 +83,25 @@ const PhoneButton = () => {
           </IconContext.Provider>
         </Buttons>
       </ButtonDiv>
-      <MainButton type="button" onClick={toggleButtons} stopAnimation={isAdditionalButtonsVisible}>
+      <MainButton
+        type="button"
+        onClick={toggleButtons}
+        stopAnimation={isAdditionalButtonsVisible}
+      >
         <IconContext.Provider
           value={{
             size: "25px",
             color: "#fff",
           }}
         >
-          <LuPhone id="icon" style={{ transform: isAdditionalButtonsVisible ? "rotate(-45deg)" : "rotate(0deg)" }} />
+          <LuPhone
+            id="icon"
+            style={{
+              transform: isAdditionalButtonsVisible
+                ? "rotate(-45deg)"
+                : "rotate(0deg)",
+            }}
+          />
         </IconContext.Provider>
       </MainButton>
     </PhoneContainer>

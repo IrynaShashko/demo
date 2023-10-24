@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import photo from "../../images/11.jpg";
+
 export const Stars = styled.div`
   display: flex;
   align-items: center;

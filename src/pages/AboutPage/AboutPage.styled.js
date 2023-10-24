@@ -147,7 +147,7 @@ export const DataTitle = styled.span`
   color: #000;
   font-size: 14px;
   letter-spacing: 2px;
-    @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     font-size: 16px;
   }
 `;

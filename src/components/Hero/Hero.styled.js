@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
-import { keyframes } from '@emotion/react';
-import { motion } from 'framer-motion';
+import { keyframes } from "@emotion/react";
+import { motion } from "framer-motion";
 
 const growFont = keyframes`
   from {
@@ -17,11 +17,11 @@ export const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  & button{
+  & button {
     animation: ${growFont} 0.3s ease-out forwards;
-    opacity: 0; 
+    opacity: 0;
   }
-  & button:nth-child(1){
+  & button:nth-child(1) {
     animation-delay: 3.2s;
   }
 `;
@@ -116,4 +116,4 @@ export const AnimationDiv = styled.div`
   & p:nth-of-type(7) {
     animation-delay: 2.8s;
   } */
-`
+`;
