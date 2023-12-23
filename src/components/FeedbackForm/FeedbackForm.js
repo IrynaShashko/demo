@@ -12,12 +12,17 @@ import {
   FeedbackInput,
   StarDiv,
   StarButton,
+  PopupDiv,
+  Popup,
+  PopupText,
+  PopupButton,
 } from "./FeedbackForm.styled";
 import { ModalSubmitBtn } from "../Modal/Modal.styled";
 
 const FeedbackForm = () => {
   const starArr = [1, 2, 3, 4, 5];
   const [totalPositiveStars, setTotalPositiveStars] = useState(1);
+  const [isPopupVisible, setIsPopupVisible] = useState(false);
 
   const handleSubmit = async (values, { resetForm }) => {
     try {
@@ -34,6 +39,8 @@ const FeedbackForm = () => {
 
       if (response.ok) {
         resetForm();
+        setTotalPositiveStars(1);
+        setIsPopupVisible(true);
       } else {
         console.error("Помилка відправлення на бекенд:", response.status);
       }
@@ -45,6 +52,10 @@ const FeedbackForm = () => {
   const handleClick = (e, index) => {
     e.preventDefault();
     setTotalPositiveStars(index + 1);
+  };
+
+  const closePopup = () => {
+    setIsPopupVisible(false);
   };
 
   return (
@@ -97,7 +108,17 @@ const FeedbackForm = () => {
               ))}
             </Stars>
           </StarDiv>
-          <ModalSubmitBtn type="submit">Відправити</ModalSubmitBtn>
+          <PopupDiv>
+            <ModalSubmitBtn style={{ width: "100%" }} type="submit">
+              Відправити
+            </ModalSubmitBtn>
+            {isPopupVisible && (
+              <Popup>
+                <PopupText>Ваш відгук успішно відправлено!</PopupText>
+                <PopupButton onClick={closePopup}>Закрити</PopupButton>
+              </Popup>
+            )}
+          </PopupDiv>
         </Form>
       </FormContainer>
     </FeedbackDiv>

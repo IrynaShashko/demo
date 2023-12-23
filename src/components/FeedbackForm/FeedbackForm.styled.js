@@ -65,3 +65,35 @@ export const StarButton = styled.button`
   background-color: transparent;
   cursor: pointer;
 `;
+
+export const PopupDiv = styled.div`
+  position: relative;
+`;
+
+export const Popup = styled.div`
+  position: absolute;
+  top: -130px;
+  left: 0px;
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #007586;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+`;
+
+export const PopupText = styled.p`
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-align: center;
+`;
+
+export const PopupButton = styled.button`
+  padding: 5px;
+  border-radius: 8px;
+  background-color: #007586;
+  color: #fff;
+  cursor: pointer;
+`;
