@@ -11,16 +11,9 @@ export const ReviewsContainer = styled.div`
   flex-direction: column;
   align-items: center;
   background-color: #f2efee;
-  height: 550px;
   padding-top: 20px;
   padding-bottom: 30px;
   justify-content: center;
-  @media screen and (min-width: 768px) {
-    height: 800px;
-  }
-  @media screen and (min-width: 1440px) {
-    height: 600px;
-  }
 `;
 
 export const ReviewsTitle = styled.h3`
@@ -31,7 +24,7 @@ export const ReviewsTitle = styled.h3`
   text-align: center;
 `;
 
-export const List = styled.ul`
+export const List = styled.div`
   width: 300px;
   margin: 0 auto;
   @media screen and (min-width: 375px) {
@@ -45,7 +38,7 @@ export const List = styled.ul`
   }
 `;
 
-export const ListItem = styled.li`
+export const ListItem = styled.div`
   background-image: linear-gradient(
       0deg,
       rgba(50, 49, 49, 0.437) 0%,
