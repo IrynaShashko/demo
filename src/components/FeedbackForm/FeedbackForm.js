@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Form } from "formik";
 import { AiFillStar } from "react-icons/ai";
 import { IconContext } from "react-icons";
+import { useReviews } from "../../store";
 import { Stars } from "../../pages/ReviewsPage/Reviews.styled";
 import {
   FormContainer,
@@ -24,26 +25,27 @@ const FeedbackForm = () => {
   const [totalPositiveStars, setTotalPositiveStars] = useState(1);
   const [isPopupVisible, setIsPopupVisible] = useState(false);
 
+  const reviewsStore = useReviews();
+
   const handleSubmit = async (values, { resetForm }) => {
     try {
-      const response = await fetch(
-        "https://massage-reviews.onrender.com/api/reviews",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ ...values, totalPositiveStars }),
-        }
-      );
+      const newReview = {
+        name: values.name,
+        comment: values.comment,
+        totalPositiveStars: values.totalPositiveStars,
+      };
+      resetForm();
 
-      if (response.ok) {
-        resetForm();
-        setTotalPositiveStars(1);
-        setIsPopupVisible(true);
-      } else {
-        console.error("Помилка відправлення на бекенд:", response.status);
-      }
+      reviewsStore.addReview(newReview);
+      setIsPopupVisible(true);
+
+      // if (response.ok) {
+      //   resetForm();
+      //   setTotalPositiveStars(1);
+      //   setIsPopupVisible(true);
+      // } else {
+      //   console.error("Помилка відправлення на бекенд:", response.status);
+      // }
     } catch (error) {
       console.error("Помилка відправлення на бекенд:", error);
     }
@@ -82,10 +84,14 @@ const FeedbackForm = () => {
           <FeedbackInputDiv>
             <FeedbackLabel htmlFor="comment">Коментар:</FeedbackLabel>
             <FeedbackInput
+              as="textarea"
               type="text"
               id="comment"
               name="comment"
               placeholder="Коментар"
+              style={{
+                resize: "none",
+              }}
             />
           </FeedbackInputDiv>
           <StarDiv>

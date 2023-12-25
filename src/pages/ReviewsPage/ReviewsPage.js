@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { onSnapshot } from "mobx-state-tree";
 import Slider from "react-slick";
 import { AiFillStar } from "react-icons/ai";
 import Contacts from "../../components/Contacts/Contacts";
 import Loader from "../../components/Loader/Loader";
 import { IconContext } from "react-icons";
+import { useReviews } from "../../store";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../../index.css";
@@ -28,50 +30,48 @@ import FeedbackForm from "../../components/FeedbackForm/FeedbackForm";
 const ReviewsPage = () => {
   const starArr = [1, 2, 3, 4, 5];
   const [data, setData] = useState(null);
-  const [error, setError] = useState(null);
+  // const [error, setError] = useState(null);
+
+  const reviewsStore = useReviews();
 
   useEffect(() => {
     const fetchData = async () => {
-      try {
-        const response = await fetch(
-          "https://massage-reviews.onrender.com/api/reviews"
-        );
-
-        if (response.ok) {
-          const result = await response.json();
-          setData(result);
-        } else {
-          setError(`Помилка отримання даних: ${response.status}`);
-        }
-      } catch (error) {
-        setError(`Помилка отримання даних: ${error.message}`);
-      }
+      await reviewsStore.fetchReviews();
+      const reviews = reviewsStore.toJSON().reviews;
+      setData(reviews);
     };
 
-    fetchData();
-  }, []);
+    const unsubscribe = onSnapshot(reviewsStore, (snapshot) => {
+      const reviews = snapshot.reviews;
+      setData(reviews);
+    });
 
-  if (error) {
-    return <div>Помилка: {error}</div>;
-  }
+    fetchData();
+
+    return () => {
+      unsubscribe();
+    };
+  }, [reviewsStore]);
+
+  // if (error) {
+  //   return <div>Помилка: {error}</div>;
+  // }
 
   if (!data) {
     return <Loader />;
   }
 
   const settings = {
-    dots: true,
-    // infinite: true,
-    // speed: 500,
+    dots: false,
+    speed: 0,
     slidesToShow: 1,
     slidesToScroll: 1,
-    // autoplaySpeed: 3000,
-    // autoplay: true,
+    autoplay: false,
     cssEase: "linear",
     pauseOnHover: true,
   };
 
-  const reviewsItem = data.map((item) => (
+  const reviewsItem = data?.map((item) => (
     <ListItem key={item._id}>
       <ItemDiv>
         <TitleDiv>
