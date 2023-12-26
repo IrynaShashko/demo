@@ -1,4 +1,4 @@
-import { types, flow } from "mobx-state-tree";
+import { types, flow, onSnapshot } from "mobx-state-tree";
 
 const URL = "https://massage-reviews.onrender.com/api/reviews";
 
@@ -46,6 +46,7 @@ export const ReviewsStore = types
 
         if (response.ok) {
           const responseData = yield response.json();
+
           newReview.id = responseData.id;
 
           store.reviews.unshift(newReview);
@@ -59,6 +60,7 @@ export const ReviewsStore = types
     fetchReviews: flow(function* () {
       try {
         const data = yield fetchData();
+        // console.log("Data from API:", data);
         const newReviews = data.map((review) => ({
           name: review.name,
           comment: review.comment,
@@ -77,8 +79,12 @@ let _reviewsStore;
 
 export const useReviews = () => {
   if (!_reviewsStore) {
-    _reviewsStore = ReviewsStore.create({
-      reviews: [],
+    const storedReviewsStore =
+      JSON.parse(localStorage.getItem("reviewsStore")) || {};
+    _reviewsStore = ReviewsStore.create(storedReviewsStore);
+
+    onSnapshot(_reviewsStore, (snapshot) => {
+      localStorage.setItem("reviewsStore", JSON.stringify(snapshot));
     });
   }
   return _reviewsStore;

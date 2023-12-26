@@ -64,7 +64,7 @@ const ReviewsPage = () => {
     pauseOnHover: true,
   };
 
-  const reviewsItem = data?.map((item) => (
+  const reviewsItem = reviewsStore.toJSON().reviews?.map((item) => (
     <ListItem key={item.id}>
       <ItemDiv>
         <TitleDiv>

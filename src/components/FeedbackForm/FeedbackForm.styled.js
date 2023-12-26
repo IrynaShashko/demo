@@ -1,22 +1,30 @@
 import styled from "@emotion/styled";
-import { Formik, Field } from "formik";
+import { Formik, Form, Field } from "formik";
 
 export const FormContainer = styled(Formik)`
-  width: 600px;
   padding: 20px;
   border-radius: 20px;
   border: 1px solid #007586;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 `;
 
+export const FormStyle = styled(Form)`
+  width: 300px;
+  padding: 20px;
+  padding-top: 0;
+  border-radius: 20px;
+
+  @media screen and (min-width: 768px) {
+    width: 500px;
+  }
+  @media screen and (min-width: 1440px) {
+    width: 700px;
+  }
+`;
+
 export const FeedbackDiv = styled.div`
   padding-top: 50px;
   padding-bottom: 20px;
-  @media screen and (min-width: 1440px) {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
 `;
 
 export const FeedbackTitle = styled.h3`
@@ -68,12 +76,15 @@ export const StarButton = styled.button`
 
 export const PopupDiv = styled.div`
   position: relative;
+  width: 100%;
 `;
 
 export const Popup = styled.div`
   position: absolute;
-  top: -130px;
+  top: -120px;
   left: 0px;
+  width: 100%;
+  box-sizing: border-box;
   background-color: white;
   padding: 20px;
   border: 1px solid #007586;

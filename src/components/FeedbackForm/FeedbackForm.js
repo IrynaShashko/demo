@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Form } from "formik";
 import { AiFillStar } from "react-icons/ai";
 import { IconContext } from "react-icons";
 import { useReviews } from "../../store";
@@ -11,6 +10,7 @@ import {
   FeedbackInputDiv,
   FeedbackLabel,
   FeedbackInput,
+  FormStyle,
   StarDiv,
   StarButton,
   PopupDiv,
@@ -64,14 +64,14 @@ const FeedbackForm = () => {
         }}
         onSubmit={handleSubmit}
       >
-        <Form>
+        <FormStyle>
           <FeedbackInputDiv>
             <FeedbackLabel htmlFor="name">Ім'я:</FeedbackLabel>
             <FeedbackInput
               type="text"
               id="name"
               name="name"
-              placeholder="Напишіть ім'я"
+              placeholder="Напишіть ім'я..."
             />
           </FeedbackInputDiv>
           <FeedbackInputDiv>
@@ -81,7 +81,7 @@ const FeedbackForm = () => {
               type="text"
               id="comment"
               name="comment"
-              placeholder="Коментар"
+              placeholder="Напишіть коментар..."
               style={{
                 resize: "none",
                 height: "100px",
@@ -119,7 +119,7 @@ const FeedbackForm = () => {
               </Popup>
             )}
           </PopupDiv>
-        </Form>
+        </FormStyle>
       </FormContainer>
     </FeedbackDiv>
   );
