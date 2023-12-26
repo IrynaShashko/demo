@@ -39,14 +39,6 @@ const FeedbackForm = () => {
 
       reviewsStore.addReview(newReview);
       setIsPopupVisible(true);
-
-      // if (response.ok) {
-      //   resetForm();
-      //   setTotalPositiveStars(1);
-      //   setIsPopupVisible(true);
-      // } else {
-      //   console.error("Помилка відправлення на бекенд:", response.status);
-      // }
     } catch (error) {
       console.error("Помилка відправлення на бекенд:", error);
     }
