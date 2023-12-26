@@ -101,7 +101,7 @@ export const StarsText = styled.p`
 `;
 
 export const ScrollableText = styled.div`
-  max-height: 220px;
+  max-height: 230px;
   overflow-y: auto;
   @media screen and (min-width: 1440px) {
     max-height: 300px;

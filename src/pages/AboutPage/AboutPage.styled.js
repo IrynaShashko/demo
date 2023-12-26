@@ -138,8 +138,7 @@ export const ItemTitle = styled.h4`
   margin-bottom: 10px;
   text-transform: uppercase;
   line-height: 50px;
-  /* text-align: center; */
-  /* letter-spacing: 5px; */
+  text-align: center;
 `;
 
 export const DataTitle = styled.span`

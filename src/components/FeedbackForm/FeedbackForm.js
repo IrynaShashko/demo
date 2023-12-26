@@ -84,6 +84,7 @@ const FeedbackForm = () => {
               placeholder="Коментар"
               style={{
                 resize: "none",
+                height: "100px",
               }}
             />
           </FeedbackInputDiv>
