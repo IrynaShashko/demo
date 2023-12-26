@@ -32,9 +32,10 @@ const FeedbackForm = () => {
       const newReview = {
         name: values.name,
         comment: values.comment,
-        totalPositiveStars: values.totalPositiveStars,
+        totalPositiveStars: totalPositiveStars,
       };
       resetForm();
+      setTotalPositiveStars(1);
 
       reviewsStore.addReview(newReview);
       setIsPopupVisible(true);
