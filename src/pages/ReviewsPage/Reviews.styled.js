@@ -111,7 +111,7 @@ export const ScrollableText = styled.div`
 export const Text = styled.p`
   font-size: 14px;
   color: #696969;
-  /* text-align: center; */
+  text-align: center;
   @media screen and (min-width: 768px) {
     font-size: 16px;
   }
