@@ -14,12 +14,10 @@ import {
   ReviewsContainer,
   List,
   ListItem,
-  // UserDiv,
   UserIconDiv,
   UserName,
-  // Title,
-  // TitleContainer,
   ReviewsTitle,
+  ScrollableText,
   Text,
   ItemDiv,
   TitleDiv,
@@ -30,7 +28,6 @@ import FeedbackForm from "../../components/FeedbackForm/FeedbackForm";
 const ReviewsPage = () => {
   const starArr = [1, 2, 3, 4, 5];
   const [data, setData] = useState(null);
-  // const [error, setError] = useState(null);
 
   const reviewsStore = useReviews();
 
@@ -53,10 +50,6 @@ const ReviewsPage = () => {
     };
   }, [reviewsStore]);
 
-  // if (error) {
-  //   return <div>Помилка: {error}</div>;
-  // }
-
   if (!data) {
     return <Loader />;
   }
@@ -72,7 +65,7 @@ const ReviewsPage = () => {
   };
 
   const reviewsItem = data?.map((item) => (
-    <ListItem key={item._id}>
+    <ListItem key={item.id}>
       <ItemDiv>
         <TitleDiv>
           <UserIconDiv>
@@ -93,7 +86,9 @@ const ReviewsPage = () => {
             </Stars>
           </UserIconDiv>
         </TitleDiv>
-        <Text>{item.comment}</Text>
+        <ScrollableText>
+          <Text>{item.comment}</Text>
+        </ScrollableText>
       </ItemDiv>
     </ListItem>
   ));

@@ -18,7 +18,6 @@ export const InfoItem = styled(motion.li)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
   padding: 20px 0;
   @media screen and (min-width: 768px) {
     padding: 20px;
@@ -28,7 +27,6 @@ export const InfoItem = styled(motion.li)`
 export const InfoTitle = styled.p`
   font-size: 20px;
   margin-bottom: 20px;
-  // text-transform: uppercase;
   color: #007586;
 `;
 

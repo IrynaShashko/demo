@@ -21,7 +21,7 @@ export const ButtonContainer = styled.div`
     animation: ${growFont} 0.3s ease-out forwards;
     opacity: 0;
   }
-  & button:nth-child(1) {
+  & button:nth-of-type(1) {
     animation-delay: 3.2s;
   }
 `;
@@ -82,38 +82,4 @@ export const ModalSubmitBtn = styled(motion.button)`
   @media screen and (min-width: 768px) {
     width: 280px;
   }
-`;
-
-export const AnimationDiv = styled.div`
-  /* & p {
-    animation: ${growFont} 0.3s ease-out forwards;
-    opacity: 0; 
-  }
-
-  & p:nth-of-type(1) {
-    animation-delay: 0.4s;
-    }
-
-  & p:nth-of-type(2) {
-    animation-delay: 0.8s;
-  }
-
-  & p:nth-of-type(3) {
-    animation-delay: 1.2s;
-  }
-
-  & p:nth-of-type(4) {
-    animation-delay: 1.6s;
-  }
-
-  & p:nth-of-type(5) {
-    animation-delay: 2s;
-  }
-
-  & p:nth-of-type(6) {
-    animation-delay: 2.4s;
-  }
-  & p:nth-of-type(7) {
-    animation-delay: 2.8s;
-  } */
 `;

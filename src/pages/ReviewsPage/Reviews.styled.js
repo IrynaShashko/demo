@@ -47,18 +47,11 @@ export const ListItem = styled.div`
     url(${photo});
   background-size: cover;
   background-position: center;
-  box-shadow: -3px 4px 15px 0px rgba(0, 0, 0, 0.06);
-  height: 460px;
+  box-shadow: -3px 4px 15px 0px rgba(0, 0, 0, 0.02);
+  height: 400px;
   width: 100%;
   border-radius: 8px;
-  padding: 30px;
   box-sizing: border-box;
-  @media screen and (min-width: 768px) {
-    padding: 40px;
-  }
-  @media screen and (min-width: 1440px) {
-    padding: 60px;
-  }
 `;
 
 export const TitleDiv = styled.div`
@@ -81,45 +74,25 @@ export const UserIconDiv = styled.div`
 export const ItemDiv = styled.div`
   height: 100%;
   overflow: hidden;
-  padding: 20px;
+  padding: 50px;
   border-radius: 4px;
   box-sizing: border-box;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.7);
+  overflow: auto;
   @media screen and (min-width: 1440px) {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    padding-inline: 80px;
   }
-`;
-
-export const UserDiv = styled.div`
-  border-radius: 50px;
-  background-color: #fff;
-  width: 20px;
-  padding: 6px 8px;
-  border: 1px solid #007586;
-  margin-bottom: 20px;
 `;
 
 export const UserName = styled.p`
   color: #007586;
   margin-bottom: 10px;
   font-size: 18px;
-`;
-
-export const Title = styled.h2`
-  font-size: 20px;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  font-weight: lighter;
-  color: #000;
-`;
-
-export const TitleContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  overflow: hidden;
 `;
 
 export const StarsText = styled.p`
@@ -127,10 +100,18 @@ export const StarsText = styled.p`
   margin-bottom: 10px;
 `;
 
+export const ScrollableText = styled.div`
+  max-height: 220px;
+  overflow-y: auto;
+  @media screen and (min-width: 1440px) {
+    max-height: 300px;
+  }
+`;
+
 export const Text = styled.p`
   font-size: 14px;
   color: #696969;
-  text-align: center;
+  /* text-align: center; */
   @media screen and (min-width: 768px) {
     font-size: 16px;
   }

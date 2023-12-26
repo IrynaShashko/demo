@@ -61,7 +61,7 @@ export const MainButton = styled.button`
         `};
   border-radius: 50px;
   background-color: #007586;
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   cursor: pointer;
   &:hover {
     background-color: #015b69;
@@ -103,7 +103,7 @@ export const Buttons = styled.button`
   border-radius: 50px;
   background-color: #007586;
   margin-bottom: 5px;
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   cursor: pointer;
   &:hover,
   &:focus {

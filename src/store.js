@@ -22,7 +22,8 @@ const fetchData = async () => {
 export const ReviewModel = types.model("ReviewModel", {
   name: types.optional(types.string, ""),
   comment: types.optional(types.string, ""),
-  totalPositiveStars: types.optional(types.number, 0), // Зміна типу на number
+  totalPositiveStars: types.optional(types.number, 0),
+  id: types.optional(types.string, ""),
 });
 
 export const ReviewsStore = types
@@ -62,6 +63,7 @@ export const ReviewsStore = types
           name: review.name,
           comment: review.comment,
           totalPositiveStars: review.totalPositiveStars,
+          id: review._id,
         }));
 
         store.setReviews(newReviews);

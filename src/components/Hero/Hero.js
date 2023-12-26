@@ -7,7 +7,6 @@ import ConnectionForm from "../ConnectionForm/СonnectionModal";
 import PhoneButton from "../PhoneButton/PhoneButton";
 import {
   TextContainer,
-  AnimationDiv,
   Text,
   ButtonContainer,
   ModalSubmitBtn,
@@ -56,7 +55,7 @@ const Hero = () => {
         ref={ref}
         custom={1}
       >
-        <AnimationDiv>
+        <div>
           <Text
             variants={animationElement}
             custom={2}
@@ -82,7 +81,7 @@ const Hero = () => {
           <Text variants={animationElement} custom={8}>
             {mark}відновити або покращити функцію опорно-рухового апарату
           </Text>
-        </AnimationDiv>
+        </div>
         <ButtonContainer>
           <motion.div
             variants={animationElement}

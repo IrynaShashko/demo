@@ -80,7 +80,7 @@ export const TitleContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   @media screen and (min-width: 768px) {
     margin-left: 50px;
   }
@@ -116,7 +116,7 @@ export const TitleText = styled(motion.p)`
   color: #696969;
   margin-bottom: 10px;
   text-indent: 50px;
-  text-align: justify;
+  /* text-align: justify; */
   @media screen and (min-width: 768px) {
     font-size: 16px;
   }
@@ -126,7 +126,6 @@ export const ItemText = styled.p`
   font-size: 14px;
   margin-bottom: 10px;
   color: #696969;
-  text-align: justify;
   text-indent: 50px;
   @media screen and (min-width: 768px) {
     font-size: 16px;
@@ -139,8 +138,8 @@ export const ItemTitle = styled.h4`
   margin-bottom: 10px;
   text-transform: uppercase;
   line-height: 50px;
-  text-align: center;
-  letter-spacing: 5px;
+  /* text-align: center; */
+  /* letter-spacing: 5px; */
 `;
 
 export const DataTitle = styled.span`
