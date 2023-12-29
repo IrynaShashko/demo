@@ -108,3 +108,9 @@ export const PopupButton = styled.button`
   color: #fff;
   cursor: pointer;
 `;
+
+export const FeedbackStarLabel = styled.p`
+  font-size: 16px;
+  font-weight: lighter;
+  margin-bottom: 5px;
+`;

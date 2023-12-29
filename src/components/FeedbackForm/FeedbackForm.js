@@ -17,6 +17,7 @@ import {
   Popup,
   PopupText,
   PopupButton,
+  FeedbackStarLabel,
 } from "./FeedbackForm.styled";
 import { ModalSubmitBtn } from "../Modal/Modal.styled";
 
@@ -89,6 +90,7 @@ const FeedbackForm = () => {
             />
           </FeedbackInputDiv>
           <StarDiv>
+            <FeedbackStarLabel htmlFor="comment">Оцініть:</FeedbackStarLabel>
             <Stars>
               {starArr.map((el, index) => (
                 <IconContext.Provider
